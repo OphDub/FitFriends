@@ -18,21 +18,25 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        "I am Control",
         <input
+          className="Control-input Control-username"
           name="username"
           onChange={[Function]}
-          placeholder=""
+          placeholder="username"
           type="text"
+          value=""
 />,
         <input
+          className="Control-input Control-password"
           name="password"
           onChange={[Function]}
-          placeholder=""
-          type="text"
+          placeholder="password"
+          type="password"
+          value=""
 />,
         <button
           className="login-btn"
+          onClick={[Function]}
 >
           Login
 </button>,
@@ -41,16 +45,17 @@ ShallowWrapper {
     },
     "ref": null,
     "rendered": Array [
-      "I am Control",
       Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "className": "Control-input Control-username",
           "name": "username",
           "onChange": [Function],
-          "placeholder": "",
+          "placeholder": "username",
           "type": "text",
+          "value": "",
         },
         "ref": null,
         "rendered": null,
@@ -61,10 +66,12 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "className": "Control-input Control-password",
           "name": "password",
           "onChange": [Function],
-          "placeholder": "",
-          "type": "text",
+          "placeholder": "password",
+          "type": "password",
+          "value": "",
         },
         "ref": null,
         "rendered": null,
@@ -77,6 +84,7 @@ ShallowWrapper {
         "props": Object {
           "children": "Login",
           "className": "login-btn",
+          "onClick": [Function],
         },
         "ref": null,
         "rendered": "Login",
@@ -92,21 +100,25 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          "I am Control",
           <input
+            className="Control-input Control-username"
             name="username"
             onChange={[Function]}
-            placeholder=""
+            placeholder="username"
             type="text"
+            value=""
 />,
           <input
+            className="Control-input Control-password"
             name="password"
             onChange={[Function]}
-            placeholder=""
-            type="text"
+            placeholder="password"
+            type="password"
+            value=""
 />,
           <button
             className="login-btn"
+            onClick={[Function]}
 >
             Login
 </button>,
@@ -115,16 +127,17 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": Array [
-        "I am Control",
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "className": "Control-input Control-username",
             "name": "username",
             "onChange": [Function],
-            "placeholder": "",
+            "placeholder": "username",
             "type": "text",
+            "value": "",
           },
           "ref": null,
           "rendered": null,
@@ -135,10 +148,12 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "className": "Control-input Control-password",
             "name": "password",
             "onChange": [Function],
-            "placeholder": "",
-            "type": "text",
+            "placeholder": "password",
+            "type": "password",
+            "value": "",
           },
           "ref": null,
           "rendered": null,
@@ -151,6 +166,7 @@ ShallowWrapper {
           "props": Object {
             "children": "Login",
             "className": "login-btn",
+            "onClick": [Function],
           },
           "ref": null,
           "rendered": "Login",
