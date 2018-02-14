@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Control.scss';
+import './Control.css';
 import { loginUser } from '../../actions/actionsIndex';
 import { connect } from 'react-redux';
 

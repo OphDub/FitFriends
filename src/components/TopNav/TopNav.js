@@ -3,8 +3,10 @@ import './TopNav.scss';
 
 export const TopNav = () => {
   return (
-    <div>
-      TopNav
-    </div>
+    <nav className="TopNav">
+      <button>Post Workout</button>
+      <button>Team</button>
+      <button>Workout History</button>
+    </nav>
   )
 };
