@@ -9,7 +9,8 @@ import App from './components/App/App';
 import registerServiceWorker from './registerServiceWorker';
 import './index.css';
 
-const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
+const devTools = window.__REDUX_DEVTOOLS_EXTENSION__
+  && window.__REDUX_DEVTOOLS_EXTENSION__();
 const middleware = applyMiddleware(logger);
 const store = createStore(rootReducer, devTools, middleware);
 
