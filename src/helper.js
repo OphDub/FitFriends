@@ -1,0 +1,7 @@
+const apiGet = () => {
+
+}
+
+const fetchAndParse = () => {
+  
+}

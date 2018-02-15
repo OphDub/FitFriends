@@ -37,4 +37,17 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBuyhDxRCXcOt0UdysgBxxqla5ZmojYTlU",
+      authDomain: "fitfriends-turing.firebaseapp.com",
+      databaseURL: "https://fitfriends-turing.firebaseio.com",
+      projectId: "fitfriends-turing",
+      storageBucket: "fitfriends-turing.appspot.com",
+      messagingSenderId: "346418121481"
+    };
+    firebase.initializeApp(config);
+  </script>
 </html>
