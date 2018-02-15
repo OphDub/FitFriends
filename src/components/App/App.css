@@ -6,4 +6,6 @@ html, body {
 
 .App {
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  min-height: 100vh;
+  justify-content: space-between; }

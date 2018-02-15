@@ -8,7 +8,7 @@ import { TopNav } from '../TopNav/TopNav';
 import { SideNav } from '../SideNav/SideNav';
 import { Leaderboard } from '../Leaderboard/Leaderboard';
 
-import { SignIn } from '../SignIn/SignIn';
+import { Welcome } from '../Welcome/Welcome';
 import { Home } from '../Home/Home';
 import Workout from '../Workout/Workout';
 import { Team } from '../Team/Team';
@@ -34,7 +34,8 @@ class App extends Component {
         <div className="App-center">
           <TopNav />
           <Switch>
-            <Route  exact path ="/" render={() => <SignIn />}/>
+            <Route  exact path ="/" render={() => <Welcome />}/>
+            <Route  path="/signup"/>
             <Route  path="/home"  render={() => <Home />}/>
             <Route  path="/workout"  render={() => <Workout />}/>
             <Route  path="/team"  render={() => <Team />}/>
