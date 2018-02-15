@@ -56,8 +56,8 @@ class App extends Component {
             <Route  path="/workout"  render={() => <Workout />}/>
             <Route  path="/team"  render={() => <Team team={mockTeam}/>}/>
             <Route  path="/workout-history" render={() => <WorkoutHistory />}/>
-            <Route  path="/user-profile" render={() => <Profile />}/>
-            <Route  path="/user-settings" render={() => <Settings />}/>
+            <Route  path="/profile" render={() => <Profile />}/>
+            <Route  path="/settings" render={() => <Settings />}/>
           </Switch>
         </div>
         {
