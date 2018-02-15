@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './SignUp.css';
+import { connect } from 'react-redux';
+import { signUpUser } from '../../actions/actionsIndex';
 
 class SignUp extends Component {
   constructor () {
@@ -21,8 +23,7 @@ class SignUp extends Component {
   handleSignUp = (e) => {
     e.preventDefault();
 
-    //pass user object to reducer for store
-
+    this.props.signUpUser(this.state);
     this.setState({
       firstName: '',
       lastName: '',
@@ -69,4 +70,8 @@ class SignUp extends Component {
   }
 }
 
-export default SignUp
+const mapDispatchToProps = (dispatch) => ({
+  signUpUser: (user) => dispatch(signUpUser(user))
+});
+
+export default connect(null, mapDispatchToProps)(SignUp);
