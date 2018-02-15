@@ -12,7 +12,10 @@ import { Home } from '../Home/Home';
 import Workout from '../Workout/Workout';
 import { Team } from '../Team/Team';
 import { WorkoutHistory } from '../WorkoutHistory/WorkoutHistory';
+import { Profile } from '../Profile/Profile';
+import { Settings } from '../Settings/Settings';
 
+import { loginUser } from '../../actions/actionsIndex';
 import { fetchAndParse } from '../../helper';
 import { clientID } from '../../apiKey';
 
@@ -24,6 +27,11 @@ class App extends Component {
   }
 
   componentDidMount () {
+    // if (localStorage.getItem('username')) {
+    //   const user = localStorage.getItem('username')
+    //   this.props.loginUser({user})
+    // }
+
     // const root = `https://www.fitbit.com/oauth2/authorize?`;
     // fetchAndParse(`${root}response_type=code&client_id=213NFP&redirect_uri=http://localhost:3000&scope=activity%20heartrate%20location%20nutrition%20profile%20settings%20sleep%20social%20weight&expires_in=604800`);
   }
@@ -31,19 +39,30 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SideNav user={mockUserProfile}/>
+        {
+          this.props.activeUser &&
+          <SideNav user={mockUserProfile}/>
+        }
         <div className="App-center">
+        {
+          this.props.activeUser &&
           <TopNav />
+        }
           <Switch>
-            <Route  path ="/" render={() => <Welcome />}/>
+            <Route  exact path ="/" render={() => <Welcome />}/>
             <Route  path="/signup" render={() => <SignUp />}/>
             <Route  path="/home"  render={() => <Home />}/>
             <Route  path="/workout"  render={() => <Workout />}/>
             <Route  path="/team"  render={() => <Team />}/>
             <Route  path="/workout-history" render={() => <WorkoutHistory />}/>
+            <Route  path="/user-profile" render={() => <Profile />}/>
+            <Route  path="/user-settings" render={() => <Settings />}/>
           </Switch>
         </div>
-        <Leaderboard />
+        {
+          this.props.activeUser &&
+          <Leaderboard />
+        }
       </div>
     );
   }
@@ -53,4 +72,8 @@ const mapStateToProps = (state) => ({
   activeUser: state.activeUser,
 })
 
-export default withRouter(connect(mapStateToProps)(App))
+const mapDispatchToProps = (dispatch) => ({
+  loginUser: (user) => dispatch(loginUser(user))
+})
+
+export default withRouter(connect(mapStateToProps,mapDispatchToProps)(App))
