@@ -17,57 +17,148 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <form
-        action=""
+      "children": Array [
+        <input
+          name="firstName"
+          onChange={[Function]}
+          placeholder="First Name"
+          type="text"
+          value=""
+/>,
+        <input
+          name="lastName"
+          onChange={[Function]}
+          placeholder="Last Name"
+          type="text"
+          value=""
+/>,
+        <input
+          name="userName"
+          onChange={[Function]}
+          placeholder="Username"
+          type="text"
+          value=""
+/>,
+        <input
+          name="userEmail"
+          onChange={[Function]}
+          placeholder="Email"
+          type="text"
+          value=""
+/>,
+        <input
+          name="userPass"
+          onChange={[Function]}
+          placeholder="Password"
+          type="password"
+          value=""
+/>,
+        <button
+          onClick={[Function]}
 >
-        <input
-                name="firstName"
-                onChange={[Function]}
-                placeholder="First Name"
-                type="text"
-                value=""
-        />
-        <input
-                name="lastName"
-                onChange={[Function]}
-                placeholder="Last Name"
-                type="text"
-                value=""
-        />
-        <input
-                name="userName"
-                onChange={[Function]}
-                placeholder="Username"
-                type="text"
-                value=""
-        />
-        <input
-                name="userEmail"
-                onChange={[Function]}
-                placeholder="Email"
-                type="text"
-                value=""
-        />
-        <input
-                name="userPass"
-                onChange={[Function]}
-                placeholder="Password"
-                type="password"
-                value=""
-        />
-        <button>
-                Sign Up
-        </button>
-</form>,
+          Sign Up
+</button>,
+      ],
       "className": "SignUp",
     },
     "ref": null,
-    "rendered": Object {
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "name": "firstName",
+          "onChange": [Function],
+          "placeholder": "First Name",
+          "type": "text",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "name": "lastName",
+          "onChange": [Function],
+          "placeholder": "Last Name",
+          "type": "text",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "name": "userName",
+          "onChange": [Function],
+          "placeholder": "Username",
+          "type": "text",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "name": "userEmail",
+          "onChange": [Function],
+          "placeholder": "Email",
+          "type": "text",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "name": "userPass",
+          "onChange": [Function],
+          "placeholder": "Password",
+          "type": "password",
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Sign Up",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Sign Up",
+        "type": "button",
+      },
+    ],
+    "type": "form",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
       "instance": null,
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "action": "",
         "children": Array [
           <input
             name="firstName"
@@ -104,10 +195,13 @@ ShallowWrapper {
             type="password"
             value=""
 />,
-          <button>
+          <button
+            onClick={[Function]}
+>
             Sign Up
 </button>,
         ],
+        "className": "SignUp",
       },
       "ref": null,
       "rendered": Array [
@@ -192,6 +286,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Sign Up",
+            "onClick": [Function],
           },
           "ref": null,
           "rendered": "Sign Up",
@@ -199,199 +294,6 @@ ShallowWrapper {
         },
       ],
       "type": "form",
-    },
-    "type": "section",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <form
-          action=""
->
-          <input
-                    name="firstName"
-                    onChange={[Function]}
-                    placeholder="First Name"
-                    type="text"
-                    value=""
-          />
-          <input
-                    name="lastName"
-                    onChange={[Function]}
-                    placeholder="Last Name"
-                    type="text"
-                    value=""
-          />
-          <input
-                    name="userName"
-                    onChange={[Function]}
-                    placeholder="Username"
-                    type="text"
-                    value=""
-          />
-          <input
-                    name="userEmail"
-                    onChange={[Function]}
-                    placeholder="Email"
-                    type="text"
-                    value=""
-          />
-          <input
-                    name="userPass"
-                    onChange={[Function]}
-                    placeholder="Password"
-                    type="password"
-                    value=""
-          />
-          <button>
-                    Sign Up
-          </button>
-</form>,
-        "className": "SignUp",
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "action": "",
-          "children": Array [
-            <input
-              name="firstName"
-              onChange={[Function]}
-              placeholder="First Name"
-              type="text"
-              value=""
-/>,
-            <input
-              name="lastName"
-              onChange={[Function]}
-              placeholder="Last Name"
-              type="text"
-              value=""
-/>,
-            <input
-              name="userName"
-              onChange={[Function]}
-              placeholder="Username"
-              type="text"
-              value=""
-/>,
-            <input
-              name="userEmail"
-              onChange={[Function]}
-              placeholder="Email"
-              type="text"
-              value=""
-/>,
-            <input
-              name="userPass"
-              onChange={[Function]}
-              placeholder="Password"
-              type="password"
-              value=""
-/>,
-            <button>
-              Sign Up
-</button>,
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "name": "firstName",
-              "onChange": [Function],
-              "placeholder": "First Name",
-              "type": "text",
-              "value": "",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "input",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "name": "lastName",
-              "onChange": [Function],
-              "placeholder": "Last Name",
-              "type": "text",
-              "value": "",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "input",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "name": "userName",
-              "onChange": [Function],
-              "placeholder": "Username",
-              "type": "text",
-              "value": "",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "input",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "name": "userEmail",
-              "onChange": [Function],
-              "placeholder": "Email",
-              "type": "text",
-              "value": "",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "input",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "name": "userPass",
-              "onChange": [Function],
-              "placeholder": "Password",
-              "type": "password",
-              "value": "",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "input",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Sign Up",
-            },
-            "ref": null,
-            "rendered": "Sign Up",
-            "type": "button",
-          },
-        ],
-        "type": "form",
-      },
-      "type": "section",
     },
   ],
   Symbol(enzyme.__options__): Object {
