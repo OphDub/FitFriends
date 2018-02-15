@@ -1,9 +1,9 @@
 import React from 'react';
 import { Teammate }from '../Teammate/Teammate';
 
-export const Team = (team) => {
-  const renderedTeam = team.map(teammate => 
-    <Teammate />
+export const Team = ({team}) => {
+  const renderedTeam = team.map(teammate =>
+    <Teammate {...teammate}/>
   )
 
   return(

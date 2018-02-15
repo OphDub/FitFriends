@@ -20,6 +20,7 @@ import { fetchAndParse } from '../../helper';
 import { clientID } from '../../apiKey';
 
 import { mockUserProfile } from '../../initialData';
+import { mockTeam } from '../../initialData';
 
 class App extends Component {
   constructor () {
@@ -53,7 +54,7 @@ class App extends Component {
             <Route  path="/signup" render={() => <SignUp />}/>
             <Route  path="/home"  render={() => <Home />}/>
             <Route  path="/workout"  render={() => <Workout />}/>
-            <Route  path="/team"  render={() => <Team />}/>
+            <Route  path="/team"  render={() => <Team team={mockTeam}/>}/>
             <Route  path="/workout-history" render={() => <WorkoutHistory />}/>
             <Route  path="/user-profile" render={() => <Profile />}/>
             <Route  path="/user-settings" render={() => <Settings />}/>
