@@ -21,6 +21,8 @@ class Control extends Component {
     e.preventDefault();
 
     this.props.loginUser(this.state);
+    // localStorage.setItem(JSON.stringify(this.state.username),JSON.stringify(this.state.username))
+    // this.props.history.push('/home');
     this.setState({ username: '', password: '' });
   }
 
@@ -49,8 +51,12 @@ class Control extends Component {
   }
 };
 
+const mapStateToProps = (state) => ({
+  history: state.history
+})
+
 const mapDispatchToProps = (dispatch) => ({
   loginUser: (user) => dispatch(loginUser(user))
 });
 
-export default connect(null, mapDispatchToProps)(Control);
+export default connect(mapStateToProps, mapDispatchToProps)(Control);
