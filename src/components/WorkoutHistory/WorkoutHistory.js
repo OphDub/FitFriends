@@ -1,9 +1,9 @@
 import React from 'react';
 
-export const Home = () => {
+export const WorkoutHistory = () => {
   return(
     <section>
-      I am Home
+      I am WorkoutHistory
     </section>
   )
 }

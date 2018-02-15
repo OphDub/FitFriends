@@ -1,4 +1,4 @@
-export const loginUser = (action) => ({
+export const loginUser = (user) => ({
   type: 'LOGIN_USER',
-  payload: action,
+  payload: user,
 });
