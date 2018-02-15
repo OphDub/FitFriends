@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Profile = () => {
   return (
-    <article>
+    <article className="Profile">
       I am Profile
     </article>
   )
