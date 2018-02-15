@@ -1,0 +1,33 @@
+.TopNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.TopNav a {
+  width: 95px;
+  height: 95px;
+  text-decoration: none;
+}
+
+.topnav-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: lightgrey;
+  border-radius: 10px;
+}
+
+.topnav-btn h4 {
+  margin: 0px;
+}
+
+.topnav-btn:hover {
+  color: white;
+  background: black;
+}
