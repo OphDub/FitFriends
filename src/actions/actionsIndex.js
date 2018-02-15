@@ -7,3 +7,8 @@ export const postWorkout = (workout) => ({
   type: 'POST_WORKOUT',
   payload: workout,
 });
+
+export const signUpUser = (user) => ({
+  type: 'SIGNUP_USER',
+  payload: user,
+});
