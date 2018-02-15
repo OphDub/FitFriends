@@ -8,7 +8,10 @@ export const Welcome = () => {
     <div className="Welcome">
       <h2>FitFriends</h2>
       <Control />
-      <NavLink to="/signup">New? Sign up here!</NavLink>
+      <NavLink className="sign-up-link"
+        to="/signup">
+          New? Sign up here!
+      </NavLink>
     </div>
   )
 };

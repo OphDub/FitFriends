@@ -6,8 +6,8 @@ import { connect } from 'react-redux';
 import { TopNav } from '../TopNav/TopNav';
 import { SideNav } from '../SideNav/SideNav';
 import { Leaderboard } from '../Leaderboard/Leaderboard';
-
 import { Welcome } from '../Welcome/Welcome';
+import SignUp from '../SignUp/SignUp';
 import { Home } from '../Home/Home';
 import Workout from '../Workout/Workout';
 import { Team } from '../Team/Team';
@@ -34,7 +34,7 @@ class App extends Component {
           <TopNav />
           <Switch>
             <Route  exact path ="/" render={() => <Welcome />}/>
-            <Route  path="/signup"/>
+            <Route  path="/signup" render={() => <SignUp />}/>
             <Route  path="/home"  render={() => <Home />}/>
             <Route  path="/workout"  render={() => <Workout />}/>
             <Route  path="/team"  render={() => <Team />}/>
