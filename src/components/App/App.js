@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Switch, Route } from 'react-router';
+import { Switch, Route, withRouter } from 'react-router';
 import { connect } from 'react-redux';
 
 import { TopNav } from '../TopNav/TopNav';
@@ -16,6 +16,8 @@ import { WorkoutHistory } from '../WorkoutHistory/WorkoutHistory';
 import { fetchAndParse } from '../../helper';
 import { clientID } from '../../apiKey';
 
+import { mockUserProfile } from '../../initialData';
+
 class App extends Component {
   constructor () {
     super();
@@ -29,11 +31,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SideNav />
+        <SideNav user={mockUserProfile}/>
         <div className="App-center">
           <TopNav />
           <Switch>
-            <Route  exact path ="/" render={() => <Welcome />}/>
+            <Route  path ="/" render={() => <Welcome />}/>
             <Route  path="/signup" render={() => <SignUp />}/>
             <Route  path="/home"  render={() => <Home />}/>
             <Route  path="/workout"  render={() => <Workout />}/>
@@ -51,4 +53,4 @@ const mapStateToProps = (state) => ({
   activeUser: state.activeUser,
 })
 
-export default connect(mapStateToProps)(App)
+export default withRouter(connect(mapStateToProps)(App))
