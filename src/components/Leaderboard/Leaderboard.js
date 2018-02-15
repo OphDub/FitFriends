@@ -1,10 +1,10 @@
 import React from 'react';
-import './Leaderboard.scss';
+import './Leaderboard.css';
 
 export const Leaderboard = () => {
   return (
-    <div>
+    <section className="Leaderboard">
       I am Leaderboard
-    </div>
+    </section>
   )
 };

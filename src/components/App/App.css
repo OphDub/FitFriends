@@ -3,3 +3,7 @@ html, body {
   min-width: 100%;
   padding: 0px;
   margin: 0px; }
+
+.App {
+  display: flex;
+  flex-direction: row; }

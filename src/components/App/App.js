@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
-import './App.scss';
+import './App.css';
 import { Switch, Route } from 'react-router';
 import { connect } from 'react-redux';
 
 // import { Main } from '../Main/Main';
 import { TopNav } from '../TopNav/TopNav';
+import { SideNav } from '../SideNav/SideNav';
+import { Leaderboard } from '../Leaderboard/Leaderboard';
+
 import { SignIn } from '../SignIn/SignIn';
 import { Home } from '../Home/Home';
 import Workout from '../Workout/Workout';
@@ -27,17 +30,18 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {
-          this.props.activeUser &&
+        <SideNav />
+        <div className="App-center">
           <TopNav />
-        }
-        <Switch>
-          <Route  exact path ="/" render={() => <SignIn />}/>
-          <Route  path="/home"  render={() => <Home />}/>
-          <Route  path="/workout"  render={() => <Workout />}/>
-          <Route  path="/team"  render={() => <Team />}/>
-          <Route  path="/workout-history" render={() => <WorkoutHistory />}/>
-        </Switch>
+          <Switch>
+            <Route  exact path ="/" render={() => <SignIn />}/>
+            <Route  path="/home"  render={() => <Home />}/>
+            <Route  path="/workout"  render={() => <Workout />}/>
+            <Route  path="/team"  render={() => <Team />}/>
+            <Route  path="/workout-history" render={() => <WorkoutHistory />}/>
+          </Switch>
+        </div>
+        <Leaderboard />
       </div>
     );
   }
