@@ -25,19 +25,19 @@ describe('CONTROL', () => {
 
   it('should clear state when handleSignUp is called', () => {
     const exampleString = 'hello';
-    const exampleEvent = { target: { value: 'hello', name: 'username'}};
+    const exampleEvent = { target: { value: 'hello', name: 'userName'}};
 
     renderedComponent.instance().handleChange(exampleEvent);
     renderedComponent.update();
 
-    expect(renderedComponent.state().username).toEqual(exampleString);
+    expect(renderedComponent.state().userName).toEqual(exampleString);
 
     const expected = '';
     const mockEvent = {preventDefault: jest.fn()};
 
-    renderedComponent.instance().handleLogin(mockEvent);
+    renderedComponent.instance().handleSignUp(mockEvent);
     renderedComponent.update();
 
-    expect(renderedComponent.state().username).toEqual(expected);
+    expect(renderedComponent.state().userName).toEqual(expected);
   });
 })

@@ -18,6 +18,20 @@ class SignUp extends Component {
     this.setState({ [name]: value });
   }
 
+  handleSignUp = (e) => {
+    e.preventDefault();
+
+    //pass user object to reducer for store
+
+    this.setState({
+      firstName: '',
+      lastName: '',
+      userName: '',
+      userEmail: '',
+      userPass: '',
+    });
+  }
+
   render () {
     return (
       <form className="SignUp">
@@ -46,7 +60,10 @@ class SignUp extends Component {
           name="userPass"
           value={this.state.userPass}
           onChange={this.handleChange}/>
-        <button>Sign Up</button>
+        <button
+          onClick={this.handleSignUp}>
+            Sign Up
+        </button>
       </form>
     )
   }
