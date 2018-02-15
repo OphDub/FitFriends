@@ -37,4 +37,17 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "***REMOVED***",
+      authDomain: "***REMOVED***",
+      databaseURL: "***REMOVED***",
+      projectId: "***REMOVED***",
+      storageBucket: "***REMOVED***.appspot.com",
+      messagingSenderId: "***REMOVED***"
+    };
+    firebase.initializeApp(config);
+  </script>
 </html>
