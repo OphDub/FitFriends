@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { postWorkout } from '../../actions/actionsIndex';
+import { connect } from 'react-redux';
 
 class Workout extends Component {
   constructor () {
@@ -6,7 +8,7 @@ class Workout extends Component {
     this.state={
       workoutName: '',
       workoutDesc: '',
-      reps: 0,
+      reps: '',
       exercise: '',
       exercises: []
     }
@@ -17,8 +19,6 @@ class Workout extends Component {
     this.setState({[name]:value});
   }
 
-
-
   addExercise = (e) => {
     e.preventDefault();
     const { reps, exercise } = this.state;
@@ -26,13 +26,23 @@ class Workout extends Component {
     const exercises = [...this.state.exercises, newExercise]
     this.setState({
       exercises,
-      reps: 0,
+      reps: '',
       exercise: '',
     });
   }
 
   postWorkout = (e) => {
     e.preventDefault();
+    const { workoutName, workoutDesc, exercises } = this.state;
+    this.props.postWorkout({ workoutName, workoutDesc, exercises });
+
+    this.setState({
+      workoutName: '',
+      workoutDesc: '',
+      reps: '',
+      exercise: '',
+      exercises: [],
+    })
   }
 
   render () {
@@ -75,4 +85,8 @@ class Workout extends Component {
   }
 }
 
-export default Workout;
+const mapDispatchToProps = (dispatch) => ({
+  postWorkout: (workout) => dispatch(postWorkout(workout))
+})
+
+export default connect(null, mapDispatchToProps)(Workout);
