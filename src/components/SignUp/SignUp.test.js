@@ -20,7 +20,7 @@ describe('CONTROL', () => {
     renderedComponent.instance().handleChange(mockEvent);
     renderedComponent.update();
 
-    expect(renderedComponent.state().username).toEqual(expected);
+    expect(renderedComponent.state().userName).toEqual(expected);
   });
 
   it('should clear state when handleSignUp is called', () => {
