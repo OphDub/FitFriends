@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.scss';
 import { Switch, Route } from 'react-router';
+import { connect } from 'react-redux';
 
 // import { Main } from '../Main/Main';
 import { TopNav } from '../TopNav/TopNav';
@@ -26,7 +27,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <TopNav />
+        {
+          this.props.activeUser &&
+          <TopNav />
+        }
         <Switch>
           <Route  exact path ="/" render={() => <SignIn />}/>
           <Route  path="/home"  render={() => <Home />}/>
@@ -39,4 +43,8 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = (state) => ({
+  activeUser: state.activeUser,
+})
+
+export default connect(mapStateToProps)(App)
