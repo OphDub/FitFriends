@@ -3,7 +3,6 @@ import './App.css';
 import { Switch, Route } from 'react-router';
 import { connect } from 'react-redux';
 
-// import { Main } from '../Main/Main';
 import { TopNav } from '../TopNav/TopNav';
 import { SideNav } from '../SideNav/SideNav';
 import { Leaderboard } from '../Leaderboard/Leaderboard';
