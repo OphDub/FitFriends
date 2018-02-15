@@ -29,3 +29,8 @@ export const mockWorkoutHistory = [
   }
 ]
 
+export const mockUserProfile = {
+  userImage: 'http://www.ixgetfit.com/wp-content/uploads/2017/10/Brooke-Wells-350x350-300x300.jpg',
+  userName: 'Brooke'
+}
+
