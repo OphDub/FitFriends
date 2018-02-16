@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { postWorkout } from '../../actions/actionsIndex';
 import { connect } from 'react-redux';
+import './Workout.css';
 
 class Workout extends Component {
   constructor () {
@@ -47,18 +48,20 @@ class Workout extends Component {
 
   render () {
     return(
-      <section>
-        <form action="submit">
-          <input type="text"
-            placeholder="Workout Name"
-            name="workoutName"
-            value={this.state.workoutName}
-            onChange={this.handleChange}/>
-          <input type="text"
-            placeholder="Workout Description (Optional)"
-            name="workoutDesc"
-            value={this.state.workoutDesc}
-            onChange={this.handleChange}/>
+      <section className="Workout">
+        <form className="Workout-form">
+          <div className="Workout-info">
+            <input type="text"
+              placeholder="Workout Name"
+              name="workoutName"
+              value={this.state.workoutName}
+              onChange={this.handleChange}/>
+            <input type="text"
+              placeholder="Workout Description (Optional)"
+              name="workoutDesc"
+              value={this.state.workoutDesc}
+              onChange={this.handleChange}/>
+          </div>
           <div>
             <h4>Exercises</h4>
             <div>
@@ -75,11 +78,11 @@ class Workout extends Component {
               <button onClick={this.addExercise}> + </button>
             </div>
           </div>
+          <button className="Workout-post-btn"
+            onClick={this.postWorkout}>
+              Post Workout
+          </button>
         </form>
-        <button type="submit"
-          onClick={this.postWorkout}>
-            Post Workout
-        </button>
       </section>
     )
   }
