@@ -1,15 +1,16 @@
 import React from 'react';
+import './Teammate.css';
 
 export const Teammate = ({ name, workoutTally, workoutsPosted }) => {
   return(
-    <article className="teammate">
-      <h4>{name}</h4>
+    <article className="Teammate">
+      <h4 className="teammate-name">{name}</h4>
       <ul>
-        <li>
+        <li className="teammate-tally">
           <h6>Workout Tally:</h6>
           <p>{workoutTally}</p>
         </li>
-        <li>
+        <li className="teammate-posted">
           <h6>Workouts Posted:</h6>
           <p>{workoutsPosted}</p>
         </li>

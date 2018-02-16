@@ -1,4 +1,5 @@
 import React from 'react';
+import './Team.css';
 import { Teammate }from '../Teammate/Teammate';
 
 export const Team = ({team}) => {
@@ -7,7 +8,7 @@ export const Team = ({team}) => {
   )
 
   return(
-    <section className="team">
+    <section className="Team">
       {renderedTeam}
     </section>
   )
