@@ -40,8 +40,8 @@ class Workout extends Component {
     e.preventDefault();
     const { id } = e.target
 
-    const filtered = this.state.exercises.filter(exercise => exercise.id !== id)
-    console.log(filtered);
+    const filtered = this.state.exercises.filter(exercise =>
+      exercise.id !== parseInt(id))
 
     this.setState({ exercises: filtered });
   }
