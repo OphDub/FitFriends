@@ -1,4 +1,5 @@
 import React from 'react';
+import './WorkoutHistory.css';
 // import { connect } from 'react-redux';
 
 export const WorkoutHistory = ({workouts}) => {
