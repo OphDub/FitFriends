@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import { Switch, Route, withRouter } from 'react-router';
 import { connect } from 'react-redux';
-import { base } from '../../base';
 
 import { TopNav } from '../TopNav/TopNav';
 import { SideNav } from '../SideNav/SideNav';
@@ -28,17 +27,6 @@ import { clientID, clientSecret } from '../../apiKey';
 class App extends Component {
   constructor () {
     super();
-  }
-
-  componentWillMount () {
-    this.activeUserRef = base.syncState('users', {
-      context: this,
-      state: 'users'
-    });
-  }
-
-  componentWillUnmount () {
-    base.removeBinding(this.activeUserRef);
   }
 
   componentDidMount () {

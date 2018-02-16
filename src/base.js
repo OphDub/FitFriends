@@ -2,7 +2,6 @@ import Rebase from 're-base';
 import firebase from 'firebase';
 import { config } from './apiKey';
 
-const app = firebase.initializeApp(config)
-const base = Rebase.createClass(app.database())
-
-export { base }
+firebase.initializeApp(config)
+export const userDb = firebase.database().ref('users/');
+export const workouts = firebase.database().ref('workouts/')
