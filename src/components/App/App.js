@@ -11,7 +11,7 @@ import SignUp from '../SignUp/SignUp';
 import { Home } from '../Home/Home';
 import Workout from '../Workout/Workout';
 import { Team } from '../Team/Team';
-import { WorkoutHistory } from '../WorkoutHistory/WorkoutHistory';
+import {WorkoutHistory} from '../WorkoutHistory/WorkoutHistory';
 import { Profile } from '../Profile/Profile';
 import { Settings } from '../Settings/Settings';
 
@@ -19,6 +19,7 @@ import { loginUser } from '../../actions/actionsIndex';
 
 import { mockUserProfile } from '../../initialData';
 import { mockTeam } from '../../initialData';
+import { mockWorkoutHistory } from '../../initialData';
 
 import { clientID, clientSecret } from '../../apiKey';
 // var FitbitApiClient = require('fitbit-node');
@@ -53,14 +54,30 @@ class App extends Component {
           <TopNav />
         }
           <Switch>
-            <Route  exact path ="/" render={() => <Welcome />}/>
-            <Route  path="/signup" render={() => <SignUp />}/>
-            <Route  path="/home"  render={() => <Home />}/>
-            <Route  path="/workout"  render={() => <Workout />}/>
-            <Route  path="/team"  render={() => <Team team={mockTeam}/>}/>
-            <Route  path="/workout-history" render={() => <WorkoutHistory />}/>
-            <Route  path="/profile" render={() => <Profile />}/>
-            <Route  path="/settings" render={() => <Settings />}/>
+            <Route
+              exact path ="/"
+              render={() => <Welcome />}/>
+            <Route
+              path="/signup"
+              render={() => <SignUp />}/>
+            <Route
+              path="/home"
+              render={() => <Home />}/>
+            <Route
+              path="/workout"
+              render={() => <Workout />}/>
+            <Route
+              path="/team"
+              render={() => <Team team={mockTeam}/>}/>
+            <Route
+              path="/workout-history"
+              render={() => <WorkoutHistory workouts={mockWorkoutHistory}/>}/>
+            <Route
+              path="/profile"
+              render={() => <Profile />}/>
+            <Route
+              path="/settings"
+              render={() => <Settings />}/>
           </Switch>
         </div>
         {

@@ -62,7 +62,7 @@ class Workout extends Component {
           <div>
             <h4>Exercises</h4>
             <div>
-              <input  type="number"
+              <input  type="number" 
                 placeholder="Reps"
                 name="reps"
                 value={this.state.reps}
