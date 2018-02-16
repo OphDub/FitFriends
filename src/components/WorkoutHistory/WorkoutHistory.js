@@ -1,8 +1,8 @@
 import React from 'react';
 import './WorkoutHistory.css';
-// import { connect } from 'react-redux';
+import { connect } from 'react-redux';
 
-export const WorkoutHistory = ({workouts}) => {
+const WorkoutHistory = ({workouts}) => {
   const renderedWorkouts = workouts.map((workout) => {
     const exercises = workout.exercises.map((exercise) => {
       return(
@@ -35,4 +35,4 @@ const mapStateToProps = (state) => ({
   workouts: state.workouts,
 });
 
-// export default connect(mapStateToProps)(WorkoutHistory);
+export default connect(mapStateToProps)(WorkoutHistory);
