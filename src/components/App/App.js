@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { TopNav } from '../TopNav/TopNav';
 import { SideNav } from '../SideNav/SideNav';
 import { Leaderboard } from '../Leaderboard/Leaderboard';
-import { Welcome } from '../Welcome/Welcome';
+import Welcome from '../Welcome/Welcome';
 import SignUp from '../SignUp/SignUp';
 import { Home } from '../Home/Home';
 import Workout from '../Workout/Workout';
@@ -56,27 +56,27 @@ class App extends Component {
           <Switch>
             <Route
               exact path ="/"
-              render={() => <Welcome />}/>
+              component={Welcome}/>
             <Route
               path="/signup"
-              render={() => <SignUp />}/>
+              component={SignUp}/>
             <Route
               path="/home"
-              render={() => <Home />}/>
+              component={Home}/>
             <Route
-              path="/workout"
+              exact path="/workout"
               render={() => <Workout />}/>
             <Route
-              path="/team"
+              exact path="/team"
               render={() => <Team team={mockTeam}/>}/>
             <Route
-              path="/workout-history"
+              exact path="/history"
               render={() => <WorkoutHistory workouts={mockWorkoutHistory}/>}/>
             <Route
-              path="/profile"
+              exact path="/profile"
               render={() => <Profile />}/>
             <Route
-              path="/settings"
+              exact path="/settings"
               render={() => <Settings />}/>
           </Switch>
         </div>
