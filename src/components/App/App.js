@@ -11,7 +11,7 @@ import SignUp from '../SignUp/SignUp';
 import { Home } from '../Home/Home';
 import Workout from '../Workout/Workout';
 import { Team } from '../Team/Team';
-import {WorkoutHistory} from '../WorkoutHistory/WorkoutHistory';
+import WorkoutHistory from '../WorkoutHistory/WorkoutHistory';
 import { Profile } from '../Profile/Profile';
 import { Settings } from '../Settings/Settings';
 
@@ -64,20 +64,20 @@ class App extends Component {
               path="/home"
               component={Home}/>
             <Route
-              exact path="/workout"
-              render={() => <Workout />}/>
+              path="/workout"
+              component={Workout}/>
             <Route
-              exact path="/team"
-              render={() => <Team team={mockTeam}/>}/>
+              path="/team"
+              component={Team}/>
             <Route
-              exact path="/history"
-              render={() => <WorkoutHistory workouts={mockWorkoutHistory}/>}/>
+              path="/history"
+              component={WorkoutHistory}/>
             <Route
-              exact path="/profile"
-              render={() => <Profile />}/>
+              path="/profile"
+              component={Profile}/>
             <Route
-              exact path="/settings"
-              render={() => <Settings />}/>
+              path="/settings"
+              component={Settings}/>
           </Switch>
         </div>
         {

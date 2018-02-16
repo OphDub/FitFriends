@@ -25,7 +25,7 @@ export const TopNav = () => {
           </h4>
         </button>
       </NavLink>
-      <NavLink to="/workout-history">
+      <NavLink to="/history">
         <button className="topnav-btn">
           <FontAwesomeIcon icon={faHistory} size="3x"/>
           <h4>
