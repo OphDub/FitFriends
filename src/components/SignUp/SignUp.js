@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './SignUp.css';
 import { connect } from 'react-redux';
 import { signUpUser, loginUser } from '../../actions/actionsIndex';
-
 class SignUp extends Component {
   constructor () {
     super()
