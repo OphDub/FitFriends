@@ -8,7 +8,7 @@ class Control extends Component {
     super ();
     this.state = {
       username: '',
-      password: ''
+      password: '',
     }
   }
 
@@ -22,8 +22,7 @@ class Control extends Component {
 
     //authenticate user here
     this.props.loginUser({user: this.state.username});
-
-    // this.props.history.push('/home');
+    this.props.handleReroute();
     this.setState({ username: '', password: '' });
   }
 
