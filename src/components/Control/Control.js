@@ -20,8 +20,9 @@ class Control extends Component {
   handleLogin = (e) => {
     e.preventDefault();
 
-    this.props.loginUser(this.state);
-    // localStorage.setItem(JSON.stringify(this.state.username),JSON.stringify(this.state.username))
+    //authenticate user here
+    this.props.loginUser({user: this.state.username});
+
     // this.props.history.push('/home');
     this.setState({ username: '', password: '' });
   }

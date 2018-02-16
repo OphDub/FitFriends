@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { Switch, Route, withRouter } from 'react-router';
 import { connect } from 'react-redux';
+import { base } from '../../base';
 
 import { TopNav } from '../TopNav/TopNav';
 import { SideNav } from '../SideNav/SideNav';
@@ -16,22 +17,36 @@ import { Profile } from '../Profile/Profile';
 import { Settings } from '../Settings/Settings';
 
 import { loginUser } from '../../actions/actionsIndex';
-import { fetchAndParse } from '../../helper';
-import { clientID } from '../../apiKey';
 
 import { mockUserProfile } from '../../initialData';
 import { mockTeam } from '../../initialData';
+
+import { clientID, clientSecret } from '../../apiKey';
+// var FitbitApiClient = require('fitbit-node');
+// const fbApi = new FitbitApiClient(clientID, clientSecret);
 
 class App extends Component {
   constructor () {
     super();
   }
 
+  componentWillMount () {
+    this.activeUserRef = base.syncState('users', {
+      context: this,
+      state: 'users'
+    });
+  }
+
+  componentWillUnmount () {
+    base.removeBinding(this.activeUserRef);
+  }
+
   componentDidMount () {
-    // if (localStorage.getItem('username')) {
-    //   const user = localStorage.getItem('username')
-    //   this.props.loginUser({user})
-    // }
+    // const scope ='activity%20nutrition%20heartrate%20location%20nutrition%20profile%20settings%20sleep%20social%20weight';
+    // const redirectUrl = 'http://localhost:3000';
+    // const authUrl = fbApi.getAuthorizeUrl(scope, redirectUrl);
+
+    // console.log(authUrl);
 
     // const root = `https://www.fitbit.com/oauth2/authorize?`;
     // fetchAndParse(`${root}response_type=code&client_id=213NFP&redirect_uri=http://localhost:3000&scope=activity%20heartrate%20location%20nutrition%20profile%20settings%20sleep%20social%20weight&expires_in=604800`);
