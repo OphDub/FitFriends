@@ -8,7 +8,7 @@ class Control extends Component {
     super ();
     this.state = {
       username: '',
-      password: ''
+      password: '',
     }
   }
 
@@ -20,7 +20,9 @@ class Control extends Component {
   handleLogin = (e) => {
     e.preventDefault();
 
+    //authenticate user here
     this.props.loginUser(this.state);
+    this.props.handleReroute();
     this.setState({ username: '', password: '' });
   }
 
@@ -28,14 +30,14 @@ class Control extends Component {
     return (
       <form type="submit" className="Control">
         <input  className="Control-input Control-username"
-          type="text"
-          placeholder="username"
+          type="email"
+          placeholder="Email"
           name="username"
           value={this.state.username}
           onChange={this.handleChange}/>
         <input  className="Control-input Control-password"
           type="password"
-          placeholder="password"
+          placeholder="Password"
           name="password"
           value={this.state.password}
           onChange={this.handleChange}/>
@@ -49,8 +51,12 @@ class Control extends Component {
   }
 };
 
+const mapStateToProps = (state) => ({
+  history: state.history
+})
+
 const mapDispatchToProps = (dispatch) => ({
   loginUser: (user) => dispatch(loginUser(user))
 });
 
-export default connect(null, mapDispatchToProps)(Control);
+export default connect(mapStateToProps, mapDispatchToProps)(Control);

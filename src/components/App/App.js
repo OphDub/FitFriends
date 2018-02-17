@@ -1,27 +1,31 @@
 import React, { Component } from 'react';
-import './App.scss';
-import { Switch, Route } from 'react-router';
+import './App.css';
+import { Switch, Route, withRouter } from 'react-router';
 import { connect } from 'react-redux';
 
-// import { Main } from '../Main/Main';
 import { TopNav } from '../TopNav/TopNav';
-import { SignIn } from '../SignIn/SignIn';
+import { SideNav } from '../SideNav/SideNav';
+import { Leaderboard } from '../Leaderboard/Leaderboard';
+import Welcome from '../Welcome/Welcome';
+import SignUp from '../SignUp/SignUp';
 import { Home } from '../Home/Home';
 import Workout from '../Workout/Workout';
 import { Team } from '../Team/Team';
-import { WorkoutHistory } from '../WorkoutHistory/WorkoutHistory';
+import WorkoutHistory from '../WorkoutHistory/WorkoutHistory';
+import { Profile } from '../Profile/Profile';
+import { Settings } from '../Settings/Settings';
 
-import { fetchAndParse } from '../../helper';
-import { clientID } from '../../apiKey';
+import { loginUser } from '../../actions/actionsIndex';
+
+import { mockUserProfile } from '../../initialData';
+import { mockTeam } from '../../initialData';
+import { mockWorkoutHistory } from '../../initialData';
+
+import { clientID, clientSecret } from '../../apiKey';
 
 class App extends Component {
   constructor () {
     super();
-  }
-
-  componentDidMount () {
-    // const root = `https://www.fitbit.com/oauth2/authorize?`;
-    // fetchAndParse(`${root}response_type=code&client_id=213NFP&redirect_uri=http://localhost:3000&scope=activity%20heartrate%20location%20nutrition%20profile%20settings%20sleep%20social%20weight&expires_in=604800`);
   }
 
   render() {
@@ -29,15 +33,44 @@ class App extends Component {
       <div className="App">
         {
           this.props.activeUser &&
+          <SideNav user={mockUserProfile}/>
+        }
+        <div className="App-center">
+        {
+          this.props.activeUser &&
           <TopNav />
         }
-        <Switch>
-          <Route  exact path ="/" render={() => <SignIn />}/>
-          <Route  path="/home"  render={() => <Home />}/>
-          <Route  path="/workout"  render={() => <Workout />}/>
-          <Route  path="/team"  render={() => <Team />}/>
-          <Route  path="/workout-history" render={() => <WorkoutHistory />}/>
-        </Switch>
+          <Switch>
+            <Route
+              exact path ="/"
+              component={Welcome}/>
+            <Route
+              path="/signup"
+              component={SignUp}/>
+            <Route
+              path="/home"
+              render={this.props.activeUser ? (<Home />) : (<Welcome />)}/>
+            <Route
+              path="/workout"
+              render={() => this.props.activeUser ? (<Workout />) : (<Welcome />)}/>
+            <Route
+              path="/team"
+              render={() => this.props.activeUser ? (<Team />) : (<Welcome />)}/>
+            <Route
+              path="/history"
+              render={() => this.props.activeUser ? (<WorkoutHistory />) : (<Welcome />)}/>
+            <Route
+              path="/profile"
+              render={() => this.props.activeUser ? (<Profile />) : (<Welcome />) }/>
+            <Route
+              path="/settings"
+              render={() => this.props.activeUser ? (<Settings />) : (<Welcome />)}/>
+          </Switch>
+        </div>
+        {
+          this.props.activeUser &&
+          <Leaderboard />
+        }
       </div>
     );
   }
@@ -47,4 +80,8 @@ const mapStateToProps = (state) => ({
   activeUser: state.activeUser,
 })
 
-export default connect(mapStateToProps)(App)
+const mapDispatchToProps = (dispatch) => ({
+  loginUser: (user) => dispatch(loginUser(user))
+})
+
+export default withRouter(connect(mapStateToProps,mapDispatchToProps)(App))
