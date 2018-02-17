@@ -5,6 +5,8 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faHome from '@fortawesome/fontawesome-free-solid/faHome';
 import faUser from '@fortawesome/fontawesome-free-solid/faUser';
 import faCog from '@fortawesome/fontawesome-free-solid/faCog';
+import { connectToFitBit } from '../../helper';
+
 
 export const SideNav = ({ userImage, userName }) => {
   return (
@@ -32,6 +34,9 @@ export const SideNav = ({ userImage, userName }) => {
             Settings
           </button>
         </NavLink>
+        <button onClick={connectToFitBit}>
+          Connect to FitBit
+        </button>
       </div>
     </section>
   )
