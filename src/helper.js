@@ -1,6 +1,4 @@
 import { clientID, clientSecret } from './apiKey';
-const root = 'https://www.fitbit.com/oauth2/authorize?'
-const redirect = '&redirect_uri=http://localhost:3000/home';
 
 export const connectToFitBit = () => {
   const root = 'https://www.fitbit.com/oauth2/authorize?';
