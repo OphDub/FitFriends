@@ -21,7 +21,7 @@ class Control extends Component {
     e.preventDefault();
 
     //authenticate user here
-    this.props.loginUser({user: this.state.username});
+    this.props.loginUser(this.state);
     this.props.handleReroute();
     this.setState({ username: '', password: '' });
   }
