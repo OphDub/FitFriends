@@ -40,4 +40,13 @@ describe('CONTROL', () => {
 
     expect(renderedComponent.state().username).toEqual(expected);
   });
+
+  it('calls loginUser and handleReroute when handleLogin is called', () => {
+    const mockFn = jest.fn();
+    const wrapper = shallow(<Control loginUser={mockFn} handleReroute={mockFn}/>);
+    const mockEvent = { preventDefault: jest.fn() };
+
+    wrapper.instance().handleLogin(mockEvent);
+    expect(mockFn).toHaveBeenCalled();
+  });
 })
