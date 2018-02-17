@@ -22,26 +22,28 @@ ShallowWrapper {
           className="Control-input Control-username"
           name="username"
           onChange={[Function]}
-          placeholder="username"
-          type="text"
+          placeholder="Email"
+          type="email"
           value=""
 />,
         <input
           className="Control-input Control-password"
           name="password"
           onChange={[Function]}
-          placeholder="password"
+          placeholder="Password"
           type="password"
           value=""
 />,
         <button
           className="login-btn"
           onClick={[Function]}
+          type="submit"
 >
           Login
 </button>,
       ],
       "className": "Control",
+      "type": "submit",
     },
     "ref": null,
     "rendered": Array [
@@ -53,8 +55,8 @@ ShallowWrapper {
           "className": "Control-input Control-username",
           "name": "username",
           "onChange": [Function],
-          "placeholder": "username",
-          "type": "text",
+          "placeholder": "Email",
+          "type": "email",
           "value": "",
         },
         "ref": null,
@@ -69,7 +71,7 @@ ShallowWrapper {
           "className": "Control-input Control-password",
           "name": "password",
           "onChange": [Function],
-          "placeholder": "password",
+          "placeholder": "Password",
           "type": "password",
           "value": "",
         },
@@ -85,6 +87,7 @@ ShallowWrapper {
           "children": "Login",
           "className": "login-btn",
           "onClick": [Function],
+          "type": "submit",
         },
         "ref": null,
         "rendered": "Login",
@@ -104,26 +107,28 @@ ShallowWrapper {
             className="Control-input Control-username"
             name="username"
             onChange={[Function]}
-            placeholder="username"
-            type="text"
+            placeholder="Email"
+            type="email"
             value=""
 />,
           <input
             className="Control-input Control-password"
             name="password"
             onChange={[Function]}
-            placeholder="password"
+            placeholder="Password"
             type="password"
             value=""
 />,
           <button
             className="login-btn"
             onClick={[Function]}
+            type="submit"
 >
             Login
 </button>,
         ],
         "className": "Control",
+        "type": "submit",
       },
       "ref": null,
       "rendered": Array [
@@ -135,8 +140,8 @@ ShallowWrapper {
             "className": "Control-input Control-username",
             "name": "username",
             "onChange": [Function],
-            "placeholder": "username",
-            "type": "text",
+            "placeholder": "Email",
+            "type": "email",
             "value": "",
           },
           "ref": null,
@@ -151,7 +156,7 @@ ShallowWrapper {
             "className": "Control-input Control-password",
             "name": "password",
             "onChange": [Function],
-            "placeholder": "password",
+            "placeholder": "Password",
             "type": "password",
             "value": "",
           },
@@ -167,6 +172,7 @@ ShallowWrapper {
             "children": "Login",
             "className": "login-btn",
             "onClick": [Function],
+            "type": "submit",
           },
           "ref": null,
           "rendered": "Login",

@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Control from './Control';
+import { Control, mapStateToProps, mapDispatchToProps } from './Control';
 
 describe('CONTROL', () => {
   let renderedComponent;
@@ -26,19 +26,21 @@ describe('CONTROL', () => {
   it('should clear state when handleLogin is called', () => {
     const exampleString = 'hello';
     const exampleEvent = { target: { value: 'hello', name: 'username'}};
+    const mockFn = jest.fn();
+    const wrapper = shallow(<Control loginUser={mockFn} handleReroute={mockFn}/>);
 
-    renderedComponent.instance().handleChange(exampleEvent);
-    renderedComponent.update();
+    wrapper.instance().handleChange(exampleEvent);
+    wrapper.update();
 
-    expect(renderedComponent.state().username).toEqual(exampleString);
+    expect(wrapper.state().username).toEqual(exampleString);
 
     const expected = '';
     const mockEvent = {preventDefault: jest.fn()};
 
-    renderedComponent.instance().handleLogin(mockEvent);
-    renderedComponent.update();
+    wrapper.instance().handleLogin(mockEvent);
+    wrapper.update();
 
-    expect(renderedComponent.state().username).toEqual(expected);
+    expect(wrapper.state().username).toEqual(expected);
   });
 
   it('calls loginUser and handleReroute when handleLogin is called', () => {
@@ -49,4 +51,13 @@ describe('CONTROL', () => {
     wrapper.instance().handleLogin(mockEvent);
     expect(mockFn).toHaveBeenCalled();
   });
-})
+
+  it('should call the dispatch func when using a func from mapDispatchToProps', () => {
+    const mockDispatch = jest.fn();
+    const mapped = mapDispatchToProps(mockDispatch);
+
+    mapped.loginUser();
+
+    expect(mockDispatch).toHaveBeenCalled();
+  })
+});
