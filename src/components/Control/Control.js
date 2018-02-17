@@ -30,14 +30,14 @@ class Control extends Component {
     return (
       <form type="submit" className="Control">
         <input  className="Control-input Control-username"
-          type="text"
-          placeholder="username"
+          type="email"
+          placeholder="Email"
           name="username"
           value={this.state.username}
           onChange={this.handleChange}/>
         <input  className="Control-input Control-password"
           type="password"
-          placeholder="password"
+          placeholder="Password"
           name="password"
           value={this.state.password}
           onChange={this.handleChange}/>

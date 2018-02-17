@@ -49,22 +49,22 @@ class App extends Component {
               component={SignUp}/>
             <Route
               path="/home"
-              component={Home}/>
+              render={this.props.activeUser ? (<Home />) : (<Welcome />)}/>
             <Route
               path="/workout"
-              component={Workout}/>
+              render={() => this.props.activeUser ? (<Workout />) : (<Welcome />)}/>
             <Route
               path="/team"
-              component={Team}/>
+              render={() => this.props.activeUser ? (<Team />) : (<Welcome />)}/>
             <Route
               path="/history"
-              component={WorkoutHistory}/>
+              render={() => this.props.activeUser ? (<WorkoutHistory />) : (<Welcome />)}/>
             <Route
               path="/profile"
-              component={Profile}/>
+              render={() => this.props.activeUser ? (<Profile />) : (<Welcome />) }/>
             <Route
               path="/settings"
-              component={Settings}/>
+              render={() => this.props.activeUser ? (<Settings />) : (<Welcome />)}/>
           </Switch>
         </div>
         {
