@@ -22,23 +22,10 @@ import { mockTeam } from '../../initialData';
 import { mockWorkoutHistory } from '../../initialData';
 
 import { clientID, clientSecret } from '../../apiKey';
-// var FitbitApiClient = require('fitbit-node');
-// const fbApi = new FitbitApiClient(clientID, clientSecret);
 
 class App extends Component {
   constructor () {
     super();
-  }
-
-  componentDidMount () {
-    // const scope ='activity%20nutrition%20heartrate%20location%20nutrition%20profile%20settings%20sleep%20social%20weight';
-    // const redirectUrl = 'http://localhost:3000';
-    // const authUrl = fbApi.getAuthorizeUrl(scope, redirectUrl);
-
-    // console.log(authUrl);
-
-    // const root = `https://www.fitbit.com/oauth2/authorize?`;
-    // fetchAndParse(`${root}response_type=code&client_id=213NFP&redirect_uri=http://localhost:3000&scope=activity%20heartrate%20location%20nutrition%20profile%20settings%20sleep%20social%20weight&expires_in=604800`);
   }
 
   render() {
