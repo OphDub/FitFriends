@@ -1,0 +1,23 @@
+.Teammate {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.teammate-name,
+.teammate-tally,
+.teammate-posted,
+h6,p {
+  margin: 0px;
+}
+
+.Teammate ul {
+  width: 50%;
+}
+
+.Teammate li {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}

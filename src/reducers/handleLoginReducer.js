@@ -1,4 +1,4 @@
-export const handleLoginReducer = (state = {}, action) => {
+export const handleLoginReducer = (state = null, action) => {
   switch (action.type) {
     case 'LOGIN_USER':
       return action.payload;

@@ -1,0 +1,15 @@
+.workout {
+  padding: 10px;
+  display: flex;
+  flex-direction: column; }
+
+.exercises {
+  align-items: center; }
+
+.exercise {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.exercise-reps, .exercise-name {
+  margin: 0px; }
