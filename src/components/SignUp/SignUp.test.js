@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import SignUp from './SignUp';
+import { SignUp } from './SignUp';
 
-describe('CONTROL', () => {
+describe('SIGNUP', () => {
   let renderedComponent;
 
   beforeEach(() => {
