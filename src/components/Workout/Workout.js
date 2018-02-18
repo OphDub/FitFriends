@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { postWorkout } from '../../actions/actionsIndex';
 import { connect } from 'react-redux';
 import './Workout.css';
+import { workouts } from '../../base';
 // import FontAwesomeIcon from '@fortawesome/fontawesome';
 // import faMinusSquare from '@fortawesome/fontawesome-free-solid/faMinusSquare';
 // import faPlusSquare from '@fortawesome/fontawesome-free-solid/faPlusSquare';
@@ -92,7 +93,7 @@ class Workout extends Component {
           </div>
           <div>
             <h4>Exercises</h4>
-            <ul>
+            <ul className="rendered-exercises">
               {this.renderExercises()}
             </ul>
             <div>

@@ -8,6 +8,6 @@ export const connectToFitBit = () => {
 
   const tokenInfo = window.location.href;
   window.location = `${root}response_type=code&client_id=${clientID}&redirect_uri=${redirect}&scope=${scope}&expires_in=${exp}`;
-
-  console.log(tokenInfo);
+  debugger;
+  console.log(window.location.href);
 }
