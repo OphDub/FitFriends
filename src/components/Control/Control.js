@@ -51,8 +51,12 @@ export class Control extends Component {
   }
 };
 
+export const mapStateToProps = (state) => ({
+  history: state.history
+})
+
 export const mapDispatchToProps = (dispatch) => ({
   loginUser: (user) => dispatch(loginUser(user))
-});
+})
 
-export default connect(null, mapDispatchToProps)(Control);
+export default connect(mapStateToProps, mapDispatchToProps)(Control);
