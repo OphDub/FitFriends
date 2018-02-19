@@ -26,7 +26,10 @@ export class SignUp extends Component {
     const userId = Date.now();
     this.setState({ userId });
     this.props.signUpUser(this.state);
-    this.props.loginUser({user: this.state.userName});
+    this.props.loginUser({
+      user: this.state.userName,
+      password: this.state.userPass,
+    });
 
     this.setState({
       firstName: '',
