@@ -1,4 +1,7 @@
 .Control {
   display: flex;
   flex-direction: column;
-  width: 25%; }
+  width: 300px; }
+
+.Control-input {
+  margin-bottom: 15px; }
