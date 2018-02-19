@@ -21,14 +21,12 @@ import { mockUserProfile } from '../../initialData';
 import { mockTeam } from '../../initialData';
 import { mockWorkoutHistory } from '../../initialData';
 
-import { clientID, clientSecret } from '../../apiKey';
-
 class App extends Component {
   constructor () {
     super();
   }
 
-  render() {
+  render() { 
     return (
       <div className="App">
         {
