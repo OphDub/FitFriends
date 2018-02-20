@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import WorkoutHistory from './WorkoutHistory';
 
-describe('WORKOUTHISTORY', () => {
+describe('WORKOUT HISTORY', () => {
   let renderedComponent;
 
   beforeEach(() => {
