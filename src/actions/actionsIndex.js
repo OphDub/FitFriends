@@ -1,4 +1,16 @@
 import { workouts } from '../base';
+import { auth } from '../base';
+
+export const getUser = (user) => {
+  return dispatch => {
+    auth.onAuthStateChanged( user => {
+      dispatch({
+        type: 'GET_USER',
+        payload: user
+      })
+    })
+  }
+}
 
 export const loginUser = (user) => ({
   type: 'LOGIN_USER',
