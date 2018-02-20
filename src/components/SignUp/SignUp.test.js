@@ -38,7 +38,7 @@ describe('SIGNUP', () => {
 
     expect(renderedComponent.state().userId).toEqual(mockUserId);
 
-    Date.now = originalDateNow
+    Date.now = originalDateNow;
   })
 
   it('should call SignUpUser and loginUser when handleSignUp is called', () => {
