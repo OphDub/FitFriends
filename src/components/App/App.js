@@ -67,7 +67,7 @@ class App extends Component {
         </div>
         {
           this.props.activeUser &&
-          <Leaderboard />
+          <Leaderboard topThree={mockTeam}/>
         }
       </div>
     );

@@ -10,6 +10,7 @@ export const Leaderboard = ({topThree}) => {
   return (
     <section className="Leaderboard">
       <h3>Leaderboard</h3>
+      {renderedLeaders}
     </section>
   )
 };
