@@ -1,4 +1,4 @@
-// import { workouts } from '../base';
+import { workouts } from '../base';
 
 // import Firebase from 'firebase';
 // const workouts = new Firebase('***REMOVED***');
@@ -37,7 +37,13 @@ export const signUpUser = (user) => ({
   payload: user,
 });
 
-export const getWorkouts = () => ({
-  type: 'GET_WORKOUTS',
-  payload: INITIAL_WORKOUTS
-})
+export const getWorkouts = () => {
+  return dispatch => {
+    workouts.on('value', snapshot => {
+      dispatch({
+        type: 'GET_WORKOUTS',
+        payload: snapshot.val()
+      })
+    })
+  }
+}
