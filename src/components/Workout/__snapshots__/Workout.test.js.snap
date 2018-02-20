@@ -719,3 +719,971 @@ ShallowWrapper {
   },
 }
 `;
+
+exports[`WORKOUT should return jsx based on the exercises array when renderExercises is called 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Workout />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <form
+        className="Workout-form"
+>
+        <div
+                className="Workout-info"
+        >
+                <input
+                        name="workoutName"
+                        onChange={[Function]}
+                        placeholder="Workout Name"
+                        type="text"
+                        value=""
+                />
+                <input
+                        name="workoutDesc"
+                        onChange={[Function]}
+                        placeholder="Workout Description (Optional)"
+                        type="text"
+                        value=""
+                />
+        </div>
+        <div>
+                <h4>
+                        Exercises
+                </h4>
+                <ul
+                        className="rendered-exercises"
+                >
+                        <li
+                                className="rendered-exercise"
+                        >
+                                <h6>
+                                        5
+                                </h6>
+                                <h6>
+                                        some exercise
+                                </h6>
+                                <button
+                                        id={1519148514421}
+                                        onClick={[Function]}
+                                >
+                                        -
+                                </button>
+                        </li>
+                </ul>
+                <div>
+                        <input
+                                name="reps"
+                                onChange={[Function]}
+                                placeholder="Reps"
+                                type="number"
+                                value=""
+                        />
+                        <input
+                                name="exercise"
+                                onChange={[Function]}
+                                placeholder="Exercise"
+                                type="text"
+                                value=""
+                        />
+                        <button
+                                onClick={[Function]}
+                        >
+                                +
+                        </button>
+                </div>
+        </div>
+        <button
+                className="Workout-post-btn"
+                onClick={[Function]}
+        >
+                Post Workout
+        </button>
+</form>,
+      "className": "Workout",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="Workout-info"
+>
+            <input
+                        name="workoutName"
+                        onChange={[Function]}
+                        placeholder="Workout Name"
+                        type="text"
+                        value=""
+            />
+            <input
+                        name="workoutDesc"
+                        onChange={[Function]}
+                        placeholder="Workout Description (Optional)"
+                        type="text"
+                        value=""
+            />
+</div>,
+          <div>
+            <h4>
+                        Exercises
+            </h4>
+            <ul
+                        className="rendered-exercises"
+            >
+                        <li
+                                    className="rendered-exercise"
+                        >
+                                    <h6>
+                                                5
+                                    </h6>
+                                    <h6>
+                                                some exercise
+                                    </h6>
+                                    <button
+                                                id={1519148514421}
+                                                onClick={[Function]}
+                                    >
+                                                -
+                                    </button>
+                        </li>
+            </ul>
+            <div>
+                        <input
+                                    name="reps"
+                                    onChange={[Function]}
+                                    placeholder="Reps"
+                                    type="number"
+                                    value=""
+                        />
+                        <input
+                                    name="exercise"
+                                    onChange={[Function]}
+                                    placeholder="Exercise"
+                                    type="text"
+                                    value=""
+                        />
+                        <button
+                                    onClick={[Function]}
+                        >
+                                    +
+                        </button>
+            </div>
+</div>,
+          <button
+            className="Workout-post-btn"
+            onClick={[Function]}
+>
+            Post Workout
+</button>,
+        ],
+        "className": "Workout-form",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <input
+                name="workoutName"
+                onChange={[Function]}
+                placeholder="Workout Name"
+                type="text"
+                value=""
+/>,
+              <input
+                name="workoutDesc"
+                onChange={[Function]}
+                placeholder="Workout Description (Optional)"
+                type="text"
+                value=""
+/>,
+            ],
+            "className": "Workout-info",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "name": "workoutName",
+                "onChange": [Function],
+                "placeholder": "Workout Name",
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "name": "workoutDesc",
+                "onChange": [Function],
+                "placeholder": "Workout Description (Optional)",
+                "type": "text",
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "input",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h4>
+                Exercises
+</h4>,
+              <ul
+                className="rendered-exercises"
+>
+                <li
+                                className="rendered-exercise"
+                >
+                                <h6>
+                                                5
+                                </h6>
+                                <h6>
+                                                some exercise
+                                </h6>
+                                <button
+                                                id={1519148514421}
+                                                onClick={[Function]}
+                                >
+                                                -
+                                </button>
+                </li>
+</ul>,
+              <div>
+                <input
+                                name="reps"
+                                onChange={[Function]}
+                                placeholder="Reps"
+                                type="number"
+                                value=""
+                />
+                <input
+                                name="exercise"
+                                onChange={[Function]}
+                                placeholder="Exercise"
+                                type="text"
+                                value=""
+                />
+                <button
+                                onClick={[Function]}
+                >
+                                +
+                </button>
+</div>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Exercises",
+              },
+              "ref": null,
+              "rendered": "Exercises",
+              "type": "h4",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <li
+                    className="rendered-exercise"
+>
+                    <h6>
+                                        5
+                    </h6>
+                    <h6>
+                                        some exercise
+                    </h6>
+                    <button
+                                        id={1519148514421}
+                                        onClick={[Function]}
+                    >
+                                        -
+                    </button>
+</li>,
+                ],
+                "className": "rendered-exercises",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": "1519148514421",
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <h6>
+                        5
+</h6>,
+                      <h6>
+                        some exercise
+</h6>,
+                      <button
+                        id={1519148514421}
+                        onClick={[Function]}
+>
+                        -
+</button>,
+                    ],
+                    "className": "rendered-exercise",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": 5,
+                      },
+                      "ref": null,
+                      "rendered": 5,
+                      "type": "h6",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "some exercise",
+                      },
+                      "ref": null,
+                      "rendered": "some exercise",
+                      "type": "h6",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "-",
+                        "id": 1519148514421,
+                        "onClick": [Function],
+                      },
+                      "ref": null,
+                      "rendered": "-",
+                      "type": "button",
+                    },
+                  ],
+                  "type": "li",
+                },
+              ],
+              "type": "ul",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <input
+                    name="reps"
+                    onChange={[Function]}
+                    placeholder="Reps"
+                    type="number"
+                    value=""
+/>,
+                  <input
+                    name="exercise"
+                    onChange={[Function]}
+                    placeholder="Exercise"
+                    type="text"
+                    value=""
+/>,
+                  <button
+                    onClick={[Function]}
+>
+                    +
+</button>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "name": "reps",
+                    "onChange": [Function],
+                    "placeholder": "Reps",
+                    "type": "number",
+                    "value": "",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "name": "exercise",
+                    "onChange": [Function],
+                    "placeholder": "Exercise",
+                    "type": "text",
+                    "value": "",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "+",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "+",
+                  "type": "button",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Post Workout",
+            "className": "Workout-post-btn",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Post Workout",
+          "type": "button",
+        },
+      ],
+      "type": "form",
+    },
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <form
+          className="Workout-form"
+>
+          <div
+                    className="Workout-info"
+          >
+                    <input
+                              name="workoutName"
+                              onChange={[Function]}
+                              placeholder="Workout Name"
+                              type="text"
+                              value=""
+                    />
+                    <input
+                              name="workoutDesc"
+                              onChange={[Function]}
+                              placeholder="Workout Description (Optional)"
+                              type="text"
+                              value=""
+                    />
+          </div>
+          <div>
+                    <h4>
+                              Exercises
+                    </h4>
+                    <ul
+                              className="rendered-exercises"
+                    >
+                              <li
+                                        className="rendered-exercise"
+                              >
+                                        <h6>
+                                                  5
+                                        </h6>
+                                        <h6>
+                                                  some exercise
+                                        </h6>
+                                        <button
+                                                  id={1519148514421}
+                                                  onClick={[Function]}
+                                        >
+                                                  -
+                                        </button>
+                              </li>
+                    </ul>
+                    <div>
+                              <input
+                                        name="reps"
+                                        onChange={[Function]}
+                                        placeholder="Reps"
+                                        type="number"
+                                        value=""
+                              />
+                              <input
+                                        name="exercise"
+                                        onChange={[Function]}
+                                        placeholder="Exercise"
+                                        type="text"
+                                        value=""
+                              />
+                              <button
+                                        onClick={[Function]}
+                              >
+                                        +
+                              </button>
+                    </div>
+          </div>
+          <button
+                    className="Workout-post-btn"
+                    onClick={[Function]}
+          >
+                    Post Workout
+          </button>
+</form>,
+        "className": "Workout",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="Workout-info"
+>
+              <input
+                            name="workoutName"
+                            onChange={[Function]}
+                            placeholder="Workout Name"
+                            type="text"
+                            value=""
+              />
+              <input
+                            name="workoutDesc"
+                            onChange={[Function]}
+                            placeholder="Workout Description (Optional)"
+                            type="text"
+                            value=""
+              />
+</div>,
+            <div>
+              <h4>
+                            Exercises
+              </h4>
+              <ul
+                            className="rendered-exercises"
+              >
+                            <li
+                                          className="rendered-exercise"
+                            >
+                                          <h6>
+                                                        5
+                                          </h6>
+                                          <h6>
+                                                        some exercise
+                                          </h6>
+                                          <button
+                                                        id={1519148514421}
+                                                        onClick={[Function]}
+                                          >
+                                                        -
+                                          </button>
+                            </li>
+              </ul>
+              <div>
+                            <input
+                                          name="reps"
+                                          onChange={[Function]}
+                                          placeholder="Reps"
+                                          type="number"
+                                          value=""
+                            />
+                            <input
+                                          name="exercise"
+                                          onChange={[Function]}
+                                          placeholder="Exercise"
+                                          type="text"
+                                          value=""
+                            />
+                            <button
+                                          onClick={[Function]}
+                            >
+                                          +
+                            </button>
+              </div>
+</div>,
+            <button
+              className="Workout-post-btn"
+              onClick={[Function]}
+>
+              Post Workout
+</button>,
+          ],
+          "className": "Workout-form",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <input
+                  name="workoutName"
+                  onChange={[Function]}
+                  placeholder="Workout Name"
+                  type="text"
+                  value=""
+/>,
+                <input
+                  name="workoutDesc"
+                  onChange={[Function]}
+                  placeholder="Workout Description (Optional)"
+                  type="text"
+                  value=""
+/>,
+              ],
+              "className": "Workout-info",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "name": "workoutName",
+                  "onChange": [Function],
+                  "placeholder": "Workout Name",
+                  "type": "text",
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "name": "workoutDesc",
+                  "onChange": [Function],
+                  "placeholder": "Workout Description (Optional)",
+                  "type": "text",
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h4>
+                  Exercises
+</h4>,
+                <ul
+                  className="rendered-exercises"
+>
+                  <li
+                                    className="rendered-exercise"
+                  >
+                                    <h6>
+                                                      5
+                                    </h6>
+                                    <h6>
+                                                      some exercise
+                                    </h6>
+                                    <button
+                                                      id={1519148514421}
+                                                      onClick={[Function]}
+                                    >
+                                                      -
+                                    </button>
+                  </li>
+</ul>,
+                <div>
+                  <input
+                                    name="reps"
+                                    onChange={[Function]}
+                                    placeholder="Reps"
+                                    type="number"
+                                    value=""
+                  />
+                  <input
+                                    name="exercise"
+                                    onChange={[Function]}
+                                    placeholder="Exercise"
+                                    type="text"
+                                    value=""
+                  />
+                  <button
+                                    onClick={[Function]}
+                  >
+                                    +
+                  </button>
+</div>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Exercises",
+                },
+                "ref": null,
+                "rendered": "Exercises",
+                "type": "h4",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <li
+                      className="rendered-exercise"
+>
+                      <h6>
+                                            5
+                      </h6>
+                      <h6>
+                                            some exercise
+                      </h6>
+                      <button
+                                            id={1519148514421}
+                                            onClick={[Function]}
+                      >
+                                            -
+                      </button>
+</li>,
+                  ],
+                  "className": "rendered-exercises",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": "1519148514421",
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <h6>
+                          5
+</h6>,
+                        <h6>
+                          some exercise
+</h6>,
+                        <button
+                          id={1519148514421}
+                          onClick={[Function]}
+>
+                          -
+</button>,
+                      ],
+                      "className": "rendered-exercise",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": 5,
+                        },
+                        "ref": null,
+                        "rendered": 5,
+                        "type": "h6",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "some exercise",
+                        },
+                        "ref": null,
+                        "rendered": "some exercise",
+                        "type": "h6",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "-",
+                          "id": 1519148514421,
+                          "onClick": [Function],
+                        },
+                        "ref": null,
+                        "rendered": "-",
+                        "type": "button",
+                      },
+                    ],
+                    "type": "li",
+                  },
+                ],
+                "type": "ul",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <input
+                      name="reps"
+                      onChange={[Function]}
+                      placeholder="Reps"
+                      type="number"
+                      value=""
+/>,
+                    <input
+                      name="exercise"
+                      onChange={[Function]}
+                      placeholder="Exercise"
+                      type="text"
+                      value=""
+/>,
+                    <button
+                      onClick={[Function]}
+>
+                      +
+</button>,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "name": "reps",
+                      "onChange": [Function],
+                      "placeholder": "Reps",
+                      "type": "number",
+                      "value": "",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "input",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "name": "exercise",
+                      "onChange": [Function],
+                      "placeholder": "Exercise",
+                      "type": "text",
+                      "value": "",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "input",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "+",
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": "+",
+                    "type": "button",
+                  },
+                ],
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Post Workout",
+              "className": "Workout-post-btn",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Post Workout",
+            "type": "button",
+          },
+        ],
+        "type": "form",
+      },
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

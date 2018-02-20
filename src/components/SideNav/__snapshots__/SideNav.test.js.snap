@@ -24,7 +24,7 @@ ShallowWrapper {
           <img
                     alt="User profile"
                     className="user-pic"
-                    src="http://www.ixgetfit.com/wp-content/uploads/2017/10/Brooke-Wells-350x350-300x300.jpg"
+                    src={undefined}
           />
           <h4
                     className="undefined"
@@ -175,7 +175,7 @@ ShallowWrapper {
             <img
               alt="User profile"
               className="user-pic"
-              src="http://www.ixgetfit.com/wp-content/uploads/2017/10/Brooke-Wells-350x350-300x300.jpg"
+              src={undefined}
 />,
             <h4
               className="undefined"
@@ -194,7 +194,7 @@ ShallowWrapper {
             "props": Object {
               "alt": "User profile",
               "className": "user-pic",
-              "src": "http://www.ixgetfit.com/wp-content/uploads/2017/10/Brooke-Wells-350x350-300x300.jpg",
+              "src": undefined,
             },
             "ref": null,
             "rendered": null,
@@ -760,7 +760,7 @@ ShallowWrapper {
             <img
                         alt="User profile"
                         className="user-pic"
-                        src="http://www.ixgetfit.com/wp-content/uploads/2017/10/Brooke-Wells-350x350-300x300.jpg"
+                        src={undefined}
             />
             <h4
                         className="undefined"
@@ -911,7 +911,7 @@ ShallowWrapper {
               <img
                 alt="User profile"
                 className="user-pic"
-                src="http://www.ixgetfit.com/wp-content/uploads/2017/10/Brooke-Wells-350x350-300x300.jpg"
+                src={undefined}
 />,
               <h4
                 className="undefined"
@@ -930,7 +930,7 @@ ShallowWrapper {
               "props": Object {
                 "alt": "User profile",
                 "className": "user-pic",
-                "src": "http://www.ixgetfit.com/wp-content/uploads/2017/10/Brooke-Wells-350x350-300x300.jpg",
+                "src": undefined,
               },
               "ref": null,
               "rendered": null,
