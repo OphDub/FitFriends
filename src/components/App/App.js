@@ -21,14 +21,12 @@ import { mockUserProfile } from '../../initialData';
 import { mockTeam } from '../../initialData';
 import { mockWorkoutHistory } from '../../initialData';
 
-import { clientID, clientSecret } from '../../apiKey';
-
 class App extends Component {
   constructor () {
     super();
   }
 
-  render() {
+  render() { 
     return (
       <div className="App">
         {
@@ -49,7 +47,7 @@ class App extends Component {
               component={SignUp}/>
             <Route
               path="/home"
-              render={this.props.activeUser ? (<Home />) : (<Welcome />)}/>
+              render={() => this.props.activeUser ? (<Home />) : (<Welcome />)}/>
             <Route
               path="/workout"
               render={() => this.props.activeUser ? (<Workout />) : (<Welcome />)}/>

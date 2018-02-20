@@ -1,4 +1,4 @@
-import { postWorkoutReducer } from './postWorkoutReducer';
+import { workoutsReducer } from './workoutsReducer';
 import * as actions from '../actions/actionsIndex';
 
 describe('postWorkoutReducer', () => {
