@@ -15,7 +15,12 @@ class Welcome extends Component {
   render () {
     return (
       <div className="Welcome">
-        <h2>FitFriends</h2>
+        <h2 className="fitfriends-text">
+          <span className="fitfriends-text-emphasis">
+            Fit
+          </span>
+            Friends
+        </h2>
         <Control handleReroute={this.handleReroute}/>
         <NavLink className="sign-up-link"
           to="/signup">
