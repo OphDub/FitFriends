@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux';
 import { handleLoginReducer } from './handleLoginReducer';
-import { postWorkoutReducer } from './postWorkoutReducer';
+import { workoutsReducer } from './workoutsReducer';
 import { signUpUserReducer } from './signUpUserReducer';
 
 const rootReducer = combineReducers({
   activeUser: handleLoginReducer,
-  workouts: postWorkoutReducer,
+  workouts: workoutsReducer,
   newUser: signUpUserReducer,
 });
 
