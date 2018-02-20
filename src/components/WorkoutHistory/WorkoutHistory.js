@@ -3,7 +3,7 @@ import './WorkoutHistory.css';
 import { connect } from 'react-redux';
 import { getWorkouts } from '../../actions/actionsIndex';
 
-class WorkoutHistory extends Component {
+export class WorkoutHistory extends Component {
   constructor () {
     super();
   }
@@ -13,13 +13,12 @@ class WorkoutHistory extends Component {
   }
 
   renderedWorkouts = () => {
-    console.log(this.props.workouts);
     const workoutVals = Object.values(this.props.workouts)
 
-    return workoutVals.map((workout) => {
-      const exerciseVals = Object.values(workout.exercises).map((exercise) => {
+    return workoutVals.map((workout, key) => {
+      const exerciseVals = Object.values(workout.exercises).map((exercise, key) => {
         return(
-          <li className="exercise">
+          <li className="exercise" key={exercise.key}>
             <p className="exercise-reps">{exercise.reps}</p>
             <p className="exercise-name">{exercise.exercise}</p>
           </li>
@@ -27,7 +26,7 @@ class WorkoutHistory extends Component {
       })
 
       return (
-        <article className="workout">
+        <article className="workout" key={workout.key}>
           <h3 className="workout-name">{workout.workoutName}</h3>
           <p className="workout-desc">{workout.workoutDesc}</p>
           <ul className="exercises">
@@ -39,7 +38,6 @@ class WorkoutHistory extends Component {
   }
 
   render () {
-    console.log(this.props);
     return (
       <section className="WorkoutHistory">
         {this.renderedWorkouts()}
@@ -48,12 +46,12 @@ class WorkoutHistory extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
+export const mapStateToProps = (state) => ({
   workouts: state.workouts,
-})
+});
 
-const mapDispatchToProps = (dispatch) => ({
+export const mapDispatchToProps = (dispatch) => ({
   getWorkouts: () => dispatch(getWorkouts())
-})
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(WorkoutHistory);
