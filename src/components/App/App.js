@@ -53,7 +53,7 @@ class App extends Component {
               render={() => this.props.activeUser ? (<Workout />) : (<Welcome />)}/>
             <Route
               path="/team"
-              render={() => this.props.activeUser ? (<Team />) : (<Welcome />)}/>
+              render={() => this.props.activeUser ? (<Team team={mockTeam} />) : (<Welcome />)}/>
             <Route
               path="/history"
               render={() => this.props.activeUser ? (<WorkoutHistory />) : (<Welcome />)}/>
