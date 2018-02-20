@@ -55,7 +55,15 @@ describe('WORKOUT', () => {
 
   it('should add an exercise to the exercises array in state when addExercise is called', () => {
     const mockEvent = {preventDefault: jest.fn()};
-    const mockExercise = {reps: 5, exercise: 'some exercise'};
+    const mockExercise = {
+      reps: 5,
+      exercise: 'some exercise',
+      id: 1519148514421
+    };
+    const expected =[mockExercise];
+    const mockDateNow = () => {return 1519148514421}
+    const originalDateNow = Date.now;
+    Date.now = mockDateNow;
 
     renderedComponent.instance().setState({
       reps: mockExercise.reps,
@@ -63,13 +71,49 @@ describe('WORKOUT', () => {
     });
     renderedComponent.update();
     renderedComponent.instance().addExercise(mockEvent);
+
+    expect(renderedComponent.state().exercises).toEqual(expected);
   });
 
   it('should remove an exercise from the exercises array in state when removeExercise is called', () => {
+    const mockEvent = {
+      preventDefault: jest.fn(),
+      target: {
+        id: '1519148514421'
+      }
+    };
+    const mockExercises = [
+      {
+        reps: 5,
+        exercise: 'some exercise',
+        id: 1519148514421
+      }
+    ];
+    const expected = [];
 
+    renderedComponent.instance().setState({ exercises: mockExercises });
+    renderedComponent.update();
+
+    expect(renderedComponent.state().exercises).toEqual(mockExercises);
+
+    renderedComponent.instance().removeExercise(mockEvent);
+    renderedComponent.update();
+
+    expect(renderedComponent.state().exercises).toEqual(expected);
   });
 
   it('should return jsx based on the exercises array when renderExercises is called', () => {
+    const mockExercises = [
+      {
+        reps: 5,
+        exercise: 'some exercise',
+        id: 1519148514421
+      }
+    ];
 
-  })
-})
+    renderedComponent.instance().setState({ exercises: mockExercises });
+    renderedComponent.update();
+
+    expect(renderedComponent).toMatchSnapshot();
+  });
+});
