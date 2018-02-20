@@ -1,11 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import SignIn from './SignIn';
+import Welcome from './Welcome';
 
-describe('SIGNIN', () => {
+describe('Welcome', () => {
   it.skip('should match snapshot', () => {
-    const renderedComponent = shallow(<SignIn />);
+    const renderedComponent = shallow(<Welcome />);
 
     expect(renderedComponent).toMatchSnapshot();
-  })
-})
+  });
+});
