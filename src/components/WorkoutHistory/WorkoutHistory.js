@@ -14,9 +14,10 @@ class WorkoutHistory extends Component {
 
   renderedWorkouts = () => {
     console.log(this.props.workouts);
+    const workoutVals = Object.values(this.props.workouts)
 
-    return this.props.workouts.map((workout) => {
-      const exercises = workout.exercises.map((exercise) => {
+    return workoutVals.map((workout) => {
+      const exerciseVals = Object.values(workout.exercises).map((exercise) => {
         return(
           <li className="exercise">
             <p className="exercise-reps">{exercise.reps}</p>
@@ -30,7 +31,7 @@ class WorkoutHistory extends Component {
           <h3 className="workout-name">{workout.workoutName}</h3>
           <p className="workout-desc">{workout.workoutDesc}</p>
           <ul className="exercises">
-            {exercises}
+            {exerciseVals}
           </ul>
         </article>
       )

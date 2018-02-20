@@ -34,3 +34,21 @@ export const mockUserProfile = {
   userName: 'Brooke'
 }
 
+export const mockWorkouts = [
+  {
+    workoutName: 'local sample workout name 1',
+    workoutDesc: 'local sample workout desc',
+    exercises: [
+      { reps: 10, exercise: 'sample exercise1'},
+      { reps: 10, exercise: 'sample exercise2'},
+    ]
+  },
+  {
+    workoutName: 'local sample workout name 2',
+    workoutDesc: 'local sample workout desc',
+    exercises: [
+      { reps: 10, exercise: 'sample exercise1'},
+      { reps: 10, exercise: 'sample exercise2'},
+    ]
+  },
+]
