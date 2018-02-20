@@ -7,7 +7,7 @@ import { workouts } from '../../base';
 // import faMinusSquare from '@fortawesome/fontawesome-free-solid/faMinusSquare';
 // import faPlusSquare from '@fortawesome/fontawesome-free-solid/faPlusSquare';
 
-class Workout extends Component {
+export class Workout extends Component {
   constructor () {
     super();
     this.state={
