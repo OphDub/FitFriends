@@ -1,4 +1,8 @@
 .Welcome {
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("https://static.pexels.com/photos/685534/pexels-photo-685534.jpeg");
+  background-repeat: no-repeat;
+  height: 100%; }

@@ -3,7 +3,7 @@ import './Control.css';
 import { loginUser } from '../../actions/actionsIndex';
 import { connect } from 'react-redux';
 
-class Control extends Component {
+export class Control extends Component {
   constructor () {
     super ();
     this.state = {
@@ -51,12 +51,12 @@ class Control extends Component {
   }
 };
 
-const mapStateToProps = (state) => ({
+export const mapStateToProps = (state) => ({
   history: state.history
 })
 
-const mapDispatchToProps = (dispatch) => ({
+export const mapDispatchToProps = (dispatch) => ({
   loginUser: (user) => dispatch(loginUser(user))
-});
+})
 
 export default connect(mapStateToProps, mapDispatchToProps)(Control);

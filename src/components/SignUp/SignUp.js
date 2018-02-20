@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './SignUp.css';
 import { connect } from 'react-redux';
 import { signUpUser, loginUser } from '../../actions/actionsIndex';
-class SignUp extends Component {
+export class SignUp extends Component {
   constructor () {
     super()
     this.state={
@@ -26,7 +26,10 @@ class SignUp extends Component {
     const userId = Date.now();
     this.setState({ userId });
     this.props.signUpUser(this.state);
-    this.props.loginUser({user: this.state.userName});
+    this.props.loginUser({
+      user: this.state.userName,
+      password: this.state.userPass,
+    });
 
     this.setState({
       firstName: '',

@@ -1,12 +1,14 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import SignUp from './SignUp';
+import { SignUp } from './SignUp';
 
-describe('CONTROL', () => {
+describe('SIGNUP', () => {
   let renderedComponent;
+  let mockFn
 
   beforeEach(() => {
-    renderedComponent = shallow(<SignUp />);
+    mockFn = jest.fn()
+    renderedComponent = shallow(<SignUp signUpUser={mockFn} loginUser={mockFn}/>);
   });
 
   it('should match snapshot', () => {
@@ -23,21 +25,52 @@ describe('CONTROL', () => {
     expect(renderedComponent.state().userName).toEqual(expected);
   });
 
-  it('should clear state when handleSignUp is called', () => {
-    const exampleString = 'hello';
-    const exampleEvent = { target: { value: 'hello', name: 'userName'}};
-
-    renderedComponent.instance().handleChange(exampleEvent);
-    renderedComponent.update();
-
-    expect(renderedComponent.state().userName).toEqual(exampleString);
-
-    const expected = '';
-    const mockEvent = {preventDefault: jest.fn()};
+  it('should set userId when handleSignUp is called', () => {
+    const mockEvent = { preventDefault: jest.fn() };
+    const mockDateNow = () => {
+      return 1518981869196;
+    }
+    const originalDateNow = Date.now;
+    Date.now = mockDateNow;
+    const mockUserId = '1518981869196';
 
     renderedComponent.instance().handleSignUp(mockEvent);
-    renderedComponent.update();
 
-    expect(renderedComponent.state().userName).toEqual(expected);
+    expect(renderedComponent.state().userId).toEqual(mockUserId);
+
+    Date.now = originalDateNow
+  })
+
+  it('should call SignUpUser and loginUser when handleSignUp is called', () => {
+    const mockEvent = { preventDefault: jest.fn() };
+
+    renderedComponent.instance().handleSignUp(mockEvent);
+
+    expect(mockFn).toHaveBeenCalled();
   });
+
+  it('should clear state when handleSignUp is called', () => {
+    const mockEvent = { preventDefault: jest.fn() };
+    const expected = {
+      firstName: '',
+      lastName: '',
+      userName: '',
+      userEmail: '',
+      userPass: '',
+      userId: '',
+    }
+
+    renderedComponent.instance().setState({
+      firstName: 'Chuck',
+      lastName: 'Norris',
+      userName: 'chuck',
+      userEmail: 'chuck@norris.com',
+      userPass: 'defeatbruce',
+      userId: '123456789',
+    });
+
+    renderedComponent.instance().handleSignUp(mockEvent);
+
+    expect(renderedComponent.state()).toEqual(expected);
+  })
 })
