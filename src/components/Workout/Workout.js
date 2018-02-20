@@ -29,7 +29,8 @@ export class Workout extends Component {
     const { reps, exercise } = this.state;
     const id = Date.now()
     const newExercise = Object.assign({ id, reps, exercise});
-    const exercises = [...this.state.exercises, newExercise]
+    const exercises = [...this.state.exercises, newExercise];
+
     this.setState({
       exercises,
       reps: '',
