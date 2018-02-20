@@ -8,11 +8,13 @@ class WorkoutHistory extends Component {
     super();
   }
 
-  componentDidMount () {
+  componentWillMount () {
     this.props.getWorkouts();
   }
 
   renderedWorkouts = () => {
+    console.log(this.props.workouts);
+
     return this.props.workouts.map((workout) => {
       const exercises = workout.exercises.map((exercise) => {
         return(
