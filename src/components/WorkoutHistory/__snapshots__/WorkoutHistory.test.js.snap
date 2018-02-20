@@ -1,3 +1,969 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`WORKOUT HISTORY should match snapshot 1`] = `undefined`;
+exports[`WORKOUT HISTORY should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <WorkoutHistory
+    getWorkouts={[Function]}
+    workouts={
+        Array [
+            Object {
+              "exercises": Array [
+                Object {
+                  "exercise": "Burpees",
+                  "reps": "10",
+                },
+                Object {
+                  "exercise": "Overhead Press(Barbell)",
+                  "reps": "8-10",
+                },
+                Object {
+                  "exercise": "Standing Bent Row(Barbell)",
+                  "reps": "8-10",
+                },
+                Object {
+                  "exercise": "Standing Kettlebell Swings",
+                  "reps": "8-10",
+                },
+              ],
+              "workoutDesc": "Opposite movement workout with some running at the end!",
+              "workoutName": "The Grind",
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <article
+          className="workout"
+>
+          <h3
+                    className="workout-name"
+          >
+                    The Grind
+          </h3>
+          <p
+                    className="workout-desc"
+          >
+                    Opposite movement workout with some running at the end!
+          </p>
+          <ul
+                    className="exercises"
+          >
+                    <li
+                              className="exercise"
+                    >
+                              <p
+                                        className="exercise-reps"
+                              >
+                                        10
+                              </p>
+                              <p
+                                        className="exercise-name"
+                              >
+                                        Burpees
+                              </p>
+                    </li>
+                    <li
+                              className="exercise"
+                    >
+                              <p
+                                        className="exercise-reps"
+                              >
+                                        8-10
+                              </p>
+                              <p
+                                        className="exercise-name"
+                              >
+                                        Overhead Press(Barbell)
+                              </p>
+                    </li>
+                    <li
+                              className="exercise"
+                    >
+                              <p
+                                        className="exercise-reps"
+                              >
+                                        8-10
+                              </p>
+                              <p
+                                        className="exercise-name"
+                              >
+                                        Standing Bent Row(Barbell)
+                              </p>
+                    </li>
+                    <li
+                              className="exercise"
+                    >
+                              <p
+                                        className="exercise-reps"
+                              >
+                                        8-10
+                              </p>
+                              <p
+                                        className="exercise-name"
+                              >
+                                        Standing Kettlebell Swings
+                              </p>
+                    </li>
+          </ul>
+</article>,
+      ],
+      "className": "WorkoutHistory",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h3
+              className="workout-name"
+>
+              The Grind
+</h3>,
+            <p
+              className="workout-desc"
+>
+              Opposite movement workout with some running at the end!
+</p>,
+            <ul
+              className="exercises"
+>
+              <li
+                            className="exercise"
+              >
+                            <p
+                                          className="exercise-reps"
+                            >
+                                          10
+                            </p>
+                            <p
+                                          className="exercise-name"
+                            >
+                                          Burpees
+                            </p>
+              </li>
+              <li
+                            className="exercise"
+              >
+                            <p
+                                          className="exercise-reps"
+                            >
+                                          8-10
+                            </p>
+                            <p
+                                          className="exercise-name"
+                            >
+                                          Overhead Press(Barbell)
+                            </p>
+              </li>
+              <li
+                            className="exercise"
+              >
+                            <p
+                                          className="exercise-reps"
+                            >
+                                          8-10
+                            </p>
+                            <p
+                                          className="exercise-name"
+                            >
+                                          Standing Bent Row(Barbell)
+                            </p>
+              </li>
+              <li
+                            className="exercise"
+              >
+                            <p
+                                          className="exercise-reps"
+                            >
+                                          8-10
+                            </p>
+                            <p
+                                          className="exercise-name"
+                            >
+                                          Standing Kettlebell Swings
+                            </p>
+              </li>
+</ul>,
+          ],
+          "className": "workout",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "The Grind",
+              "className": "workout-name",
+            },
+            "ref": null,
+            "rendered": "The Grind",
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Opposite movement workout with some running at the end!",
+              "className": "workout-desc",
+            },
+            "ref": null,
+            "rendered": "Opposite movement workout with some running at the end!",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <li
+                  className="exercise"
+>
+                  <p
+                                    className="exercise-reps"
+                  >
+                                    10
+                  </p>
+                  <p
+                                    className="exercise-name"
+                  >
+                                    Burpees
+                  </p>
+</li>,
+                <li
+                  className="exercise"
+>
+                  <p
+                                    className="exercise-reps"
+                  >
+                                    8-10
+                  </p>
+                  <p
+                                    className="exercise-name"
+                  >
+                                    Overhead Press(Barbell)
+                  </p>
+</li>,
+                <li
+                  className="exercise"
+>
+                  <p
+                                    className="exercise-reps"
+                  >
+                                    8-10
+                  </p>
+                  <p
+                                    className="exercise-name"
+                  >
+                                    Standing Bent Row(Barbell)
+                  </p>
+</li>,
+                <li
+                  className="exercise"
+>
+                  <p
+                                    className="exercise-reps"
+                  >
+                                    8-10
+                  </p>
+                  <p
+                                    className="exercise-name"
+                  >
+                                    Standing Kettlebell Swings
+                  </p>
+</li>,
+              ],
+              "className": "exercises",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <p
+                      className="exercise-reps"
+>
+                      10
+</p>,
+                    <p
+                      className="exercise-name"
+>
+                      Burpees
+</p>,
+                  ],
+                  "className": "exercise",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "10",
+                      "className": "exercise-reps",
+                    },
+                    "ref": null,
+                    "rendered": "10",
+                    "type": "p",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Burpees",
+                      "className": "exercise-name",
+                    },
+                    "ref": null,
+                    "rendered": "Burpees",
+                    "type": "p",
+                  },
+                ],
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <p
+                      className="exercise-reps"
+>
+                      8-10
+</p>,
+                    <p
+                      className="exercise-name"
+>
+                      Overhead Press(Barbell)
+</p>,
+                  ],
+                  "className": "exercise",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "8-10",
+                      "className": "exercise-reps",
+                    },
+                    "ref": null,
+                    "rendered": "8-10",
+                    "type": "p",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Overhead Press(Barbell)",
+                      "className": "exercise-name",
+                    },
+                    "ref": null,
+                    "rendered": "Overhead Press(Barbell)",
+                    "type": "p",
+                  },
+                ],
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <p
+                      className="exercise-reps"
+>
+                      8-10
+</p>,
+                    <p
+                      className="exercise-name"
+>
+                      Standing Bent Row(Barbell)
+</p>,
+                  ],
+                  "className": "exercise",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "8-10",
+                      "className": "exercise-reps",
+                    },
+                    "ref": null,
+                    "rendered": "8-10",
+                    "type": "p",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Standing Bent Row(Barbell)",
+                      "className": "exercise-name",
+                    },
+                    "ref": null,
+                    "rendered": "Standing Bent Row(Barbell)",
+                    "type": "p",
+                  },
+                ],
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <p
+                      className="exercise-reps"
+>
+                      8-10
+</p>,
+                    <p
+                      className="exercise-name"
+>
+                      Standing Kettlebell Swings
+</p>,
+                  ],
+                  "className": "exercise",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "8-10",
+                      "className": "exercise-reps",
+                    },
+                    "ref": null,
+                    "rendered": "8-10",
+                    "type": "p",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Standing Kettlebell Swings",
+                      "className": "exercise-name",
+                    },
+                    "ref": null,
+                    "rendered": "Standing Kettlebell Swings",
+                    "type": "p",
+                  },
+                ],
+                "type": "li",
+              },
+            ],
+            "type": "ul",
+          },
+        ],
+        "type": "article",
+      },
+    ],
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <article
+            className="workout"
+>
+            <h3
+                        className="workout-name"
+            >
+                        The Grind
+            </h3>
+            <p
+                        className="workout-desc"
+            >
+                        Opposite movement workout with some running at the end!
+            </p>
+            <ul
+                        className="exercises"
+            >
+                        <li
+                                    className="exercise"
+                        >
+                                    <p
+                                                className="exercise-reps"
+                                    >
+                                                10
+                                    </p>
+                                    <p
+                                                className="exercise-name"
+                                    >
+                                                Burpees
+                                    </p>
+                        </li>
+                        <li
+                                    className="exercise"
+                        >
+                                    <p
+                                                className="exercise-reps"
+                                    >
+                                                8-10
+                                    </p>
+                                    <p
+                                                className="exercise-name"
+                                    >
+                                                Overhead Press(Barbell)
+                                    </p>
+                        </li>
+                        <li
+                                    className="exercise"
+                        >
+                                    <p
+                                                className="exercise-reps"
+                                    >
+                                                8-10
+                                    </p>
+                                    <p
+                                                className="exercise-name"
+                                    >
+                                                Standing Bent Row(Barbell)
+                                    </p>
+                        </li>
+                        <li
+                                    className="exercise"
+                        >
+                                    <p
+                                                className="exercise-reps"
+                                    >
+                                                8-10
+                                    </p>
+                                    <p
+                                                className="exercise-name"
+                                    >
+                                                Standing Kettlebell Swings
+                                    </p>
+                        </li>
+            </ul>
+</article>,
+        ],
+        "className": "WorkoutHistory",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h3
+                className="workout-name"
+>
+                The Grind
+</h3>,
+              <p
+                className="workout-desc"
+>
+                Opposite movement workout with some running at the end!
+</p>,
+              <ul
+                className="exercises"
+>
+                <li
+                                className="exercise"
+                >
+                                <p
+                                                className="exercise-reps"
+                                >
+                                                10
+                                </p>
+                                <p
+                                                className="exercise-name"
+                                >
+                                                Burpees
+                                </p>
+                </li>
+                <li
+                                className="exercise"
+                >
+                                <p
+                                                className="exercise-reps"
+                                >
+                                                8-10
+                                </p>
+                                <p
+                                                className="exercise-name"
+                                >
+                                                Overhead Press(Barbell)
+                                </p>
+                </li>
+                <li
+                                className="exercise"
+                >
+                                <p
+                                                className="exercise-reps"
+                                >
+                                                8-10
+                                </p>
+                                <p
+                                                className="exercise-name"
+                                >
+                                                Standing Bent Row(Barbell)
+                                </p>
+                </li>
+                <li
+                                className="exercise"
+                >
+                                <p
+                                                className="exercise-reps"
+                                >
+                                                8-10
+                                </p>
+                                <p
+                                                className="exercise-name"
+                                >
+                                                Standing Kettlebell Swings
+                                </p>
+                </li>
+</ul>,
+            ],
+            "className": "workout",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "The Grind",
+                "className": "workout-name",
+              },
+              "ref": null,
+              "rendered": "The Grind",
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Opposite movement workout with some running at the end!",
+                "className": "workout-desc",
+              },
+              "ref": null,
+              "rendered": "Opposite movement workout with some running at the end!",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <li
+                    className="exercise"
+>
+                    <p
+                                        className="exercise-reps"
+                    >
+                                        10
+                    </p>
+                    <p
+                                        className="exercise-name"
+                    >
+                                        Burpees
+                    </p>
+</li>,
+                  <li
+                    className="exercise"
+>
+                    <p
+                                        className="exercise-reps"
+                    >
+                                        8-10
+                    </p>
+                    <p
+                                        className="exercise-name"
+                    >
+                                        Overhead Press(Barbell)
+                    </p>
+</li>,
+                  <li
+                    className="exercise"
+>
+                    <p
+                                        className="exercise-reps"
+                    >
+                                        8-10
+                    </p>
+                    <p
+                                        className="exercise-name"
+                    >
+                                        Standing Bent Row(Barbell)
+                    </p>
+</li>,
+                  <li
+                    className="exercise"
+>
+                    <p
+                                        className="exercise-reps"
+                    >
+                                        8-10
+                    </p>
+                    <p
+                                        className="exercise-name"
+                    >
+                                        Standing Kettlebell Swings
+                    </p>
+</li>,
+                ],
+                "className": "exercises",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <p
+                        className="exercise-reps"
+>
+                        10
+</p>,
+                      <p
+                        className="exercise-name"
+>
+                        Burpees
+</p>,
+                    ],
+                    "className": "exercise",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "10",
+                        "className": "exercise-reps",
+                      },
+                      "ref": null,
+                      "rendered": "10",
+                      "type": "p",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Burpees",
+                        "className": "exercise-name",
+                      },
+                      "ref": null,
+                      "rendered": "Burpees",
+                      "type": "p",
+                    },
+                  ],
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <p
+                        className="exercise-reps"
+>
+                        8-10
+</p>,
+                      <p
+                        className="exercise-name"
+>
+                        Overhead Press(Barbell)
+</p>,
+                    ],
+                    "className": "exercise",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "8-10",
+                        "className": "exercise-reps",
+                      },
+                      "ref": null,
+                      "rendered": "8-10",
+                      "type": "p",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Overhead Press(Barbell)",
+                        "className": "exercise-name",
+                      },
+                      "ref": null,
+                      "rendered": "Overhead Press(Barbell)",
+                      "type": "p",
+                    },
+                  ],
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <p
+                        className="exercise-reps"
+>
+                        8-10
+</p>,
+                      <p
+                        className="exercise-name"
+>
+                        Standing Bent Row(Barbell)
+</p>,
+                    ],
+                    "className": "exercise",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "8-10",
+                        "className": "exercise-reps",
+                      },
+                      "ref": null,
+                      "rendered": "8-10",
+                      "type": "p",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Standing Bent Row(Barbell)",
+                        "className": "exercise-name",
+                      },
+                      "ref": null,
+                      "rendered": "Standing Bent Row(Barbell)",
+                      "type": "p",
+                    },
+                  ],
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <p
+                        className="exercise-reps"
+>
+                        8-10
+</p>,
+                      <p
+                        className="exercise-name"
+>
+                        Standing Kettlebell Swings
+</p>,
+                    ],
+                    "className": "exercise",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "8-10",
+                        "className": "exercise-reps",
+                      },
+                      "ref": null,
+                      "rendered": "8-10",
+                      "type": "p",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Standing Kettlebell Swings",
+                        "className": "exercise-name",
+                      },
+                      "ref": null,
+                      "rendered": "Standing Kettlebell Swings",
+                      "type": "p",
+                    },
+                  ],
+                  "type": "li",
+                },
+              ],
+              "type": "ul",
+            },
+          ],
+          "type": "article",
+        },
+      ],
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
