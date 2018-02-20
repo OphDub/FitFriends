@@ -1,9 +1,9 @@
 import { workoutsReducer } from './workoutsReducer';
 import * as actions from '../actions/actionsIndex';
 
-describe('postWorkoutReducer', () => {
+describe('workoutReducer', () => {
   it('should return the default state', () => {
     const expected = [];
-    expect(postWorkoutReducer(undefined, {})).toEqual(expected);
+    expect(workoutsReducer(undefined, {})).toEqual(expected);
   });
 });
