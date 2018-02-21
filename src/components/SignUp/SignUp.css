@@ -29,12 +29,12 @@
   outline: none; }
 
 .signup-btn {
-  margin-top: 10px;
   border: none;
   padding: 8px;
   text-transform: uppercase;
   border-radius: 5px;
-  outline: none; }
+  outline: none;
+  width: 100%; }
 
 .signup-btn h3 {
   margin: 0px; }
@@ -42,3 +42,12 @@
 .signup-btn:hover {
   background-color: #48E0EA;
   color: white; }
+
+.signup-goback {
+  display: flex;
+  flex-direction: column;
+  width: 100%; }
+
+.signup-goback h5 {
+  margin: 10px;
+  align-self: center; }
