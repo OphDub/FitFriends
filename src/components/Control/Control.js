@@ -44,7 +44,7 @@ export class Control extends Component {
         <button className="login-btn"
           onClick={this.handleLogin}
           type="submit">
-            Login
+            <h3>Login</h3>
         </button>
       </form>
     )

@@ -4,4 +4,22 @@
   width: 300px; }
 
 .Control-input {
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  outline: none; }
+
+.login-btn {
+  border: none;
+  padding: 8px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  outline: none; }
+
+.login-btn h3 {
+  margin: 0px; }
+
+.login-btn:hover {
+  background-color: #48E0EA;
+  color: white; }
