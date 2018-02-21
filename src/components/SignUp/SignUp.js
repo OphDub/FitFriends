@@ -31,52 +31,40 @@ export class SignUp extends Component {
     });
 
     this.setState({
-      firstName: '',
-      lastName: '',
       userName: '',
       userEmail: '',
-      userPass: '',
+      userPass1: '',
+      userPass2: '',
       userId: '',
     });
-  }
-
-  authWithFacebook = (e) => {
-    e.preventDefault();
-
   }
 
   render () {
     return (
       <form className="SignUp">
-        <div>
-          <button onClick={this.authWithFacebook}>Login with Facebook</button>
-        </div>
-        <div className="signup-email">
-          <input type="text"
-            placeholder="Username"
-            name="userName"
-            value={this.state.userName}
-            onChange={this.handleChange}/>
-          <input type="email"
-            placeholder="Email"
-            name="userEmail"
-            value={this.state.userEmail}
-            onChange={this.handleChange}/>
-          <input type="password"
-            placeholder="Password"
-            name="userPass1"
-            value={this.state.userPass}
-            onChange={this.handleChange}/>
-          <input type="password"
-            placeholder="Password"
-            name="userPass2"
-            value={this.state.userPass}
-            onChange={this.handleChange}/>
-          <button
-            onClick={this.handleSignUp}>
-              Sign Up
-          </button>
-        </div>
+        <input type="text"
+          placeholder="Username"
+          name="userName"
+          value={this.state.userName}
+          onChange={this.handleChange}/>
+        <input type="email"
+          placeholder="Email"
+          name="userEmail"
+          value={this.state.userEmail}
+          onChange={this.handleChange}/>
+        <input type="password"
+          placeholder="Password"
+          name="userPass1"
+          value={this.state.userPass}
+          onChange={this.handleChange}/>
+        <input type="password"
+          placeholder="Password"
+          name="userPass2"
+          value={this.state.userPass}
+          onChange={this.handleChange}/>
+        <button onClick={this.handleSignUp}>
+            Sign Up
+        </button>
       </form>
     )
   }
