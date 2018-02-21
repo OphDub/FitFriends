@@ -83,7 +83,8 @@ export class SignUp extends Component {
           </form>
           <div className="signup-goback">
             <h5>Already have an account?</h5>
-            <button className="signup-btn">
+            <button className="signup-btn"
+              onClick={this.props.handleRedirect}>
               Go to Login
             </button>
           </div>
@@ -93,9 +94,13 @@ export class SignUp extends Component {
   }
 }
 
+const mapStateToProps = (state) => ({
+  history: state.history
+})
+
 const mapDispatchToProps = (dispatch) => ({
   signUpUser: (user) => dispatch(signUpUser(user)),
   loginUser: (user) => dispatch(loginUser(user))
 });
 
-export default connect(null, mapDispatchToProps)(SignUp);
+export default connect(mapStateToProps, mapDispatchToProps)(SignUp);
