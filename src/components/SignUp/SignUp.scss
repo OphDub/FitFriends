@@ -1,11 +1,55 @@
 .SignUp {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
   height: 100%;
+  background: linear-gradient(
+    rgba(0,0,0,0.45),
+    rgba(0,0,0,0.45)
+  ), url('https://static.pexels.com/photos/685531/pexels-photo-685531.jpeg');
+  background-repeat: no-repeat;
 }
 
-.signup-email {
+.form-background {
+  background-color: #D8D8D8;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.SignUp-form {
   display: flex;
   flex-direction: column;
+}
+
+.SignUp-form label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.SignUp-form input {
+  margin-left: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.signup-btn {
+  margin-top: 10px;
+  border: none;
+  padding: 8px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  outline: none;
+}
+
+.signup-btn h3 {
+  margin: 0px;
+}
+
+.signup-btn:hover {
+  background-color: #48E0EA;
+  color: white;
 }
