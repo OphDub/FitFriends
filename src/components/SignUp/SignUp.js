@@ -6,11 +6,10 @@ export class SignUp extends Component {
   constructor () {
     super()
     this.state={
-      firstName: '',
-      lastName: '',
       userName: '',
       userEmail: '',
-      userPass: '',
+      userPass1: '',
+      userPass2: '',
       userId: '',
     }
   }
@@ -32,65 +31,76 @@ export class SignUp extends Component {
     });
 
     this.setState({
-      firstName: '',
-      lastName: '',
       userName: '',
       userEmail: '',
-      userPass: '',
+      userPass1: '',
+      userPass2: '',
       userId: '',
     });
   }
 
-  authWithFacebook = (e) => {
-    e.preventDefault();
-
-  }
-
   render () {
     return (
-      <form className="SignUp">
-        <div>
-          <button onClick={this.authWithFacebook}>Login with Facebook</button>
+      <div className="SignUp">
+        <div className="form-background">
+          <form className="SignUp-form">
+            <label htmlFor="userName">
+              <span>Username: </span>
+              <input type="text"
+                placeholder="Username"
+                name="userName"
+                value={this.state.userName}
+                onChange={this.handleChange}/>
+            </label>
+            <label htmlFor="userEmail">
+              <span>Email: </span>
+              <input type="email"
+                placeholder="Email"
+                name="userEmail"
+                value={this.state.userEmail}
+                onChange={this.handleChange}/>
+            </label>
+            <label htmlFor="userPass1">
+              <span>Password: </span>
+              <input type="password"
+                placeholder="Password"
+                name="userPass1"
+                value={this.state.userPass}
+                onChange={this.handleChange}/>
+            </label>
+            <label htmlFor="userPass2">
+              <span>Confirm Password: </span>
+              <input type="password"
+                placeholder="Password"
+                name="userPass2"
+                value={this.state.userPass}
+                onChange={this.handleChange}/>
+            </label>
+            <button onClick={this.handleSignUp}
+              className="signup-btn">
+                <h3>Sign Up</h3>
+            </button>
+          </form>
+          <div className="signup-goback">
+            <h5>Already have an account?</h5>
+            <button className="signup-btn"
+              onClick={this.props.handleRedirect}>
+              Go to Login
+            </button>
+          </div>
         </div>
-        <div className="signup-email">
-          <input type="text"
-            placeholder="First Name"
-            name="firstName"
-            value={this.state.firstName}
-            onChange={this.handleChange}/>
-          <input type="text"
-            placeholder="Last Name"
-            name="lastName"
-            value={this.state.lastName}
-            onChange={this.handleChange}/>
-          <input type="text"
-            placeholder="Username"
-            name="userName"
-            value={this.state.userName}
-            onChange={this.handleChange}/>
-          <input type="email"
-            placeholder="Email"
-            name="userEmail"
-            value={this.state.userEmail}
-            onChange={this.handleChange}/>
-          <input type="password"
-            placeholder="Password"
-            name="userPass"
-            value={this.state.userPass}
-            onChange={this.handleChange}/>
-          <button
-            onClick={this.handleSignUp}>
-              Sign Up
-          </button>
-        </div>
-      </form>
+      </div>
     )
   }
 }
+
+const mapStateToProps = (state) => ({
+  history: state.history
+})
 
 const mapDispatchToProps = (dispatch) => ({
   signUpUser: (user) => dispatch(signUpUser(user)),
   loginUser: (user) => dispatch(loginUser(user))
 });
 
-export default connect(null, mapDispatchToProps)(SignUp);
+export default connect(mapStateToProps, mapDispatchToProps)(SignUp);

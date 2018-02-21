@@ -26,7 +26,11 @@ class App extends Component {
     super();
   }
 
-  render() { 
+  handleRedirect = () => {
+    return this.props.history.push('/');
+  }
+
+  render() {
     return (
       <div className="App">
         {
@@ -44,7 +48,7 @@ class App extends Component {
               component={Welcome}/>
             <Route
               path="/signup"
-              component={SignUp}/>
+              render={() => <SignUp handleRedirect={this.handleRedirect}/>}/>
             <Route
               path="/home"
               render={() => this.props.activeUser ? (<Home />) : (<Welcome />)}/>
@@ -53,7 +57,7 @@ class App extends Component {
               render={() => this.props.activeUser ? (<Workout />) : (<Welcome />)}/>
             <Route
               path="/team"
-              render={() => this.props.activeUser ? (<Team />) : (<Welcome />)}/>
+              render={() => this.props.activeUser ? (<Team team={mockTeam} />) : (<Welcome />)}/>
             <Route
               path="/history"
               render={() => this.props.activeUser ? (<WorkoutHistory />) : (<Welcome />)}/>
@@ -67,7 +71,7 @@ class App extends Component {
         </div>
         {
           this.props.activeUser &&
-          <Leaderboard />
+          <Leaderboard topThree={mockTeam}/>
         }
       </div>
     );
