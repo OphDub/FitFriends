@@ -81,6 +81,12 @@ export class SignUp extends Component {
                 <h3>Sign Up</h3>
             </button>
           </form>
+          <div className="signup-goback">
+            <h5>Already have an account?</h5>
+            <button className="signup-btn">
+              Go to Login
+            </button>
+          </div>
         </div>
       </div>
     )
