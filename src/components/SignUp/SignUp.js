@@ -6,11 +6,10 @@ export class SignUp extends Component {
   constructor () {
     super()
     this.state={
-      firstName: '',
-      lastName: '',
       userName: '',
       userEmail: '',
-      userPass: '',
+      userPass1: '',
+      userPass2: '',
       userId: '',
     }
   }
@@ -54,16 +53,6 @@ export class SignUp extends Component {
         </div>
         <div className="signup-email">
           <input type="text"
-            placeholder="First Name"
-            name="firstName"
-            value={this.state.firstName}
-            onChange={this.handleChange}/>
-          <input type="text"
-            placeholder="Last Name"
-            name="lastName"
-            value={this.state.lastName}
-            onChange={this.handleChange}/>
-          <input type="text"
             placeholder="Username"
             name="userName"
             value={this.state.userName}
@@ -75,7 +64,12 @@ export class SignUp extends Component {
             onChange={this.handleChange}/>
           <input type="password"
             placeholder="Password"
-            name="userPass"
+            name="userPass1"
+            value={this.state.userPass}
+            onChange={this.handleChange}/>
+          <input type="password"
+            placeholder="Password"
+            name="userPass2"
             value={this.state.userPass}
             onChange={this.handleChange}/>
           <button
