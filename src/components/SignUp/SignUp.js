@@ -41,31 +41,48 @@ export class SignUp extends Component {
 
   render () {
     return (
-      <form className="SignUp">
-        <input type="text"
-          placeholder="Username"
-          name="userName"
-          value={this.state.userName}
-          onChange={this.handleChange}/>
-        <input type="email"
-          placeholder="Email"
-          name="userEmail"
-          value={this.state.userEmail}
-          onChange={this.handleChange}/>
-        <input type="password"
-          placeholder="Password"
-          name="userPass1"
-          value={this.state.userPass}
-          onChange={this.handleChange}/>
-        <input type="password"
-          placeholder="Password"
-          name="userPass2"
-          value={this.state.userPass}
-          onChange={this.handleChange}/>
-        <button onClick={this.handleSignUp}>
-            Sign Up
-        </button>
-      </form>
+      <div className="SignUp">
+        <div className="form-background">
+          <form className="SignUp-form">
+            <label htmlFor="userName">
+              <span>Username: </span>
+              <input type="text"
+                placeholder="Username"
+                name="userName"
+                value={this.state.userName}
+                onChange={this.handleChange}/>
+            </label>
+            <label htmlFor="userEmail">
+              <span>Email: </span>
+              <input type="email"
+                placeholder="Email"
+                name="userEmail"
+                value={this.state.userEmail}
+                onChange={this.handleChange}/>
+            </label>
+            <label htmlFor="userPass1">
+              <span>Password: </span>
+              <input type="password"
+                placeholder="Password"
+                name="userPass1"
+                value={this.state.userPass}
+                onChange={this.handleChange}/>
+            </label>
+            <label htmlFor="userPass2">
+              <span>Confirm Password: </span>
+              <input type="password"
+                placeholder="Password"
+                name="userPass2"
+                value={this.state.userPass}
+                onChange={this.handleChange}/>
+            </label>
+            <button onClick={this.handleSignUp}
+              className="signup-btn">
+                <h3>Sign Up</h3>
+            </button>
+          </form>
+        </div>
+      </div>
     )
   }
 }
