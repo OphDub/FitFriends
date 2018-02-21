@@ -45,4 +45,5 @@
 
 .sign-up-btn:hover {
   background-color: #48E0EA;
-  color: white; }
+  color: white;
+  cursor: pointer; }
