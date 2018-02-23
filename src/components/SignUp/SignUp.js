@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './SignUp.css';
 import { connect } from 'react-redux';
-import { signUpUser, loginUser } from '../../actions/actionsIndex';
+import { signUpUser, loginUser, getUser } from '../../actions/actionsIndex';
 export class SignUp extends Component {
   constructor () {
     super()
@@ -94,13 +94,14 @@ export class SignUp extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state, ownProps) => ({
   history: state.history
 })
 
 const mapDispatchToProps = (dispatch) => ({
   signUpUser: (user) => dispatch(signUpUser(user)),
-  loginUser: (user) => dispatch(loginUser(user))
+  loginUser: (user) => dispatch(loginUser(user)),
+  getUser: (user) => dispatch(getUser(user))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SignUp);

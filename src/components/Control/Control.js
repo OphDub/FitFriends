@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Control.css';
-import { loginUser } from '../../actions/actionsIndex';
+import { loginUser, login } from '../../actions/actionsIndex';
 import { connect } from 'react-redux';
 
 export class Control extends Component {
@@ -20,8 +20,10 @@ export class Control extends Component {
   handleLogin = (e) => {
     e.preventDefault();
 
+    const { username, password } = this.state;
     //authenticate user here
-    this.props.loginUser(this.state);
+    this.props.login(username,password);
+    // this.props.loginUser(this.state);
     this.props.handleReroute();
     this.setState({ username: '', password: '' });
   }
@@ -56,7 +58,8 @@ export const mapStateToProps = (state) => ({
 })
 
 export const mapDispatchToProps = (dispatch) => ({
-  loginUser: (user) => dispatch(loginUser(user))
+  loginUser: (user) => dispatch(loginUser(user)),
+  login: (email, password) => dispatch(login(email, password))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Control);
