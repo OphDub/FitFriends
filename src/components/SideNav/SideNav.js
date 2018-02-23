@@ -6,9 +6,11 @@ import faHome from '@fortawesome/fontawesome-free-solid/faHome';
 import faUser from '@fortawesome/fontawesome-free-solid/faUser';
 import faCog from '@fortawesome/fontawesome-free-solid/faCog';
 import { connectToFitBit } from '../../helper';
+import { connect } from 'react-redux';
+import { logout } from '../../actions/actionsIndex';
+import { SignUp } from '../SignUp/SignUp';
 
-
-export const SideNav = ({ userImage, userName }) => {
+export const SideNav = ({ userImage, userName, logout }) => {
   return (
     <section className="SideNav">
       <div className="user-profile">
@@ -37,7 +39,20 @@ export const SideNav = ({ userImage, userName }) => {
         <button onClick={connectToFitBit}>
           Connect to FitBit
         </button>
+        <button>
+          Logout
+        </button>
       </div>
     </section>
   )
 };
+
+export const mapStateToProps = (state) => ({
+  user: state.user,
+});
+
+export const mapDispatchToProps = (dispatch) => ({
+  logout: (user) => dispatch(logout(user)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(SignUp);

@@ -4,8 +4,8 @@ import Control from '../Control/Control';
 import { NavLink } from 'react-router-dom';
 
 class Welcome extends Component {
-  constructor () {
-    super();
+  constructor (props) {
+    super(props);
   }
 
   handleReroute = () => {

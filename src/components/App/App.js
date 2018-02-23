@@ -3,8 +3,10 @@ import './App.css';
 import { Switch, Route, withRouter } from 'react-router';
 import { connect } from 'react-redux';
 
+import { getUser } from '../../actions/actionsIndex';
+
 import { TopNav } from '../TopNav/TopNav';
-import { SideNav } from '../SideNav/SideNav';
+import SideNav from '../SideNav/SideNav';
 import { Leaderboard } from '../Leaderboard/Leaderboard';
 import Welcome from '../Welcome/Welcome';
 import SignUp from '../SignUp/SignUp';
@@ -30,16 +32,24 @@ class App extends Component {
     return this.props.history.push('/');
   }
 
+  componentWillMount () {
+    this.props.getUser();
+    if (this.props.user.email === undefined) {
+      this.props.history.push('/')
+    }
+  }
+
   render() {
+    console.log(this.props);
     return (
       <div className="App">
         {
-          this.props.activeUser &&
+          this.props.user.email &&
           <SideNav user={mockUserProfile}/>
         }
         <div className="App-center">
         {
-          this.props.activeUser &&
+          this.props.user.email &&
           <TopNav />
         }
           <Switch>
@@ -48,29 +58,29 @@ class App extends Component {
               component={Welcome}/>
             <Route
               path="/signup"
-              render={() => <SignUp handleRedirect={this.handleRedirect}/>}/>
+              render={() => this.props.user.email ? (<SignUp handleRedirect={this.handleRedirect}/>) : null}/>
             <Route
               path="/home"
-              render={() => this.props.activeUser ? (<Home />) : (<Welcome />)}/>
+              render={() => this.props.activeUser === true ? (<Home/>) : (<Welcome />) }/>
             <Route
               path="/workout"
-              render={() => this.props.activeUser ? (<Workout />) : (<Welcome />)}/>
+              render={() => this.props.activeUser === true ? (<Workout/>) : (<Welcome />)}/>
             <Route
               path="/team"
-              render={() => this.props.activeUser ? (<Team team={mockTeam} />) : (<Welcome />)}/>
+              render={() => this.props.activeUser === true ? (<Team team={mockTeam} />) : (<Welcome />)}/>
             <Route
               path="/history"
-              render={() => this.props.activeUser ? (<WorkoutHistory />) : (<Welcome />)}/>
+              render={() => this.props.activeUser === true ? (<WorkoutHistory/>) : (<Welcome />)}/>
             <Route
               path="/profile"
-              render={() => this.props.activeUser ? (<Profile />) : (<Welcome />) }/>
+              render={() => this.props.activeUser === true ? (<Profile />) : (<Welcome />)}/>
             <Route
               path="/settings"
-              render={() => this.props.activeUser ? (<Settings />) : (<Welcome />)}/>
+              render={() => this.props.activeUser === true ? (<Settings/>) : (<Welcome />)}/>
           </Switch>
         </div>
         {
-          this.props.activeUser &&
+          this.props.user.email &&
           <Leaderboard topThree={mockTeam}/>
         }
       </div>
@@ -78,12 +88,14 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state, ownProps) => ({
+  user: state.user,
   activeUser: state.activeUser,
 })
 
 const mapDispatchToProps = (dispatch) => ({
-  loginUser: (user) => dispatch(loginUser(user))
+  loginUser: (user) => dispatch(loginUser(user)),
+  getUser: (user) => dispatch(getUser(user)),
 })
 
 export default withRouter(connect(mapStateToProps,mapDispatchToProps)(App))
