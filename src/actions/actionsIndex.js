@@ -26,7 +26,7 @@ export const logout = (user) => {
 
 export const loginUser = (user) => ({
   type: 'LOGIN_USER',
-  payload: user,
+  user,
 });
 
 export const postWorkout = (workout) => {
@@ -35,7 +35,7 @@ export const postWorkout = (workout) => {
 
 export const signUpUser = (user) => ({
   type: 'SIGNUP_USER',
-  payload: user,
+  user,
 });
 
 export const getWorkouts = () => {

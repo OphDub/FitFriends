@@ -24,65 +24,56 @@ import { mockTeam } from '../../initialData';
 import { mockWorkoutHistory } from '../../initialData';
 
 class App extends Component {
-  constructor () {
-    super();
-  }
-
   handleRedirect = () => {
     return this.props.history.push('/');
   }
 
   componentWillMount () {
-    this.props.getUser();
-    if (this.props.user.email === undefined) {
-      this.props.history.push('/')
-    }
+    // this.props.getUser();
+    // if (this.props.user.email === undefined) {
+    //   this.props.history.push('/')
+    // }
   }
 
   render() {
-    console.log(this.props);
     return (
       <div className="App">
-        {
-          this.props.user.email &&
-          <SideNav user={mockUserProfile}/>
-        }
         <div className="App-center">
-        {
-          this.props.user.email &&
-          <TopNav />
-        }
+          {
+            this.props.user.loggedIn === true &&
+            <TopNav />
+          }
           <Switch>
             <Route
-              exact path ="/"
-              component={Welcome}/>
+              exact path="/"
+              render={() => (<Home/>)}/>
+            <Route
+              path="/login"
+              render={() => (<Welcome/>)}/>
             <Route
               path="/signup"
-              render={() => this.props.user.email ? (<SignUp handleRedirect={this.handleRedirect}/>) : null}/>
-            <Route
-              path="/home"
-              render={() => this.props.activeUser === true ? (<Home/>) : (<Welcome />) }/>
+              render={() => (<SignUp handleRedirect={this.handleRedirect}/>)}/>
             <Route
               path="/workout"
-              render={() => this.props.activeUser === true ? (<Workout/>) : (<Welcome />)}/>
+              render={( )=> (<Workout/>)}/>
             <Route
               path="/team"
-              render={() => this.props.activeUser === true ? (<Team team={mockTeam} />) : (<Welcome />)}/>
+              render={() => (<Team team={mockTeam} />)}/>
             <Route
               path="/history"
-              render={() => this.props.activeUser === true ? (<WorkoutHistory/>) : (<Welcome />)}/>
+              render={() => (<WorkoutHistory/>)}/>
             <Route
               path="/profile"
-              render={() => this.props.activeUser === true ? (<Profile />) : (<Welcome />)}/>
+              render={() => (<Profile />)}/>
             <Route
               path="/settings"
-              render={() => this.props.activeUser === true ? (<Settings/>) : (<Welcome />)}/>
+              render={() => (<Settings/>)}/>
           </Switch>
         </div>
-        {
-          this.props.user.email &&
-          <Leaderboard topThree={mockTeam}/>
-        }
+          {
+            this.props.user.loggedIn === true &&
+            <Leaderboard topThree={mockTeam}/>
+          }
       </div>
     );
   }

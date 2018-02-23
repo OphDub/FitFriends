@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './Control.css';
-import { loginUser, login } from '../../actions/actionsIndex';
+import { login, getUser } from '../../actions/actionsIndex';
 import { connect } from 'react-redux';
 
 export class Control extends Component {
   constructor () {
     super ();
     this.state = {
-      username: '',
+      email: '',
       password: '',
     }
   }
@@ -19,13 +19,12 @@ export class Control extends Component {
 
   handleLogin = (e) => {
     e.preventDefault();
+    const { email, password } = this.state;
 
-    const { username, password } = this.state;
-    //authenticate user here
-    this.props.login(username,password);
+    this.props.login(email,password);
+    this.props.getUser(email, password);
     // this.props.loginUser(this.state);
-    this.props.handleReroute();
-    this.setState({ username: '', password: '' });
+    this.setState({ email: '', password: '' });
   }
 
   render () {
@@ -34,8 +33,8 @@ export class Control extends Component {
         <input  className="Control-input Control-username"
           type="email"
           placeholder="Email"
-          name="username"
-          value={this.state.username}
+          name="email"
+          value={this.state.email}
           onChange={this.handleChange}/>
         <input  className="Control-input Control-password"
           type="password"
@@ -54,12 +53,11 @@ export class Control extends Component {
 };
 
 export const mapStateToProps = (state) => ({
-  history: state.history
 })
 
 export const mapDispatchToProps = (dispatch) => ({
-  loginUser: (user) => dispatch(loginUser(user)),
-  login: (email, password) => dispatch(login(email, password))
+  login: (email, password) => dispatch(login(email, password)),
+  getUser: (email, password) => dispatch(getUser(email, password))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Control);
