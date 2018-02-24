@@ -9,7 +9,12 @@ import { connect } from 'react-redux';
 import { logout } from '../../actions/actionsIndex';
 import { SignUp } from '../SignUp/SignUp';
 
-export const SideNav = ({ userImage, userName, logout }) => {
+export const SideNav = ({ user, userImage, userName, logout }) => {
+  const logoutUser = (event) => {
+    event.preventDefault();
+    logout(user);
+  }
+
   return (
     <section className="SideNav">
       <div className="user-profile">
@@ -38,7 +43,7 @@ export const SideNav = ({ userImage, userName, logout }) => {
         {/* <button onClick={connectToFitBit}>
           Connect to FitBit
         </button> */}
-        <button >
+        <button onClick={logoutUser}>
           Logout
         </button>
       </div>
@@ -54,4 +59,4 @@ export const mapDispatchToProps = (dispatch) => ({
   logout: (user) => dispatch(logout(user)),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(SignUp);
+export default connect(mapStateToProps, mapDispatchToProps)(SideNav);
