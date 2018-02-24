@@ -26,6 +26,10 @@ export class WorkoutHistory extends Component {
           <h3 className="workout-name">{workout.workoutName}</h3>
           <p className="workout-desc">{workout.workoutDesc}</p>
           <ul className="exercises">
+            <li className="exercises-header">
+              <p className="exercises-reps">Reps:</p>
+              <p className="exercises-name">Exercises:</p>
+            </li>
             {exerciseVals}
           </ul>
         </article>
