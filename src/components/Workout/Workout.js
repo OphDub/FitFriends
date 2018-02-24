@@ -52,9 +52,10 @@ export class Workout extends Component {
     return this.state.exercises.map( (exercise,index) =>
       <li className="rendered-exercise"
         key={exercise.id}>
-          <h6>{exercise.reps}</h6>
-          <h6>{exercise.exercise}</h6>
-        <button id={exercise.id}
+          <h5 className="rendered-ex-info">{exercise.reps}</h5>
+          <h5 className="rendered-ex-info">{exercise.exercise}</h5>
+        <button className="rendered-ex-btn"
+          id={exercise.id}
           onClick={this.removeExercise}>
             -
         </button>
@@ -81,41 +82,50 @@ export class Workout extends Component {
       <section className="Workout">
         <form className="Workout-form">
           <div className="Workout-info">
-            <input type="text"
+            <input  type="text"
+              className="workout-info-inputs workout-name"
               placeholder="Workout Name"
               name="workoutName"
               value={this.state.workoutName}
-              onChange={this.handleChange}/>
-            <input type="text"
+              onChange={this.handleChange}
+            />
+            <input  type="text"
+              className="workout-info-inputs workout-description"
               placeholder="Workout Description (Optional)"
               name="workoutDesc"
               value={this.state.workoutDesc}
-              onChange={this.handleChange}/>
+              onChange={this.handleChange}
+            />
           </div>
           <div>
-            <h4>Exercises</h4>
+            <h4 className="exercise-header">Exercises</h4>
             <ul className="rendered-exercises">
               {this.renderExercises()}
             </ul>
-            <div>
+            <div className="create-exercises">
               <input  type="number"
+                className="exercise-inputs exercise-number"
                 placeholder="Reps"
                 name="reps"
                 value={this.state.reps}
-                onChange={this.handleChange}/>
+                onChange={this.handleChange}
+              />
               <input  type="text"
+                className="exercise-inputs exercise-name"
                 placeholder="Exercise"
                 name="exercise"
                 value={this.state.exercise}
-                onChange={this.handleChange}/>
-              <button onClick={this.addExercise}>
+                onChange={this.handleChange}
+              />
+              <button className="exercise-button"
+                onClick={this.addExercise}>
                 +
               </button>
             </div>
           </div>
           <button className="Workout-post-btn"
             onClick={this.postWorkout}>
-              Post Workout
+              <h3>Post Workout</h3>
           </button>
         </form>
       </section>
