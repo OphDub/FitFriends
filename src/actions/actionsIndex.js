@@ -6,7 +6,7 @@ export const getUser = (user) => {
     auth.onAuthStateChanged( user => {
       dispatch({
         type: 'GET_USER',
-        payload: user
+        user
       })
     })
   }
