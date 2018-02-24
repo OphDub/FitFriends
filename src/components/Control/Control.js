@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import './Control.css';
-import { loginUser } from '../../actions/actionsIndex';
+import { login, getUser } from '../../actions/actionsIndex';
 import { connect } from 'react-redux';
 
 export class Control extends Component {
   constructor () {
     super ();
     this.state = {
-      username: '',
+      email: '',
       password: '',
+      errorMsg: '',
     }
   }
 
@@ -17,13 +18,29 @@ export class Control extends Component {
     this.setState({ [name]: value });
   }
 
-  handleLogin = (e) => {
+  handleLogin = async (e) => {
     e.preventDefault();
+    const { email, password } = this.state;
 
-    //authenticate user here
-    this.props.loginUser(this.state);
-    this.props.handleReroute();
-    this.setState({ username: '', password: '' });
+    try {
+      await this.props.login(email, password);
+    } catch(error) {
+      const errorMsg = 'Username/password incorrect. Try again.';
+
+      this.setState({
+        email: '',
+        password: '',
+        errorMsg
+      });
+
+      throw error
+    }
+
+    this.setState({ email: '', password: '', errorMsg: '' });
+  }
+
+  renderError = () => {
+    return (<h3>{this.state.errorMsg}</h3>)
   }
 
   render () {
@@ -32,8 +49,8 @@ export class Control extends Component {
         <input  className="Control-input Control-username"
           type="email"
           placeholder="Email"
-          name="username"
-          value={this.state.username}
+          name="email"
+          value={this.state.email}
           onChange={this.handleChange}/>
         <input  className="Control-input Control-password"
           type="password"
@@ -46,17 +63,20 @@ export class Control extends Component {
           type="submit">
             <h3>Login</h3>
         </button>
+        <div className="error-msg">
+          {this.renderError()}
+        </div>
       </form>
     )
   }
 };
 
 export const mapStateToProps = (state) => ({
-  history: state.history
 })
 
 export const mapDispatchToProps = (dispatch) => ({
-  loginUser: (user) => dispatch(loginUser(user))
+  login: (email, password) => dispatch(login(email, password)),
+  getUser: (email, password) => dispatch(getUser(email, password))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Control);

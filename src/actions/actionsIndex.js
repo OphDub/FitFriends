@@ -2,29 +2,41 @@ import { workouts } from '../base';
 import { auth } from '../base';
 
 export const getUser = (user) => {
-  return dispatch => {
-    auth.onAuthStateChanged( user => {
+  return async dispatch => {
+    await auth.onAuthStateChanged( user => {
       dispatch({
         type: 'GET_USER',
-        payload: user
+        user
       })
     })
   }
-}
+};
 
-export const loginUser = (user) => ({
-  type: 'LOGIN_USER',
-  payload: user,
-});
+export const login = (email, password) => {
+  return async dispatch => {
+    await auth.signInWithEmailAndPassword(email, password)
+  }
+};
+
+export const logout = () => {
+  return async dispatch => {
+    await auth.signOut();
+
+    dispatch({
+      type: 'LOGOUT_USER',
+    })
+  }
+};
+
+export const signup = (email, password) => {
+  return dispatch => {
+    auth.createUserWithEmailAndPassword(email, password);
+  }
+};
 
 export const postWorkout = (workout) => {
   return dispatch => workouts.push(workout)
 };
-
-export const signUpUser = (user) => ({
-  type: 'SIGNUP_USER',
-  payload: user,
-});
 
 export const getWorkouts = () => {
   return dispatch => {
