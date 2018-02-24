@@ -13,30 +13,36 @@ export const getUser = (user) => {
 };
 
 export const login = (email, password) => {
-  return dispatch => {
-    auth.signInWithEmailAndPassword(email, password)
+  return async dispatch => {
+    await auth.signInWithEmailAndPassword(email, password)
   }
 };
 
 export const logout = (user) => {
   return dispatch => {
-    auth.signOut()
+    auth.signOut();
   }
 };
 
-export const loginUser = (user) => ({
-  type: 'LOGIN_USER',
-  user,
-});
+export const signup = (email, password) => {
+  return dispatch => {
+    auth.createUserWithEmailAndPassword(email, password);
+  }
+};
+
+// export const loginUser = (user) => ({
+//   type: 'LOGIN_USER',
+//   user,
+// });
 
 export const postWorkout = (workout) => {
   return dispatch => workouts.push(workout)
 };
 
-export const signUpUser = (user) => ({
-  type: 'SIGNUP_USER',
-  user,
-});
+// export const signUpUser = (user) => ({
+//   type: 'SIGNUP_USER',
+//   user,
+// });
 
 export const getWorkouts = () => {
   return dispatch => {

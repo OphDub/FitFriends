@@ -9,6 +9,7 @@ export class Control extends Component {
     this.state = {
       email: '',
       password: '',
+      errorMsg: '',
     }
   }
 
@@ -17,16 +18,29 @@ export class Control extends Component {
     this.setState({ [name]: value });
   }
 
-  handleLogin = (e) => {
+  handleLogin = async (e) => {
     e.preventDefault();
     const { email, password } = this.state;
 
-    try{
-      this.props.login(email, password);
+    try {
+      await this.props.login(email, password);
     } catch(error) {
+      const errorMsg = 'Username/password incorrect. Try again.';
+
+      this.setState({
+        email: '',
+        password: '',
+        errorMsg
+      });
+
       throw error
     }
-    this.setState({ email: '', password: '' });
+
+    this.setState({ email: '', password: '', errorMsg: '' });
+  }
+
+  renderError = () => {
+    return (<h3>{this.state.errorMsg}</h3>)
   }
 
   render () {
@@ -49,6 +63,9 @@ export class Control extends Component {
           type="submit">
             <h3>Login</h3>
         </button>
+        <div className="error-msg">
+          {this.renderError()}
+        </div>
       </form>
     )
   }
