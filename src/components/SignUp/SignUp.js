@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './SignUp.css';
 import { connect } from 'react-redux';
-import { signUpUser, loginUser } from '../../actions/actionsIndex';
+import { signUpUser, loginUser, getUser } from '../../actions/actionsIndex';
+import { NavLink } from 'react-router-dom';
 export class SignUp extends Component {
   constructor () {
     super()
@@ -83,10 +84,11 @@ export class SignUp extends Component {
           </form>
           <div className="signup-goback">
             <h5>Already have an account?</h5>
-            <button className="signup-btn"
-              onClick={this.props.handleRedirect}>
-              Go to Login
-            </button>
+            <NavLink to="/login">
+              <button className="signup-btn">
+                Go to Login
+              </button>
+            </NavLink>
           </div>
         </div>
       </div>
@@ -95,12 +97,13 @@ export class SignUp extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  history: state.history
+
 })
 
 const mapDispatchToProps = (dispatch) => ({
   signUpUser: (user) => dispatch(signUpUser(user)),
-  loginUser: (user) => dispatch(loginUser(user))
+  loginUser: (user) => dispatch(loginUser(user)),
+  getUser: (user) => dispatch(getUser(user))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SignUp);
