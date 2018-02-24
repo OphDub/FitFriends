@@ -4,10 +4,6 @@ import { connect } from 'react-redux';
 import { getWorkouts } from '../../actions/actionsIndex';
 
 export class WorkoutHistory extends Component {
-  constructor () {
-    super();
-  }
-
   componentWillMount () {
     this.props.getWorkouts();
   }

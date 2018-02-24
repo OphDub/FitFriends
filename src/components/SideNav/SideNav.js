@@ -5,7 +5,6 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faHome from '@fortawesome/fontawesome-free-solid/faHome';
 import faUser from '@fortawesome/fontawesome-free-solid/faUser';
 import faCog from '@fortawesome/fontawesome-free-solid/faCog';
-import { connectToFitBit } from '../../helper';
 import { connect } from 'react-redux';
 import { logout } from '../../actions/actionsIndex';
 import { SignUp } from '../SignUp/SignUp';
@@ -36,10 +35,10 @@ export const SideNav = ({ userImage, userName, logout }) => {
             Settings
           </button>
         </NavLink>
-        <button onClick={connectToFitBit}>
+        {/* <button onClick={connectToFitBit}>
           Connect to FitBit
-        </button>
-        <button>
+        </button> */}
+        <button >
           Logout
         </button>
       </div>
