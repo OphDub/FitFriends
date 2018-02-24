@@ -1,13 +1,13 @@
 export const userReducer = (state = { loggedIn: false }, action) => {
   switch (action.type) {
     case 'GET_USER':
-      return { loggedIn: true, ...action.payload };
+      return { loggedIn: true, email: action.user.email };
     case 'LOGIN_USER':
-      return action.payload;
+      return action;
     case 'LOGOUT_USER':
-      return action.payload;
+      return action;
     case 'CREATE_USER':
-      return action.payload;
+      return action;
     default:
       return state;
   }
