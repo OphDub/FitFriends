@@ -10,19 +10,19 @@ export const getUser = (user) => {
       })
     })
   }
-}
+};
 
 export const login = (email, password) => {
   return dispatch => {
     auth.signInWithEmailAndPassword(email, password)
   }
-}
+};
 
 export const logout = (user) => {
   return dispatch => {
-    auth.signOut();
+    auth.signOut()
   }
-}
+};
 
 export const loginUser = (user) => ({
   type: 'LOGIN_USER',

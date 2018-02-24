@@ -24,16 +24,20 @@ import { mockTeam } from '../../initialData';
 import { mockWorkoutHistory } from '../../initialData';
 
 class App extends Component {
+  componentDidMount() {
+    this.props.getUser()
+  }
+
   render() {
     return (
       <div className="App">
         {
-          // this.props.user.loggedIn === true &&
-          // <SideNav />
+          this.props.user.email !== null &&
+          <SideNav />
         }
         <div className="App-center">
           {
-            this.props.user.loggedIn === true &&
+            this.props.user.email !== null &&
             <TopNav />
           }
           <Switch>
@@ -64,7 +68,7 @@ class App extends Component {
           </Switch>
         </div>
           {
-            this.props.user.loggedIn === true &&
+            this.props.user.email !== null &&
             <Leaderboard topThree={mockTeam}/>
           }
       </div>

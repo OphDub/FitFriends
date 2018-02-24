@@ -21,9 +21,11 @@ export class Control extends Component {
     e.preventDefault();
     const { email, password } = this.state;
 
-    this.props.login(email,password);
-    this.props.getUser(email, password);
-    // this.props.loginUser(this.state);
+    try{
+      this.props.login(email, password);
+    } catch(error) {
+      throw error
+    }
     this.setState({ email: '', password: '' });
   }
 
