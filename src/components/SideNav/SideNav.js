@@ -5,9 +5,9 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faHome from '@fortawesome/fontawesome-free-solid/faHome';
 import faUser from '@fortawesome/fontawesome-free-solid/faUser';
 import faCog from '@fortawesome/fontawesome-free-solid/faCog';
+import faSignOut from '@fortawesome/fontawesome-free-solid/faSignOutAlt'
 import { connect } from 'react-redux';
 import { logout } from '../../actions/actionsIndex';
-import { SignUp } from '../SignUp/SignUp';
 
 export const SideNav = ({ user, userImage, userName, logout }) => {
   const logoutUser = (event) => {
@@ -40,12 +40,13 @@ export const SideNav = ({ user, userImage, userName, logout }) => {
             Settings
           </button>
         </NavLink>
-        {/* <button onClick={connectToFitBit}>
-          Connect to FitBit
-        </button> */}
-        <button onClick={logoutUser}>
-          Logout
-        </button>
+        <NavLink to="/login">
+          <button className="sidenav-btn"
+            onClick={logoutUser}>
+            <FontAwesomeIcon icon={faSignOut} size="2x"/>
+            Logout
+          </button>
+        </NavLink>
       </div>
     </section>
   )
@@ -56,7 +57,7 @@ export const mapStateToProps = (state) => ({
 });
 
 export const mapDispatchToProps = (dispatch) => ({
-  logout: (user) => dispatch(logout(user)),
+  logout: () => dispatch(logout()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SideNav);

@@ -17,15 +17,19 @@ import WorkoutHistory from '../WorkoutHistory/WorkoutHistory';
 import { Profile } from '../Profile/Profile';
 import { Settings } from '../Settings/Settings';
 
-import { loginUser } from '../../actions/actionsIndex';
-
-import { mockUserProfile } from '../../initialData';
 import { mockTeam } from '../../initialData';
 import { mockWorkoutHistory } from '../../initialData';
 
 class App extends Component {
-  componentDidMount() {
-    this.props.getUser()
+
+  componentWillMount() {
+    if (this.props.user.email === null) {
+      this.props.getUser();
+    }
+
+    if (this.props.user.loggedIn === false) {
+      this.props.history.replace('/login');
+    }
   }
 
   render() {
@@ -82,7 +86,7 @@ const mapStateToProps = (state, ownProps) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-  loginUser: (user) => dispatch(loginUser(user)),
+  // loginUser: (user) => dispatch(loginUser(user)),
   getUser: (user) => dispatch(getUser(user)),
 })
 
