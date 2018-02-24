@@ -24,20 +24,13 @@ import { mockTeam } from '../../initialData';
 import { mockWorkoutHistory } from '../../initialData';
 
 class App extends Component {
-  handleRedirect = () => {
-    return this.props.history.push('/');
-  }
-
-  componentWillMount () {
-    // this.props.getUser();
-    // if (this.props.user.email === undefined) {
-    //   this.props.history.push('/')
-    // }
-  }
-
   render() {
     return (
       <div className="App">
+        {
+          // this.props.user.loggedIn === true &&
+          // <SideNav />
+        }
         <div className="App-center">
           {
             this.props.user.loggedIn === true &&
@@ -52,7 +45,7 @@ class App extends Component {
               render={() => (<Welcome/>)}/>
             <Route
               path="/signup"
-              render={() => (<SignUp handleRedirect={this.handleRedirect}/>)}/>
+              render={() => (<SignUp />)}/>
             <Route
               path="/workout"
               render={( )=> (<Workout/>)}/>
