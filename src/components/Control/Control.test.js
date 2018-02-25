@@ -1,12 +1,15 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Control, mapStateToProps, mapDispatchToProps } from './Control';
+import { Control, mapDispatchToProps } from './Control';
 
 describe('CONTROL', () => {
   let renderedComponent;
+  let mockLogin;
 
   beforeEach(() => {
-    renderedComponent = shallow(<Control />);
+    mockLogin=jest.fn();
+
+    renderedComponent = shallow(<Control login={mockLogin} />, { disableLifecycleMethods: true });
   });
 
   it('should match snapshot', () => {
@@ -23,41 +26,69 @@ describe('CONTROL', () => {
     expect(renderedComponent.state().username).toEqual(expected);
   });
 
-  it('should clear state when handleLogin is called', () => {
-    const exampleString = 'hello';
-    const exampleEvent = { target: { value: 'hello', name: 'username'}};
-    const mockFn = jest.fn();
-    const wrapper = shallow(<Control loginUser={mockFn} handleReroute={mockFn}/>);
+  it('validateLogin should return false and set an error message in state if all fields are not complete', () => {
+    renderedComponent.setState({
+      email: 'me@me.com',
+      password: ''
+    });
+    const expected = false;
+    const expectedErrorMsg = 'Please provide an email and password.';
 
-    wrapper.instance().handleChange(exampleEvent);
-    wrapper.update();
-
-    expect(wrapper.state().username).toEqual(exampleString);
-
-    const expected = '';
-    const mockEvent = {preventDefault: jest.fn()};
-
-    wrapper.instance().handleLogin(mockEvent);
-    wrapper.update();
-
-    expect(wrapper.state().username).toEqual(expected);
+    expect(renderedComponent.instance().validateLogin()).toEqual(expected);
+    expect(renderedComponent.state().errorMsg).toEqual(expectedErrorMsg);
   });
 
-  it('calls loginUser and handleReroute when handleLogin is called', () => {
-    const mockFn = jest.fn();
-    const wrapper = shallow(<Control loginUser={mockFn} handleReroute={mockFn}/>);
+  it('validateLogin should return true if all fields are complete', () => {
+    renderedComponent.setState({
+      email: 'me@me.com',
+      password: 'password'
+    });
+    const expected = true;
+
+    expect(renderedComponent.instance().validateLogin()).toEqual(expected);
+  });
+
+  it('should call login when handleLogin is called', () => {
+    const expectedState = {
+      email: '',
+      password: '',
+      errorMsg: '',
+    }
     const mockEvent = { preventDefault: jest.fn() };
 
-    wrapper.instance().handleLogin(mockEvent);
-    expect(mockFn).toHaveBeenCalled();
+    renderedComponent.setState({
+      email: 'will@me.com',
+      password: 'password',
+    });
+    renderedComponent.instance().handleLogin(mockEvent);
+
+    expect(mockLogin).toHaveBeenCalled();
+  });
+
+  it('should clear state when handleLogin is called', async () => {
+    const mockEvent = { preventDefault: jest.fn() };
+    const expectedState = {
+      email: '',
+      password: '',
+      errorMsg: '',
+    };
+
+    renderedComponent.setState({
+      email: 'me@me.com',
+      password: 'password',
+    });
+
+    await renderedComponent.instance().handleLogin(mockEvent);
+
+    expect(renderedComponent.state()).toEqual(expectedState);
   });
 
   it('should call the dispatch func when using a func from mapDispatchToProps', () => {
     const mockDispatch = jest.fn();
     const mapped = mapDispatchToProps(mockDispatch);
 
-    mapped.loginUser();
+    mapped.login();
 
     expect(mockDispatch).toHaveBeenCalled();
-  })
+  });
 });
