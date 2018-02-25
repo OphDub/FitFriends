@@ -44,6 +44,11 @@
   color: white;
   cursor: pointer; }
 
+.signup-error {
+  color: #ff0000;
+  border-radius: 5px;
+  margin: 10px 0; }
+
 .signup-goback {
   display: flex;
   flex-direction: column;

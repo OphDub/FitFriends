@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './SignUp.css';
 import { connect } from 'react-redux';
-import { signUpUser, loginUser, getUser } from '../../actions/actionsIndex';
 import { NavLink } from 'react-router-dom';
 import { signup } from '../../actions/actionsIndex';
 export class SignUp extends Component {
@@ -11,6 +10,7 @@ export class SignUp extends Component {
       userEmail: '',
       userPass1: '',
       userPass2: '',
+      errorMsg: '',
     }
   }
 
@@ -19,57 +19,103 @@ export class SignUp extends Component {
     this.setState({ [name]: value });
   }
 
-  handleSignUp = (e) => {
-    e.preventDefault();
+  signUpValidation = () => {
+    const { userEmail, userPass1, userPass2 } = this.state;
 
-    try {
-      const {userEmail, userPass1} = this.state;
-      this.props.signup(userEmail, userPass1);
-    } catch (error) {
-      throw error
+    if (userEmail === '' || userPass1 === '' || userPass2 === '') {
+      const errorMsg = 'Please fill out all fields.';
+
+      this.setState({ errorMsg });
+      return false;
     }
 
-    this.setState({
-      userEmail: '',
-      userPass1: '',
-      userPass2: '',
-    });
+    if (userPass1 !== userPass2) {
+      const errorMsg = 'Please make sure passwords match.';
+
+      this.setState({ errorMsg });
+      return false;
+    }
+
+    return true;
+  }
+
+  handleSignUp = async (e) => {
+    e.preventDefault();
+    const {userEmail, userPass1} = this.state;
+
+    if (!this.signUpValidation()) {
+      return
+    }
+
+    try {
+      await this.props.signup(userEmail, userPass1);
+
+      this.setState({
+        userEmail: '',
+        userPass1: '',
+        userPass2: '',
+        errorMsg: '',
+      });
+    } catch (error) {
+      const errorMsg = error.message;
+
+      this.setState({ errorMsg });
+      throw error;
+    }
+  }
+
+  renderForm = () => {
+    return (
+      <form className="SignUp-form">
+        <label htmlFor="userEmail">
+          <span>Email: </span>
+          <input type="email"
+            placeholder="Email"
+            name="userEmail"
+            value={this.state.userEmail}
+            onChange={this.handleChange}
+          />
+        </label>
+        <label htmlFor="userPass1">
+          <span>Password: </span>
+          <input type="password"
+            placeholder="Password"
+            name="userPass1"
+            value={this.state.userPass1}
+            onChange={this.handleChange}
+          />
+        </label>
+        <label htmlFor="userPass2">
+          <span>Confirm Password: </span>
+          <input type="password"
+            placeholder="Password"
+            name="userPass2"
+            value={this.state.userPass2}
+            onChange={this.handleChange}
+          />
+        </label>
+        <button onClick={this.handleSignUp}
+          className="signup-btn">
+            <h3>Sign Up</h3>
+        </button>
+      </form>
+    )
+  }
+
+  renderError = () => {
+    return(
+      <div className="signup-error">
+        <h5 className="signup-error-msg">{this.state.errorMsg}</h5>
+      </div>
+    )
   }
 
   render () {
     return (
       <div className="SignUp">
         <div className="form-background">
-          <form className="SignUp-form">
-            <label htmlFor="userEmail">
-              <span>Email: </span>
-              <input type="email"
-                placeholder="Email"
-                name="userEmail"
-                value={this.state.userEmail}
-                onChange={this.handleChange}/>
-            </label>
-            <label htmlFor="userPass1">
-              <span>Password: </span>
-              <input type="password"
-                placeholder="Password"
-                name="userPass1"
-                value={this.state.userPass1}
-                onChange={this.handleChange}/>
-            </label>
-            <label htmlFor="userPass2">
-              <span>Confirm Password: </span>
-              <input type="password"
-                placeholder="Password"
-                name="userPass2"
-                value={this.state.userPass2}
-                onChange={this.handleChange}/>
-            </label>
-            <button onClick={this.handleSignUp}
-              className="signup-btn">
-                <h3>Sign Up</h3>
-            </button>
-          </form>
+         {this.renderForm()}
+         {this.renderError()}
           <div className="signup-goback">
             <h5>Already have an account?</h5>
             <NavLink to="/login">
@@ -84,12 +130,8 @@ export class SignUp extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-
-})
-
-const mapDispatchToProps = (dispatch) => ({
+export const mapDispatchToProps = (dispatch) => ({
   signup: (email, password) => dispatch(signup(email, password)),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(SignUp);
+export default connect(null, mapDispatchToProps)(SignUp);
