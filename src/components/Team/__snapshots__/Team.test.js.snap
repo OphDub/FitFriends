@@ -85,7 +85,7 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": undefined,
+        "key": "randomKey1",
         "nodeType": "function",
         "props": Object {
           "UID": "randomKey1",
@@ -99,7 +99,7 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": undefined,
+        "key": "randomKey2",
         "nodeType": "function",
         "props": Object {
           "UID": "randomKey2",
@@ -113,7 +113,7 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": undefined,
+        "key": "randomKey3",
         "nodeType": "function",
         "props": Object {
           "UID": "randomKey3",
@@ -179,7 +179,7 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "randomKey1",
           "nodeType": "function",
           "props": Object {
             "UID": "randomKey1",
@@ -193,7 +193,7 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "randomKey2",
           "nodeType": "function",
           "props": Object {
             "UID": "randomKey2",
@@ -207,7 +207,7 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "randomKey3",
           "nodeType": "function",
           "props": Object {
             "UID": "randomKey3",
