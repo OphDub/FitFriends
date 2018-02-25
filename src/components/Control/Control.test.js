@@ -4,9 +4,14 @@ import { Control, mapStateToProps, mapDispatchToProps } from './Control';
 
 describe('CONTROL', () => {
   let renderedComponent;
+  let mockProps;
 
   beforeEach(() => {
-    renderedComponent = shallow(<Control />);
+    mockProps={
+      login: () => jest.fn()
+    }
+
+    renderedComponent = shallow(<Control props={mockProps} />, { disableLifecycleMethods: true });
   });
 
   it('should match snapshot', () => {
@@ -59,5 +64,5 @@ describe('CONTROL', () => {
     mapped.loginUser();
 
     expect(mockDispatch).toHaveBeenCalled();
-  })
+  });
 });

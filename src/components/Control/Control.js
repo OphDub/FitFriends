@@ -71,12 +71,9 @@ export class Control extends Component {
   }
 };
 
-export const mapStateToProps = (state) => ({
-})
-
 export const mapDispatchToProps = (dispatch) => ({
   login: (email, password) => dispatch(login(email, password)),
   getUser: (email, password) => dispatch(getUser(email, password))
-})
+});
 
-export default connect(mapStateToProps, mapDispatchToProps)(Control);
+export default connect(null, mapDispatchToProps)(Control);
