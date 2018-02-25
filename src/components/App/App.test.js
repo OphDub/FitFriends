@@ -1,11 +1,36 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import App from './App';
+import { mapStateToProps, mapDispatchToProps } from './App';
 
 describe('APP', () => {
-  it.skip('should match snapshot', () => {
-    const renderedComponent = shallow(<App />);
+  it('should match the snapshot', () => {
+    const mockEmail = 'user@user.com';
+    const mockProps = {
+      user: { email: mockEmail }
+    }
+    const renderedComponent = shallow(<App props={mockProps}/>, { disableLifecycleMethods: true });
 
     expect(renderedComponent).toMatchSnapshot();
-  })
-})
+  });
+
+  it('should be able to map the store correctly', () => {
+    const mockUser = { loggedIn: true, email: 'will@will.com' }
+    const mockStore = {
+      user: mockUser
+    };
+
+    const mapped = mapStateToProps(mockStore);
+
+    expect(mapped.user).toEqual(mockStore.user);
+  });
+
+  it('should call the dispatch func when using a func getUser', () => {
+    const mockDispatch = jest.fn();
+    const mapped = mapDispatchToProps(mockDispatch);
+
+    mapped.getUser();
+
+    expect(mockDispatch).toHaveBeenCalled();
+  });
+});
