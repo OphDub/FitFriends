@@ -29,8 +29,8 @@ export const logout = () => {
 };
 
 export const signup = (email, password) => {
-  return dispatch => {
-    auth.createUserWithEmailAndPassword(email, password);
+  return async dispatch => {
+    await auth.createUserWithEmailAndPassword(email, password)
   }
 };
 
