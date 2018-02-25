@@ -1,3 +1,4 @@
+/* eslint-disable */
 import * as actions from './actionsIndex';
 import thunk from 'redux-thunk';
 import configureMockStore from 'redux-mock-store';
@@ -5,7 +6,7 @@ import configureMockStore from 'redux-mock-store';
 const middleware = [ thunk ];
 const mockStore = configureMockStore(middleware);
 
-describe.skip('ACTIONS', () => {
+describe('ACTIONS', () => {
   describe('getUser action', () => {
     it('should return a type of GET_USER, with a user', async () => {
       const mockUser = { email: 'me@me.com', password: 'password' };
