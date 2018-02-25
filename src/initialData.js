@@ -1,15 +1,18 @@
 export const mockTeam = [
   {
+    UID: 'randomKey1',
     name: 'Felipe',
     workoutTally: 6,
     workoutsPosted: 2,
   },
   {
+    UID: 'randomKey2',
     name: 'Fion',
     workoutTally: 5,
     workoutsPosted: 3,
   },
   {
+    UID: 'randomKey3',
     name: 'Morgan',
     workoutTally: 3,
     workoutsPosted: 4,

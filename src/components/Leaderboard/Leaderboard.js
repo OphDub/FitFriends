@@ -4,7 +4,7 @@ import { Teammate } from '../Teammate/Teammate';
 
 export const Leaderboard = ({topThree}) => {
   const renderedLeaders = topThree.map(leader => 
-    <Teammate {...leader}/>
+    <Teammate {...leader} key={leader.UID}/>
   )
 
   return (

@@ -1,4 +1,4 @@
-import { workouts } from '../base';
+import { workoutsDb } from '../base';
 import { auth } from '../base';
 
 export const getUser = (user) => {
@@ -35,15 +35,15 @@ export const signup = (email, password) => {
 };
 
 export const postWorkout = (workout) => {
-  return dispatch => workouts.push(workout)
+  return dispatch => workoutsDb.push(workout)
 };
 
 export const getWorkouts = () => {
   return dispatch => {
-    workouts.on('value', snapshot => {
+    workoutsDb.on('value', snapshot => {
       dispatch({
         type: 'GET_WORKOUTS',
-        payload: snapshot.val()
+        workouts: snapshot.val()
       })
     })
   }
