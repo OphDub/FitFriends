@@ -80,13 +80,11 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = (state, ownProps) => ({
+export const mapStateToProps = (state) => ({
   user: state.user,
-  activeUser: state.activeUser,
 })
 
-const mapDispatchToProps = (dispatch) => ({
-  // loginUser: (user) => dispatch(loginUser(user)),
+export const mapDispatchToProps = (dispatch) => ({
   getUser: (user) => dispatch(getUser(user)),
 })
 
