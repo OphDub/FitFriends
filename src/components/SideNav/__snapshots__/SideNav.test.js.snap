@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SIDENAV should match snapshot 1`] = `
+exports[`SIDENAV should match the snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
@@ -155,11 +155,47 @@ ShallowWrapper {
                               Settings
                     </button>
           </NavLink>
-          <button
-                    onClick={[Function]}
+          <NavLink
+                    activeClassName="active"
+                    ariaCurrent="true"
+                    to="/login"
           >
-                    Connect to FitBit
-          </button>
+                    <button
+                              className="sidenav-btn"
+                              onClick={[Function]}
+                    >
+                              <FontAwesomeIcon$1
+                                        border={false}
+                                        className=""
+                                        fixedWidth={false}
+                                        flip={null}
+                                        icon={
+                                                  Object {
+                                                            "icon": Array [
+                                                              512,
+                                                              512,
+                                                              Array [],
+                                                              "f2f5",
+                                                              "M497 273L329 441c-15 15-41 4.5-41-17v-96H152c-13.3 0-24-10.7-24-24v-96c0-13.3 10.7-24 24-24h136V88c0-21.4 25.9-32 41-17l168 168c9.3 9.4 9.3 24.6 0 34zM192 436v-40c0-6.6-5.4-12-12-12H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h84c6.6 0 12-5.4 12-12V76c0-6.6-5.4-12-12-12H96c-53 0-96 43-96 96v192c0 53 43 96 96 96h84c6.6 0 12-5.4 12-12z",
+                                                            ],
+                                                            "iconName": "sign-out-alt",
+                                                            "prefix": "fas",
+                                                          }
+                                        }
+                                        listItem={false}
+                                        mask={null}
+                                        name=""
+                                        pull={null}
+                                        pulse={false}
+                                        rotation={null}
+                                        size="2x"
+                                        spin={false}
+                                        symbol={false}
+                                        transform={null}
+                              />
+                              Logout
+                    </button>
+          </NavLink>
 </div>,
       ],
       "className": "SideNav",
@@ -341,11 +377,47 @@ ShallowWrapper {
                             Settings
               </button>
 </NavLink>,
-            <button
-              onClick={[Function]}
+            <NavLink
+              activeClassName="active"
+              ariaCurrent="true"
+              to="/login"
 >
-              Connect to FitBit
-</button>,
+              <button
+                            className="sidenav-btn"
+                            onClick={[Function]}
+              >
+                            <FontAwesomeIcon$1
+                                          border={false}
+                                          className=""
+                                          fixedWidth={false}
+                                          flip={null}
+                                          icon={
+                                                        Object {
+                                                                      "icon": Array [
+                                                                        512,
+                                                                        512,
+                                                                        Array [],
+                                                                        "f2f5",
+                                                                        "M497 273L329 441c-15 15-41 4.5-41-17v-96H152c-13.3 0-24-10.7-24-24v-96c0-13.3 10.7-24 24-24h136V88c0-21.4 25.9-32 41-17l168 168c9.3 9.4 9.3 24.6 0 34zM192 436v-40c0-6.6-5.4-12-12-12H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h84c6.6 0 12-5.4 12-12V76c0-6.6-5.4-12-12-12H96c-53 0-96 43-96 96v192c0 53 43 96 96 96h84c6.6 0 12-5.4 12-12z",
+                                                                      ],
+                                                                      "iconName": "sign-out-alt",
+                                                                      "prefix": "fas",
+                                                                    }
+                                          }
+                                          listItem={false}
+                                          mask={null}
+                                          name=""
+                                          pull={null}
+                                          pulse={false}
+                                          rotation={null}
+                                          size="2x"
+                                          spin={false}
+                                          symbol={false}
+                                          transform={null}
+                            />
+                            Logout
+              </button>
+</NavLink>,
           ],
           "className": "sidenav-btns",
         },
@@ -732,14 +804,130 @@ ShallowWrapper {
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "host",
+            "nodeType": "function",
             "props": Object {
-              "children": "Connect to FitBit",
-              "onClick": [Function],
+              "activeClassName": "active",
+              "ariaCurrent": "true",
+              "children": <button
+                className="sidenav-btn"
+                onClick={[Function]}
+>
+                <FontAwesomeIcon$1
+                                border={false}
+                                className=""
+                                fixedWidth={false}
+                                flip={null}
+                                icon={
+                                                Object {
+                                                                "icon": Array [
+                                                                  512,
+                                                                  512,
+                                                                  Array [],
+                                                                  "f2f5",
+                                                                  "M497 273L329 441c-15 15-41 4.5-41-17v-96H152c-13.3 0-24-10.7-24-24v-96c0-13.3 10.7-24 24-24h136V88c0-21.4 25.9-32 41-17l168 168c9.3 9.4 9.3 24.6 0 34zM192 436v-40c0-6.6-5.4-12-12-12H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h84c6.6 0 12-5.4 12-12V76c0-6.6-5.4-12-12-12H96c-53 0-96 43-96 96v192c0 53 43 96 96 96h84c6.6 0 12-5.4 12-12z",
+                                                                ],
+                                                                "iconName": "sign-out-alt",
+                                                                "prefix": "fas",
+                                                              }
+                                }
+                                listItem={false}
+                                mask={null}
+                                name=""
+                                pull={null}
+                                pulse={false}
+                                rotation={null}
+                                size="2x"
+                                spin={false}
+                                symbol={false}
+                                transform={null}
+                />
+                Logout
+</button>,
+              "to": "/login",
             },
             "ref": null,
-            "rendered": "Connect to FitBit",
-            "type": "button",
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <FontAwesomeIcon$1
+                    border={false}
+                    className=""
+                    fixedWidth={false}
+                    flip={null}
+                    icon={
+                                        Object {
+                                                            "icon": Array [
+                                                              512,
+                                                              512,
+                                                              Array [],
+                                                              "f2f5",
+                                                              "M497 273L329 441c-15 15-41 4.5-41-17v-96H152c-13.3 0-24-10.7-24-24v-96c0-13.3 10.7-24 24-24h136V88c0-21.4 25.9-32 41-17l168 168c9.3 9.4 9.3 24.6 0 34zM192 436v-40c0-6.6-5.4-12-12-12H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h84c6.6 0 12-5.4 12-12V76c0-6.6-5.4-12-12-12H96c-53 0-96 43-96 96v192c0 53 43 96 96 96h84c6.6 0 12-5.4 12-12z",
+                                                            ],
+                                                            "iconName": "sign-out-alt",
+                                                            "prefix": "fas",
+                                                          }
+                    }
+                    listItem={false}
+                    mask={null}
+                    name=""
+                    pull={null}
+                    pulse={false}
+                    rotation={null}
+                    size="2x"
+                    spin={false}
+                    symbol={false}
+                    transform={null}
+/>,
+                  "Logout",
+                ],
+                "className": "sidenav-btn",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "border": false,
+                    "className": "",
+                    "fixedWidth": false,
+                    "flip": null,
+                    "icon": Object {
+                      "icon": Array [
+                        512,
+                        512,
+                        Array [],
+                        "f2f5",
+                        "M497 273L329 441c-15 15-41 4.5-41-17v-96H152c-13.3 0-24-10.7-24-24v-96c0-13.3 10.7-24 24-24h136V88c0-21.4 25.9-32 41-17l168 168c9.3 9.4 9.3 24.6 0 34zM192 436v-40c0-6.6-5.4-12-12-12H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h84c6.6 0 12-5.4 12-12V76c0-6.6-5.4-12-12-12H96c-53 0-96 43-96 96v192c0 53 43 96 96 96h84c6.6 0 12-5.4 12-12z",
+                      ],
+                      "iconName": "sign-out-alt",
+                      "prefix": "fas",
+                    },
+                    "listItem": false,
+                    "mask": null,
+                    "name": "",
+                    "pull": null,
+                    "pulse": false,
+                    "rotation": null,
+                    "size": "2x",
+                    "spin": false,
+                    "symbol": false,
+                    "transform": null,
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "Logout",
+              ],
+              "type": "button",
+            },
+            "type": [Function],
           },
         ],
         "type": "div",
@@ -891,11 +1079,47 @@ ShallowWrapper {
                                     Settings
                         </button>
             </NavLink>
-            <button
-                        onClick={[Function]}
+            <NavLink
+                        activeClassName="active"
+                        ariaCurrent="true"
+                        to="/login"
             >
-                        Connect to FitBit
-            </button>
+                        <button
+                                    className="sidenav-btn"
+                                    onClick={[Function]}
+                        >
+                                    <FontAwesomeIcon$1
+                                                border={false}
+                                                className=""
+                                                fixedWidth={false}
+                                                flip={null}
+                                                icon={
+                                                            Object {
+                                                                        "icon": Array [
+                                                                          512,
+                                                                          512,
+                                                                          Array [],
+                                                                          "f2f5",
+                                                                          "M497 273L329 441c-15 15-41 4.5-41-17v-96H152c-13.3 0-24-10.7-24-24v-96c0-13.3 10.7-24 24-24h136V88c0-21.4 25.9-32 41-17l168 168c9.3 9.4 9.3 24.6 0 34zM192 436v-40c0-6.6-5.4-12-12-12H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h84c6.6 0 12-5.4 12-12V76c0-6.6-5.4-12-12-12H96c-53 0-96 43-96 96v192c0 53 43 96 96 96h84c6.6 0 12-5.4 12-12z",
+                                                                        ],
+                                                                        "iconName": "sign-out-alt",
+                                                                        "prefix": "fas",
+                                                                      }
+                                                }
+                                                listItem={false}
+                                                mask={null}
+                                                name=""
+                                                pull={null}
+                                                pulse={false}
+                                                rotation={null}
+                                                size="2x"
+                                                spin={false}
+                                                symbol={false}
+                                                transform={null}
+                                    />
+                                    Logout
+                        </button>
+            </NavLink>
 </div>,
         ],
         "className": "SideNav",
@@ -1077,11 +1301,47 @@ ShallowWrapper {
                                 Settings
                 </button>
 </NavLink>,
-              <button
-                onClick={[Function]}
+              <NavLink
+                activeClassName="active"
+                ariaCurrent="true"
+                to="/login"
 >
-                Connect to FitBit
-</button>,
+                <button
+                                className="sidenav-btn"
+                                onClick={[Function]}
+                >
+                                <FontAwesomeIcon$1
+                                                border={false}
+                                                className=""
+                                                fixedWidth={false}
+                                                flip={null}
+                                                icon={
+                                                                Object {
+                                                                                "icon": Array [
+                                                                                  512,
+                                                                                  512,
+                                                                                  Array [],
+                                                                                  "f2f5",
+                                                                                  "M497 273L329 441c-15 15-41 4.5-41-17v-96H152c-13.3 0-24-10.7-24-24v-96c0-13.3 10.7-24 24-24h136V88c0-21.4 25.9-32 41-17l168 168c9.3 9.4 9.3 24.6 0 34zM192 436v-40c0-6.6-5.4-12-12-12H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h84c6.6 0 12-5.4 12-12V76c0-6.6-5.4-12-12-12H96c-53 0-96 43-96 96v192c0 53 43 96 96 96h84c6.6 0 12-5.4 12-12z",
+                                                                                ],
+                                                                                "iconName": "sign-out-alt",
+                                                                                "prefix": "fas",
+                                                                              }
+                                                }
+                                                listItem={false}
+                                                mask={null}
+                                                name=""
+                                                pull={null}
+                                                pulse={false}
+                                                rotation={null}
+                                                size="2x"
+                                                spin={false}
+                                                symbol={false}
+                                                transform={null}
+                                />
+                                Logout
+                </button>
+</NavLink>,
             ],
             "className": "sidenav-btns",
           },
@@ -1468,14 +1728,130 @@ ShallowWrapper {
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "host",
+              "nodeType": "function",
               "props": Object {
-                "children": "Connect to FitBit",
-                "onClick": [Function],
+                "activeClassName": "active",
+                "ariaCurrent": "true",
+                "children": <button
+                  className="sidenav-btn"
+                  onClick={[Function]}
+>
+                  <FontAwesomeIcon$1
+                                    border={false}
+                                    className=""
+                                    fixedWidth={false}
+                                    flip={null}
+                                    icon={
+                                                      Object {
+                                                                        "icon": Array [
+                                                                          512,
+                                                                          512,
+                                                                          Array [],
+                                                                          "f2f5",
+                                                                          "M497 273L329 441c-15 15-41 4.5-41-17v-96H152c-13.3 0-24-10.7-24-24v-96c0-13.3 10.7-24 24-24h136V88c0-21.4 25.9-32 41-17l168 168c9.3 9.4 9.3 24.6 0 34zM192 436v-40c0-6.6-5.4-12-12-12H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h84c6.6 0 12-5.4 12-12V76c0-6.6-5.4-12-12-12H96c-53 0-96 43-96 96v192c0 53 43 96 96 96h84c6.6 0 12-5.4 12-12z",
+                                                                        ],
+                                                                        "iconName": "sign-out-alt",
+                                                                        "prefix": "fas",
+                                                                      }
+                                    }
+                                    listItem={false}
+                                    mask={null}
+                                    name=""
+                                    pull={null}
+                                    pulse={false}
+                                    rotation={null}
+                                    size="2x"
+                                    spin={false}
+                                    symbol={false}
+                                    transform={null}
+                  />
+                  Logout
+</button>,
+                "to": "/login",
               },
               "ref": null,
-              "rendered": "Connect to FitBit",
-              "type": "button",
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <FontAwesomeIcon$1
+                      border={false}
+                      className=""
+                      fixedWidth={false}
+                      flip={null}
+                      icon={
+                                            Object {
+                                                                  "icon": Array [
+                                                                    512,
+                                                                    512,
+                                                                    Array [],
+                                                                    "f2f5",
+                                                                    "M497 273L329 441c-15 15-41 4.5-41-17v-96H152c-13.3 0-24-10.7-24-24v-96c0-13.3 10.7-24 24-24h136V88c0-21.4 25.9-32 41-17l168 168c9.3 9.4 9.3 24.6 0 34zM192 436v-40c0-6.6-5.4-12-12-12H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h84c6.6 0 12-5.4 12-12V76c0-6.6-5.4-12-12-12H96c-53 0-96 43-96 96v192c0 53 43 96 96 96h84c6.6 0 12-5.4 12-12z",
+                                                                  ],
+                                                                  "iconName": "sign-out-alt",
+                                                                  "prefix": "fas",
+                                                                }
+                      }
+                      listItem={false}
+                      mask={null}
+                      name=""
+                      pull={null}
+                      pulse={false}
+                      rotation={null}
+                      size="2x"
+                      spin={false}
+                      symbol={false}
+                      transform={null}
+/>,
+                    "Logout",
+                  ],
+                  "className": "sidenav-btn",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "border": false,
+                      "className": "",
+                      "fixedWidth": false,
+                      "flip": null,
+                      "icon": Object {
+                        "icon": Array [
+                          512,
+                          512,
+                          Array [],
+                          "f2f5",
+                          "M497 273L329 441c-15 15-41 4.5-41-17v-96H152c-13.3 0-24-10.7-24-24v-96c0-13.3 10.7-24 24-24h136V88c0-21.4 25.9-32 41-17l168 168c9.3 9.4 9.3 24.6 0 34zM192 436v-40c0-6.6-5.4-12-12-12H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h84c6.6 0 12-5.4 12-12V76c0-6.6-5.4-12-12-12H96c-53 0-96 43-96 96v192c0 53 43 96 96 96h84c6.6 0 12-5.4 12-12z",
+                        ],
+                        "iconName": "sign-out-alt",
+                        "prefix": "fas",
+                      },
+                      "listItem": false,
+                      "mask": null,
+                      "name": "",
+                      "pull": null,
+                      "pulse": false,
+                      "rotation": null,
+                      "size": "2x",
+                      "spin": false,
+                      "symbol": false,
+                      "transform": null,
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  "Logout",
+                ],
+                "type": "button",
+              },
+              "type": [Function],
             },
           ],
           "type": "div",
