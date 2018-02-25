@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Control.css';
-import { login, getUser } from '../../actions/actionsIndex';
+import { login } from '../../actions/actionsIndex';
 import { connect } from 'react-redux';
 
 export class Control extends Component {
@@ -18,12 +18,34 @@ export class Control extends Component {
     this.setState({ [name]: value });
   }
 
+  validateLogin = () => {
+    const { email, password } = this.state;
+    const message = 'Please provide an email and password.'
+    let errorMsg;
+
+    const validated = email === '' || password === '' ?
+      (errorMsg = message) && false : true;
+
+    this.setState({ errorMsg });
+    return validated;
+  }
+
   handleLogin = async (e) => {
     e.preventDefault();
     const { email, password } = this.state;
 
+    if(!this.validateLogin()) {
+      return
+    }
+
     try {
       await this.props.login(email, password);
+
+      this.setState({
+        email: '',
+        password: '',
+        errorMsg: '',
+      });
     } catch(error) {
       const errorMsg = 'Username/password incorrect. Try again.';
 
@@ -35,8 +57,6 @@ export class Control extends Component {
 
       throw error
     }
-
-    this.setState({ email: '', password: '', errorMsg: '' });
   }
 
   renderError = () => {
@@ -72,8 +92,7 @@ export class Control extends Component {
 };
 
 export const mapDispatchToProps = (dispatch) => ({
-  login: (email, password) => dispatch(login(email, password)),
-  getUser: (email, password) => dispatch(getUser(email, password))
+  login: (email, password) => dispatch(login(email, password))
 });
 
 export default connect(null, mapDispatchToProps)(Control);
