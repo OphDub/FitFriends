@@ -28,7 +28,7 @@ class App extends Component {
     }
 
     if (this.props.user.loggedIn === false) {
-      this.props.history.replace('/login');
+      this.props.history.push('/login');
     }
   }
 
