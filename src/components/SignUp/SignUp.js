@@ -3,15 +3,14 @@ import './SignUp.css';
 import { connect } from 'react-redux';
 import { signUpUser, loginUser, getUser } from '../../actions/actionsIndex';
 import { NavLink } from 'react-router-dom';
+import { signup } from '../../actions/actionsIndex';
 export class SignUp extends Component {
   constructor () {
     super()
     this.state={
-      userName: '',
       userEmail: '',
       userPass1: '',
       userPass2: '',
-      userId: '',
     }
   }
 
@@ -23,20 +22,17 @@ export class SignUp extends Component {
   handleSignUp = (e) => {
     e.preventDefault();
 
-    const userId = Date.now();
-    this.setState({ userId });
-    this.props.signUpUser(this.state);
-    this.props.loginUser({
-      user: this.state.userName,
-      password: this.state.userPass,
-    });
+    try {
+      const {userEmail, userPass1} = this.state;
+      this.props.signup(userEmail, userPass1);
+    } catch (error) {
+      throw error
+    }
 
     this.setState({
-      userName: '',
       userEmail: '',
       userPass1: '',
       userPass2: '',
-      userId: '',
     });
   }
 
@@ -45,14 +41,6 @@ export class SignUp extends Component {
       <div className="SignUp">
         <div className="form-background">
           <form className="SignUp-form">
-            <label htmlFor="userName">
-              <span>Username: </span>
-              <input type="text"
-                placeholder="Username"
-                name="userName"
-                value={this.state.userName}
-                onChange={this.handleChange}/>
-            </label>
             <label htmlFor="userEmail">
               <span>Email: </span>
               <input type="email"
@@ -66,7 +54,7 @@ export class SignUp extends Component {
               <input type="password"
                 placeholder="Password"
                 name="userPass1"
-                value={this.state.userPass}
+                value={this.state.userPass1}
                 onChange={this.handleChange}/>
             </label>
             <label htmlFor="userPass2">
@@ -74,7 +62,7 @@ export class SignUp extends Component {
               <input type="password"
                 placeholder="Password"
                 name="userPass2"
-                value={this.state.userPass}
+                value={this.state.userPass2}
                 onChange={this.handleChange}/>
             </label>
             <button onClick={this.handleSignUp}
@@ -101,9 +89,7 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-  signUpUser: (user) => dispatch(signUpUser(user)),
-  loginUser: (user) => dispatch(loginUser(user)),
-  getUser: (user) => dispatch(getUser(user))
+  signup: (email, password) => dispatch(signup(email, password)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SignUp);
