@@ -162,7 +162,7 @@ ShallowWrapper {
           >
                     <button
                               className="sidenav-btn"
-                              onClick={[Function]}
+                              onClick={undefined}
                     >
                               <FontAwesomeIcon$1
                                         border={false}
@@ -384,7 +384,7 @@ ShallowWrapper {
 >
               <button
                             className="sidenav-btn"
-                            onClick={[Function]}
+                            onClick={undefined}
               >
                             <FontAwesomeIcon$1
                                           border={false}
@@ -810,7 +810,7 @@ ShallowWrapper {
               "ariaCurrent": "true",
               "children": <button
                 className="sidenav-btn"
-                onClick={[Function]}
+                onClick={undefined}
 >
                 <FontAwesomeIcon$1
                                 border={false}
@@ -884,7 +884,7 @@ ShallowWrapper {
                   "Logout",
                 ],
                 "className": "sidenav-btn",
-                "onClick": [Function],
+                "onClick": undefined,
               },
               "ref": null,
               "rendered": Array [
@@ -1086,7 +1086,7 @@ ShallowWrapper {
             >
                         <button
                                     className="sidenav-btn"
-                                    onClick={[Function]}
+                                    onClick={undefined}
                         >
                                     <FontAwesomeIcon$1
                                                 border={false}
@@ -1308,7 +1308,7 @@ ShallowWrapper {
 >
                 <button
                                 className="sidenav-btn"
-                                onClick={[Function]}
+                                onClick={undefined}
                 >
                                 <FontAwesomeIcon$1
                                                 border={false}
@@ -1734,7 +1734,7 @@ ShallowWrapper {
                 "ariaCurrent": "true",
                 "children": <button
                   className="sidenav-btn"
-                  onClick={[Function]}
+                  onClick={undefined}
 >
                   <FontAwesomeIcon$1
                                     border={false}
@@ -1808,7 +1808,7 @@ ShallowWrapper {
                     "Logout",
                   ],
                   "className": "sidenav-btn",
-                  "onClick": [Function],
+                  "onClick": undefined,
                 },
                 "ref": null,
                 "rendered": Array [
