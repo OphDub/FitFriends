@@ -8,16 +8,19 @@ ShallowWrapper {
     team={
         Array [
             Object {
+              "UID": "randomKey1",
               "name": "Felipe",
               "workoutTally": 6,
               "workoutsPosted": 2,
             },
             Object {
+              "UID": "randomKey2",
               "name": "Fion",
               "workoutTally": 5,
               "workoutsPosted": 3,
             },
             Object {
+              "UID": "randomKey3",
               "name": "Morgan",
               "workoutTally": 3,
               "workoutsPosted": 4,
@@ -38,21 +41,31 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Unknown
-          name="Felipe"
-          workoutTally={6}
-          workoutsPosted={2}
+        <h3
+          className="Team-header"
+>
+          Team Members
+</h3>,
+        Array [
+          <Unknown
+            UID="randomKey1"
+            name="Felipe"
+            workoutTally={6}
+            workoutsPosted={2}
 />,
-        <Unknown
-          name="Fion"
-          workoutTally={5}
-          workoutsPosted={3}
+          <Unknown
+            UID="randomKey2"
+            name="Fion"
+            workoutTally={5}
+            workoutsPosted={3}
 />,
-        <Unknown
-          name="Morgan"
-          workoutTally={3}
-          workoutsPosted={4}
+          <Unknown
+            UID="randomKey3"
+            name="Morgan"
+            workoutTally={3}
+            workoutsPosted={4}
 />,
+        ],
       ],
       "className": "Team",
     },
@@ -61,8 +74,21 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Team Members",
+          "className": "Team-header",
+        },
+        "ref": null,
+        "rendered": "Team Members",
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": "randomKey1",
         "nodeType": "function",
         "props": Object {
+          "UID": "randomKey1",
           "name": "Felipe",
           "workoutTally": 6,
           "workoutsPosted": 2,
@@ -73,9 +99,10 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": undefined,
+        "key": "randomKey2",
         "nodeType": "function",
         "props": Object {
+          "UID": "randomKey2",
           "name": "Fion",
           "workoutTally": 5,
           "workoutsPosted": 3,
@@ -86,9 +113,10 @@ ShallowWrapper {
       },
       Object {
         "instance": null,
-        "key": undefined,
+        "key": "randomKey3",
         "nodeType": "function",
         "props": Object {
+          "UID": "randomKey3",
           "name": "Morgan",
           "workoutTally": 3,
           "workoutsPosted": 4,
@@ -107,21 +135,31 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Unknown
-            name="Felipe"
-            workoutTally={6}
-            workoutsPosted={2}
+          <h3
+            className="Team-header"
+>
+            Team Members
+</h3>,
+          Array [
+            <Unknown
+              UID="randomKey1"
+              name="Felipe"
+              workoutTally={6}
+              workoutsPosted={2}
 />,
-          <Unknown
-            name="Fion"
-            workoutTally={5}
-            workoutsPosted={3}
+            <Unknown
+              UID="randomKey2"
+              name="Fion"
+              workoutTally={5}
+              workoutsPosted={3}
 />,
-          <Unknown
-            name="Morgan"
-            workoutTally={3}
-            workoutsPosted={4}
+            <Unknown
+              UID="randomKey3"
+              name="Morgan"
+              workoutTally={3}
+              workoutsPosted={4}
 />,
+          ],
         ],
         "className": "Team",
       },
@@ -130,8 +168,21 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Team Members",
+            "className": "Team-header",
+          },
+          "ref": null,
+          "rendered": "Team Members",
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": "randomKey1",
           "nodeType": "function",
           "props": Object {
+            "UID": "randomKey1",
             "name": "Felipe",
             "workoutTally": 6,
             "workoutsPosted": 2,
@@ -142,9 +193,10 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "randomKey2",
           "nodeType": "function",
           "props": Object {
+            "UID": "randomKey2",
             "name": "Fion",
             "workoutTally": 5,
             "workoutsPosted": 3,
@@ -155,9 +207,10 @@ ShallowWrapper {
         },
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "randomKey3",
           "nodeType": "function",
           "props": Object {
+            "UID": "randomKey3",
             "name": "Morgan",
             "workoutTally": 3,
             "workoutsPosted": 4,
@@ -176,6 +229,7 @@ ShallowWrapper {
         "enableComponentDidUpdateOnSetState": true,
       },
     },
+    "disableLifecycleMethods": true,
   },
 }
 `;

@@ -4,7 +4,30 @@ exports[`LEADERBOARD should match snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Unknown />,
+  Symbol(enzyme.__unrendered__): <Unknown
+    topThree={
+        Array [
+            Object {
+              "UID": "randomKey1",
+              "name": "Felipe",
+              "workoutTally": 6,
+              "workoutsPosted": 2,
+            },
+            Object {
+              "UID": "randomKey2",
+              "name": "Fion",
+              "workoutTally": 5,
+              "workoutsPosted": 3,
+            },
+            Object {
+              "UID": "randomKey3",
+              "name": "Morgan",
+              "workoutTally": 3,
+              "workoutsPosted": 4,
+            },
+          ]
+    }
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -17,11 +40,89 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": "I am Leaderboard",
+      "children": Array [
+        <h3>
+          Leaderboard
+</h3>,
+        Array [
+          <Unknown
+            UID="randomKey1"
+            name="Felipe"
+            workoutTally={6}
+            workoutsPosted={2}
+/>,
+          <Unknown
+            UID="randomKey2"
+            name="Fion"
+            workoutTally={5}
+            workoutsPosted={3}
+/>,
+          <Unknown
+            UID="randomKey3"
+            name="Morgan"
+            workoutTally={3}
+            workoutsPosted={4}
+/>,
+        ],
+      ],
       "className": "Leaderboard",
     },
     "ref": null,
-    "rendered": "I am Leaderboard",
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Leaderboard",
+        },
+        "ref": null,
+        "rendered": "Leaderboard",
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": "randomKey1",
+        "nodeType": "function",
+        "props": Object {
+          "UID": "randomKey1",
+          "name": "Felipe",
+          "workoutTally": 6,
+          "workoutsPosted": 2,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "randomKey2",
+        "nodeType": "function",
+        "props": Object {
+          "UID": "randomKey2",
+          "name": "Fion",
+          "workoutTally": 5,
+          "workoutsPosted": 3,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "randomKey3",
+        "nodeType": "function",
+        "props": Object {
+          "UID": "randomKey3",
+          "name": "Morgan",
+          "workoutTally": 3,
+          "workoutsPosted": 4,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
     "type": "section",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -30,11 +131,89 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": "I am Leaderboard",
+        "children": Array [
+          <h3>
+            Leaderboard
+</h3>,
+          Array [
+            <Unknown
+              UID="randomKey1"
+              name="Felipe"
+              workoutTally={6}
+              workoutsPosted={2}
+/>,
+            <Unknown
+              UID="randomKey2"
+              name="Fion"
+              workoutTally={5}
+              workoutsPosted={3}
+/>,
+            <Unknown
+              UID="randomKey3"
+              name="Morgan"
+              workoutTally={3}
+              workoutsPosted={4}
+/>,
+          ],
+        ],
         "className": "Leaderboard",
       },
       "ref": null,
-      "rendered": "I am Leaderboard",
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Leaderboard",
+          },
+          "ref": null,
+          "rendered": "Leaderboard",
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": "randomKey1",
+          "nodeType": "function",
+          "props": Object {
+            "UID": "randomKey1",
+            "name": "Felipe",
+            "workoutTally": 6,
+            "workoutsPosted": 2,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "randomKey2",
+          "nodeType": "function",
+          "props": Object {
+            "UID": "randomKey2",
+            "name": "Fion",
+            "workoutTally": 5,
+            "workoutsPosted": 3,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "randomKey3",
+          "nodeType": "function",
+          "props": Object {
+            "UID": "randomKey3",
+            "name": "Morgan",
+            "workoutTally": 3,
+            "workoutsPosted": 4,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
       "type": "section",
     },
   ],

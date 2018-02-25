@@ -25,17 +25,17 @@ ShallowWrapper {
           <li
                     className="teammate-tally"
           >
-                    <h6>
+                    <h5>
                               Workout Tally:
-                    </h6>
+                    </h5>
                     <p />
           </li>
           <li
                     className="teammate-posted"
           >
-                    <h6>
+                    <h5>
                               Workouts Posted:
-                    </h6>
+                    </h5>
                     <p />
           </li>
 </ul>,
@@ -65,17 +65,17 @@ ShallowWrapper {
             <li
               className="teammate-tally"
 >
-              <h6>
+              <h5>
                             Workout Tally:
-              </h6>
+              </h5>
               <p />
 </li>,
             <li
               className="teammate-posted"
 >
-              <h6>
+              <h5>
                             Workouts Posted:
-              </h6>
+              </h5>
               <p />
 </li>,
           ],
@@ -88,9 +88,9 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                <h6>
+                <h5>
                   Workout Tally:
-</h6>,
+</h5>,
                 <p />,
               ],
               "className": "teammate-tally",
@@ -106,7 +106,7 @@ ShallowWrapper {
                 },
                 "ref": null,
                 "rendered": "Workout Tally:",
-                "type": "h6",
+                "type": "h5",
               },
               Object {
                 "instance": null,
@@ -128,9 +128,9 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "children": Array [
-                <h6>
+                <h5>
                   Workouts Posted:
-</h6>,
+</h5>,
                 <p />,
               ],
               "className": "teammate-posted",
@@ -146,7 +146,7 @@ ShallowWrapper {
                 },
                 "ref": null,
                 "rendered": "Workouts Posted:",
-                "type": "h6",
+                "type": "h5",
               },
               Object {
                 "instance": null,
@@ -182,17 +182,17 @@ ShallowWrapper {
             <li
                         className="teammate-tally"
             >
-                        <h6>
+                        <h5>
                                     Workout Tally:
-                        </h6>
+                        </h5>
                         <p />
             </li>
             <li
                         className="teammate-posted"
             >
-                        <h6>
+                        <h5>
                                     Workouts Posted:
-                        </h6>
+                        </h5>
                         <p />
             </li>
 </ul>,
@@ -222,17 +222,17 @@ ShallowWrapper {
               <li
                 className="teammate-tally"
 >
-                <h6>
+                <h5>
                                 Workout Tally:
-                </h6>
+                </h5>
                 <p />
 </li>,
               <li
                 className="teammate-posted"
 >
-                <h6>
+                <h5>
                                 Workouts Posted:
-                </h6>
+                </h5>
                 <p />
 </li>,
             ],
@@ -245,9 +245,9 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  <h6>
+                  <h5>
                     Workout Tally:
-</h6>,
+</h5>,
                   <p />,
                 ],
                 "className": "teammate-tally",
@@ -263,7 +263,7 @@ ShallowWrapper {
                   },
                   "ref": null,
                   "rendered": "Workout Tally:",
-                  "type": "h6",
+                  "type": "h5",
                 },
                 Object {
                   "instance": null,
@@ -285,9 +285,9 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  <h6>
+                  <h5>
                     Workouts Posted:
-</h6>,
+</h5>,
                   <p />,
                 ],
                 "className": "teammate-posted",
@@ -303,7 +303,7 @@ ShallowWrapper {
                   },
                   "ref": null,
                   "rendered": "Workouts Posted:",
-                  "type": "h6",
+                  "type": "h5",
                 },
                 Object {
                   "instance": null,

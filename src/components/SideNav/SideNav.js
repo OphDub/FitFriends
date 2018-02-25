@@ -10,11 +10,6 @@ import { connect } from 'react-redux';
 import { logout } from '../../actions/actionsIndex';
 
 export const SideNav = ({ user, userImage, userName, logout }) => {
-  const logoutUser = (event) => {
-    event.preventDefault();
-    logout(user);
-  }
-
   return (
     <section className="SideNav">
       <div className="user-profile">
@@ -42,7 +37,7 @@ export const SideNav = ({ user, userImage, userName, logout }) => {
         </NavLink>
         <NavLink to="/login">
           <button className="sidenav-btn"
-            onClick={logoutUser}>
+            onClick={logout}>
             <FontAwesomeIcon icon={faSignOut} size="2x"/>
             Logout
           </button>
