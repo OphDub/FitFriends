@@ -1,3 +1,4 @@
+/* eslint-disable */
 export const mockTeam = [
   {
     UID: 'randomKey1',
