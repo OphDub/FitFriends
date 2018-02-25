@@ -23,7 +23,7 @@ export class WorkoutHistory extends Component {
 
       return (
         <article className="workout" key={workout.key}>
-          <h3 className="workout-name">{workout.workoutName}</h3>
+          <h3 className="workout-name"><span className="workout-title">Workout:</span> {workout.workoutName}</h3>
           <p className="workout-desc">{workout.workoutDesc}</p>
           <ul className="exercises">
             <li className="exercises-header">
