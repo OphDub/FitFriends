@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import './WorkoutHistory.css';
 import { connect } from 'react-redux';
+import PropTypes, { string, arrayOf, func } from 'prop-types';
 import { getWorkouts } from '../../actions/actionsIndex';
+import './WorkoutHistory.css';
 
 export class WorkoutHistory extends Component {
   componentWillMount () {
@@ -9,17 +10,17 @@ export class WorkoutHistory extends Component {
   }
 
   renderedWorkouts = () => {
-    const workoutVals = Object.values(this.props.workouts)
+    const workoutVals = Object.values(this.props.workouts);
 
     return workoutVals.map((workout, key) => {
       const exerciseVals = Object.values(workout.exercises).map((exercise, key) => {
-        return(
+        return (
           <li className="exercise" key={key}>
             <p className="exercise-reps">{exercise.reps}</p>
             <p className="exercise-name">{exercise.exercise}</p>
           </li>
-        )
-      })
+        );
+      });
 
       return (
         <article className="workout" key={key}>
@@ -33,8 +34,8 @@ export class WorkoutHistory extends Component {
             {exerciseVals}
           </ul>
         </article>
-      )
-    })
+      );
+    });
   }
 
   render () {
@@ -42,12 +43,28 @@ export class WorkoutHistory extends Component {
       <section className="WorkoutHistory">
         {this.renderedWorkouts()}
       </section>
-    )
+    );
   }
 }
 
+const exercise = {
+  reps: string.isRequired,
+  exercise: string.isRequired
+};
+
+const workout = {
+  workoutName: string.isRequired,
+  workoutDesc: string.isRequired,
+  exercises: arrayOf(exercise).isRequired
+};
+
+WorkoutHistory.propTypes = {
+  getWorkouts: func.isRequired,
+  workouts: arrayOf(workout).isRequired
+};
+
 export const mapStateToProps = (state) => ({
-  workouts: state.workouts,
+  workouts: state.workouts
 });
 
 export const mapDispatchToProps = (dispatch) => ({
