@@ -7,11 +7,11 @@ export const Teammate = ({ name, workoutTally, workoutsPosted }) => {
       <h4 className="teammate-name">{name}</h4>
       <ul>
         <li className="teammate-tally">
-          <h6>Workout Tally:</h6>
+          <h5>Workout Tally:</h5>
           <p>{workoutTally}</p>
         </li>
         <li className="teammate-posted">
-          <h6>Workouts Posted:</h6>
+          <h5>Workouts Posted:</h5>
           <p>{workoutsPosted}</p>
         </li>
       </ul>

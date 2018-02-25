@@ -1,2 +1,12 @@
 .Team {
-  padding: 10px; }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: lightgrey;
+  min-height: 75%;
+  padding: 15px;
+  margin: 0 10px 10px 10px;
+  border-radius: 10px; }
+
+.Team-header {
+  margin: 10px 0; }
