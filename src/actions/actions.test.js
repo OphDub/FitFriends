@@ -1,54 +1,37 @@
 import * as actions from './actionsIndex';
 
-describe('Login user action', () => {
-  it('should return a type of LOGIN_USER, with a user', () => {
-    const username = 'jhun';
-    const password = 'suhdude';
-    const user = {
-      username: username,
-      password: password
-    }
-    const expected = {
-      type: 'LOGIN_USER',
-      payload: user,
-    }
+describe('getUser action', () => {
+  it('should return a type of GET_USER, with a user', () => {
 
-    expect(actions.loginUser(user)).toEqual(expected);
   });
 });
 
-describe('Post Workout action', () => {
-  it('should return a type of POST_WORKOUT, with a workout', () => {
-    const workoutName = 'workout';
-    const workoutDesc = 'desc';
-    const exercises = [{rep: 1, exercise: 'exercise'}];
-    const workout = {
-      workoutName: workoutName,
-      workoutDesc: workoutDesc,
-      exercises: exercises,
-    }
-    const expected = {
-      type: 'POST_WORKOUT',
-      payload: workout,
-    }
+describe('login action', () => {
+  it('should call signInWithEmailAndPassword', () => {
 
-    expect(actions.postWorkout(workout)).toEqual(expected);
   });
 });
 
-describe('Sign Up User action', () => {
-  it('should return a type of SIGNUP_USER, with a user', () => {
-    const username = 'jhun';
-    const password = 'suhdude';
-    const user = {
-      username: username,
-      password: password
-    }
-    const expected = {
-      type: 'SIGNUP_USER',
-      payload: user,
-    }
+describe('logout action', () => {
+  it('should call signOut and return a type of LOGOUT_USER', () => {
 
-    expect(actions.signUpUser(user)).toEqual(expected);
-  })
-})
+  });
+});
+
+describe('signup action', () => {
+  it('should call createUserWithEmailAndPassword', () => {
+
+  });
+});
+
+describe('postWorkout action', () => {
+  it('should call push', () => {
+
+  });
+});
+
+describe('getWorkouts action', () => {
+  it('should return a type of GET_WORKOUTS and a snapshot value', () => {
+
+  });
+});
