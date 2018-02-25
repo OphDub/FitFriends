@@ -18,11 +18,13 @@
   height: 100%;
   border: none;
   background: lightgrey;
-  border-radius: 10px; }
+  border-radius: 10px;
+  outline: none; }
 
 .topnav-btn h4 {
   margin: 0px; }
 
 .topnav-btn:hover {
   color: white;
-  background: black; }
+  background: black;
+  cursor: pointer; }

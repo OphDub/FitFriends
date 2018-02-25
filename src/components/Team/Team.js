@@ -9,6 +9,7 @@ export const Team = ({team}) => {
 
   return(
     <section className="Team">
+      <h3 className="Team-header">Team Members</h3>
       {renderedTeam}
     </section>
   )

@@ -40,11 +40,16 @@
   height: 100%;
   border: none;
   background: lightgrey;
-  border-radius: 10px; }
+  border-radius: 5px;
+  outline: none; }
+
+.sidenav-btn:focus {
+  outline: 0; }
 
 .sidenav-btn h4 {
   margin: 0px; }
 
 .sidenav-btn:hover {
   color: white;
-  background: #48E0EA; }
+  background: #48E0EA;
+  cursor: pointer; }
