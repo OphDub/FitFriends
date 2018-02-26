@@ -1,8 +1,9 @@
 import React from 'react';
 import './Teammate.css';
+import PropTypes, { string } from 'prop-types';
 
 export const Teammate = ({ name, workoutTally, workoutsPosted }) => {
-  return(
+  return (
     <article className="Teammate">
       <h4 className="teammate-name">{name}</h4>
       <ul>
@@ -16,5 +17,12 @@ export const Teammate = ({ name, workoutTally, workoutsPosted }) => {
         </li>
       </ul>
     </article>
-  )
-}
+  );
+};
+
+Teammate.propTypes = {
+  name: string.isRequired,
+  workoutTally: string.isRequired,
+  workoutsPosted: string.isRequired
+};
+
