@@ -9,15 +9,7 @@ describe('workoutReducer', () => {
     expect(workoutsReducer(undefined, {})).toEqual(expected);
   });
 
-  it('should return an updated state with a type POST_WORKOUT', () => {
-    const initialState = mockWorkouts;
-    const expected = [ ...mockWorkouts, mockWorkout ];
-    const mockAction = actions.postWorkout(mockWorkout);
-
-    expect(workoutsReducer(initialState, mockAction)).toEqual(expected);
-  });
-
-  it('should return workouts when given an action with a type GET_WORKOUTS', () => {
+  it('should return workouts when given an action with a type SAVE_WORKOUTS', () => {
     const expected = mockWorkouts;
     const mockAction = actions.getWorkouts(mockWorkouts);
   });
