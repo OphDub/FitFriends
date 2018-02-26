@@ -7,8 +7,8 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <WorkoutHistory
     getWorkouts={[Function]}
     workouts={
-        Array [
-            Object {
+        Object {
+            "someKey1": Object {
               "exercises": Array [
                 Object {
                   "exercise": "sample exercise1",
@@ -22,7 +22,7 @@ ShallowWrapper {
               "workoutDesc": "local sample workout desc",
               "workoutName": "local sample workout name 1",
             },
-            Object {
+            "someKey2": Object {
               "exercises": Array [
                 Object {
                   "exercise": "sample exercise1",
@@ -36,7 +36,7 @@ ShallowWrapper {
               "workoutDesc": "local sample workout desc",
               "workoutName": "local sample workout name 2",
             },
-          ]
+          }
     }
 />,
   Symbol(enzyme.__renderer__): Object {

@@ -5,7 +5,11 @@ import { SideNav, mapStateToProps, mapDispatchToProps } from './SideNav';
 
 describe('SIDENAV', () => {
   it('should match the snapshot', () => {
-    const renderedComponent = shallow(<SideNav />);
+    const mockImgUrl = 'www.someimage.com';
+    const mockUser = {
+      image: mockImgUrl
+    }
+    const renderedComponent = shallow(<SideNav user={mockUser}/>);
 
     expect(renderedComponent).toMatchSnapshot();
   });
