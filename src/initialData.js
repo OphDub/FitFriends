@@ -36,7 +36,8 @@ export const mockUserProfile = {
   userName: 'Brooke'
 }
 
-export const mockWorkouts = [
+export const mockWorkouts = {
+  'someKey1':
   {
     workoutName: 'local sample workout name 1',
     workoutDesc: 'local sample workout desc',
@@ -45,6 +46,7 @@ export const mockWorkouts = [
       { reps: 10, exercise: 'sample exercise2'},
     ]
   },
+  'someKey2':
   {
     workoutName: 'local sample workout name 2',
     workoutDesc: 'local sample workout desc',
@@ -53,4 +55,4 @@ export const mockWorkouts = [
       { reps: 10, exercise: 'sample exercise2'},
     ]
   },
-]
+}
