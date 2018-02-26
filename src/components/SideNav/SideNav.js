@@ -45,7 +45,7 @@ const userProps = PropTypes.shape({
 });
 
 SideNav.propTypes = {
-  user: PropTypes(userProps),
+  user: PropTypes.shape(userProps),
   logout: PropTypes.func
 };
 
