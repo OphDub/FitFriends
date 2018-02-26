@@ -1,7 +1,6 @@
 /* eslint-disable */
 import * as actions from './actionsIndex';
 import thunk from 'redux-thunk';
-import fetchMock from 'fetch-mock';
 import configureMockStore from 'redux-mock-store';
 import { auth, workoutsDb } from '../base';
 import { mockWorkout, mockWorkouts } from '../initialData';
