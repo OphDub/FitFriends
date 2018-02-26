@@ -6,10 +6,7 @@
   background: grey; }
 
 .user-pic {
-  border-radius: 50%;
-  width: 75px;
-  height: 75px;
-  padding-bottom: 5px; }
+  border-radius: 50%; }
 
 .user-name {
   margin: 10px auto; }
@@ -17,7 +14,8 @@
 .user-profile {
   padding: 15px 0;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  align-items: center; }
 
 .sidenav-btns {
   display: flex;
