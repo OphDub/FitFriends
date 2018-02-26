@@ -6,12 +6,12 @@ import { NavLink } from 'react-router-dom';
 const Welcome = () => {
   return (
     <div className="Welcome">
-        <h2 className="fitfriends-text">
-          <span className="fitfriends-text-emphasis">
-            Fit
-          </span>
-            Friends
-        </h2>
+      <h2 className="fitfriends-text">
+        <span className="fitfriends-text-emphasis">
+          Fit
+        </span>
+          Friends
+      </h2>
       <div className="Welcome-container">
         <Control />
         <div className="welcome-signup">
@@ -25,8 +25,8 @@ const Welcome = () => {
         </div>
       </div>
     </div>
-  )
+  );
 };
 
-export default Welcome
+export default Welcome;
 

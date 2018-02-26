@@ -2,16 +2,17 @@ import React, { Component } from 'react';
 import './SignUp.css';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { signup } from '../../actions/actionsIndex';
 export class SignUp extends Component {
   constructor () {
-    super()
+    super();
     this.state={
       userEmail: '',
       userPass1: '',
       userPass2: '',
-      errorMsg: '',
-    }
+      errorMsg: ''
+    };
   }
 
   handleChange = (e) => {
@@ -44,7 +45,7 @@ export class SignUp extends Component {
     const {userEmail, userPass1} = this.state;
 
     if (!this.signUpValidation()) {
-      return
+      return;
     }
 
     try {
@@ -54,7 +55,7 @@ export class SignUp extends Component {
         userEmail: '',
         userPass1: '',
         userPass2: '',
-        errorMsg: '',
+        errorMsg: ''
       });
     } catch (error) {
       const errorMsg = error.message;
@@ -96,26 +97,26 @@ export class SignUp extends Component {
         </label>
         <button onClick={this.handleSignUp}
           className="signup-btn">
-            <h3>Sign Up</h3>
+          <h3>Sign Up</h3>
         </button>
       </form>
-    )
+    );
   }
 
   renderError = () => {
-    return(
+    return (
       <div className="signup-error">
         <h5 className="signup-error-msg">{this.state.errorMsg}</h5>
       </div>
-    )
+    );
   }
 
   render () {
     return (
       <div className="SignUp">
         <div className="form-background">
-         {this.renderForm()}
-         {this.renderError()}
+          {this.renderForm()}
+          {this.renderError()}
           <div className="signup-goback">
             <h5>Already have an account?</h5>
             <NavLink to="/login">
@@ -126,12 +127,16 @@ export class SignUp extends Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
+SignUp.propTypes = {
+  signup: PropTypes.func.isRequired
+};
+
 export const mapDispatchToProps = (dispatch) => ({
-  signup: (email, password) => dispatch(signup(email, password)),
+  signup: (email, password) => dispatch(signup(email, password))
 });
 
 export default connect(null, mapDispatchToProps)(SignUp);

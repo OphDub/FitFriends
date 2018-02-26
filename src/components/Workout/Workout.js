@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
-import { postWorkout } from '../../actions/actionsIndex';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import './Workout.css';
-import { workouts } from '../../base';
-// import FontAwesomeIcon from '@fortawesome/fontawesome';
-// import faMinusSquare from '@fortawesome/fontawesome-free-solid/faMinusSquare';
-// import faPlusSquare from '@fortawesome/fontawesome-free-solid/faPlusSquare';
-
+import { postWorkout } from '../../actions/actionsIndex';
 export class Workout extends Component {
   constructor () {
     super();
@@ -16,7 +12,7 @@ export class Workout extends Component {
       reps: '',
       exercise: '',
       exercises: []
-    }
+    };
   }
 
   handleChange = (e) => {
@@ -27,40 +23,40 @@ export class Workout extends Component {
   addExercise = (e) => {
     e.preventDefault();
     const { reps, exercise } = this.state;
-    const id = Date.now()
+    const id = Date.now();
     const newExercise = Object.assign({ id, reps, exercise});
     const exercises = [...this.state.exercises, newExercise];
 
     this.setState({
       exercises,
       reps: '',
-      exercise: '',
+      exercise: ''
     });
   }
 
   removeExercise = (e) => {
     e.preventDefault();
-    const { id } = e.target
+    const { id } = e.target;
 
     const filtered = this.state.exercises.filter(exercise =>
-      exercise.id !== parseInt(id))
+      exercise.id !== parseInt(id));
 
     this.setState({ exercises: filtered });
   }
 
   renderExercises = () => {
-    return this.state.exercises.map( (exercise,index) =>
+    return this.state.exercises.map( (exercise) =>
       <li className="rendered-exercise"
         key={exercise.id}>
-          <h5 className="rendered-ex-info">{exercise.reps}</h5>
-          <h5 className="rendered-ex-info">{exercise.exercise}</h5>
+        <h5 className="rendered-ex-info">{exercise.reps}</h5>
+        <h5 className="rendered-ex-info">{exercise.exercise}</h5>
         <button className="rendered-ex-btn"
           id={exercise.id}
           onClick={this.removeExercise}>
             -
         </button>
       </li>
-    )
+    );
   }
 
   postWorkout = (e) => {
@@ -73,12 +69,12 @@ export class Workout extends Component {
       workoutDesc: '',
       reps: '',
       exercise: '',
-      exercises: [],
-    })
+      exercises: []
+    });
   }
 
   render () {
-    return(
+    return (
       <section className="Workout">
         <form className="Workout-form">
           <div className="Workout-info">
@@ -125,16 +121,20 @@ export class Workout extends Component {
           </div>
           <button className="Workout-post-btn"
             onClick={this.postWorkout}>
-              <h3>Post Workout</h3>
+            <h3>Post Workout</h3>
           </button>
         </form>
       </section>
-    )
+    );
   }
 }
 
+Workout.propTypes = {
+  postWorkout: PropTypes.func.isRequired
+};
+
 const mapDispatchToProps = (dispatch) => ({
   postWorkout: (workout) => dispatch(postWorkout(workout))
-})
+});
 
 export default connect(null, mapDispatchToProps)(Workout);

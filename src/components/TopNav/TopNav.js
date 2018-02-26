@@ -34,5 +34,5 @@ export const TopNav = () => {
         </button>
       </NavLink>
     </nav>
-  )
+  );
 };
