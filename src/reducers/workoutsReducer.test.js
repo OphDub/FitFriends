@@ -16,4 +16,9 @@ describe('workoutReducer', () => {
 
     expect(workoutsReducer(initialState, mockAction)).toEqual(expected);
   });
+
+  it('should return workouts when given an action with a type GET_WORKOUTS', () => {
+    const expected = mockWorkouts;
+    const mockAction = actions.getWorkouts(mockWorkouts);
+  });
 });

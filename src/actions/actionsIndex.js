@@ -1,17 +1,6 @@
 import { workoutsDb } from '../base';
 import { auth } from '../base';
 
-// export const getUser = (user) => {
-//   return async dispatch => {
-//     await auth.onAuthStateChanged( user => {
-//       dispatch({
-//         type: 'GET_USER',
-//         user
-//       })
-//     })
-//   }
-// };
-
 export const saveUserInStore = (user) => ({
   type: 'SAVE_USER',
   user
