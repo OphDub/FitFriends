@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import './Control.css';
-import { login } from '../../actions/actionsIndex';
+import { login, getUserFromFirebase } from '../../actions/actionsIndex';
+import { withRouter } from 'react-router-dom';
 
 export class Control extends Component {
   constructor () {
@@ -21,6 +22,7 @@ export class Control extends Component {
 
   validateLogin = () => {
     const { email, password } = this.state;
+
     const message = 'Please provide an email and password.';
     let errorMsg;
 
@@ -47,6 +49,8 @@ export class Control extends Component {
         password: '',
         errorMsg: ''
       });
+
+      this.props.history.push('/workout');
     } catch (error) {
       const errorMsg = 'Username/password incorrect. Try again.';
 
@@ -100,4 +104,4 @@ export const mapDispatchToProps = (dispatch) => ({
   login: (email, password) => dispatch(login(email, password))
 });
 
-export default connect(null, mapDispatchToProps)(Control);
+export default withRouter(connect(null, mapDispatchToProps)(Control));

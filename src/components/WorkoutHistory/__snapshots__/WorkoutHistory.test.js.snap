@@ -11,24 +11,30 @@ ShallowWrapper {
             Object {
               "exercises": Array [
                 Object {
-                  "exercise": "Burpees",
-                  "reps": "10",
+                  "exercise": "sample exercise1",
+                  "reps": 10,
                 },
                 Object {
-                  "exercise": "Overhead Press(Barbell)",
-                  "reps": "8-10",
-                },
-                Object {
-                  "exercise": "Standing Bent Row(Barbell)",
-                  "reps": "8-10",
-                },
-                Object {
-                  "exercise": "Standing Kettlebell Swings",
-                  "reps": "8-10",
+                  "exercise": "sample exercise2",
+                  "reps": 10,
                 },
               ],
-              "workoutDesc": "Opposite movement workout with some running at the end!",
-              "workoutName": "The Grind",
+              "workoutDesc": "local sample workout desc",
+              "workoutName": "local sample workout name 1",
+            },
+            Object {
+              "exercises": Array [
+                Object {
+                  "exercise": "sample exercise1",
+                  "reps": 10,
+                },
+                Object {
+                  "exercise": "sample exercise2",
+                  "reps": 10,
+                },
+              ],
+              "workoutDesc": "local sample workout desc",
+              "workoutName": "local sample workout name 2",
             },
           ]
     }
@@ -58,12 +64,12 @@ ShallowWrapper {
                               Workout:
                     </span>
                      
-                    The Grind
+                    local sample workout name 1
           </h3>
           <p
                     className="workout-desc"
           >
-                    Opposite movement workout with some running at the end!
+                    local sample workout desc
           </p>
           <ul
                     className="exercises"
@@ -93,7 +99,7 @@ ShallowWrapper {
                               <p
                                         className="exercise-name"
                               >
-                                        Burpees
+                                        sample exercise1
                               </p>
                     </li>
                     <li
@@ -102,12 +108,50 @@ ShallowWrapper {
                               <p
                                         className="exercise-reps"
                               >
-                                        8-10
+                                        10
                               </p>
                               <p
                                         className="exercise-name"
                               >
-                                        Overhead Press(Barbell)
+                                        sample exercise2
+                              </p>
+                    </li>
+          </ul>
+</article>,
+        <article
+          className="workout"
+>
+          <h3
+                    className="workout-name"
+          >
+                    <span
+                              className="workout-title"
+                    >
+                              Workout:
+                    </span>
+                     
+                    local sample workout name 2
+          </h3>
+          <p
+                    className="workout-desc"
+          >
+                    local sample workout desc
+          </p>
+          <ul
+                    className="exercises"
+          >
+                    <li
+                              className="exercises-header"
+                    >
+                              <p
+                                        className="exercises-reps"
+                              >
+                                        Reps:
+                              </p>
+                              <p
+                                        className="exercises-name"
+                              >
+                                        Exercises:
                               </p>
                     </li>
                     <li
@@ -116,12 +160,12 @@ ShallowWrapper {
                               <p
                                         className="exercise-reps"
                               >
-                                        8-10
+                                        10
                               </p>
                               <p
                                         className="exercise-name"
                               >
-                                        Standing Bent Row(Barbell)
+                                        sample exercise1
                               </p>
                     </li>
                     <li
@@ -130,12 +174,12 @@ ShallowWrapper {
                               <p
                                         className="exercise-reps"
                               >
-                                        8-10
+                                        10
                               </p>
                               <p
                                         className="exercise-name"
                               >
-                                        Standing Kettlebell Swings
+                                        sample exercise2
                               </p>
                     </li>
           </ul>
@@ -160,12 +204,12 @@ ShallowWrapper {
                             Workout:
               </span>
                
-              The Grind
+              local sample workout name 1
 </h3>,
             <p
               className="workout-desc"
 >
-              Opposite movement workout with some running at the end!
+              local sample workout desc
 </p>,
             <ul
               className="exercises"
@@ -195,7 +239,7 @@ ShallowWrapper {
                             <p
                                           className="exercise-name"
                             >
-                                          Burpees
+                                          sample exercise1
                             </p>
               </li>
               <li
@@ -204,40 +248,12 @@ ShallowWrapper {
                             <p
                                           className="exercise-reps"
                             >
-                                          8-10
+                                          10
                             </p>
                             <p
                                           className="exercise-name"
                             >
-                                          Overhead Press(Barbell)
-                            </p>
-              </li>
-              <li
-                            className="exercise"
-              >
-                            <p
-                                          className="exercise-reps"
-                            >
-                                          8-10
-                            </p>
-                            <p
-                                          className="exercise-name"
-                            >
-                                          Standing Bent Row(Barbell)
-                            </p>
-              </li>
-              <li
-                            className="exercise"
-              >
-                            <p
-                                          className="exercise-reps"
-                            >
-                                          8-10
-                            </p>
-                            <p
-                                          className="exercise-name"
-                            >
-                                          Standing Kettlebell Swings
+                                          sample exercise2
                             </p>
               </li>
 </ul>,
@@ -258,7 +274,7 @@ ShallowWrapper {
                   Workout:
 </span>,
                 " ",
-                "The Grind",
+                "local sample workout name 1",
               ],
               "className": "workout-name",
             },
@@ -277,7 +293,7 @@ ShallowWrapper {
                 "type": "span",
               },
               " ",
-              "The Grind",
+              "local sample workout name 1",
             ],
             "type": "h3",
           },
@@ -286,11 +302,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Opposite movement workout with some running at the end!",
+              "children": "local sample workout desc",
               "className": "workout-desc",
             },
             "ref": null,
-            "rendered": "Opposite movement workout with some running at the end!",
+            "rendered": "local sample workout desc",
             "type": "p",
           },
           Object {
@@ -325,7 +341,7 @@ ShallowWrapper {
                     <p
                                         className="exercise-name"
                     >
-                                        Burpees
+                                        sample exercise1
                     </p>
 </li>,
                   <li
@@ -334,40 +350,12 @@ ShallowWrapper {
                     <p
                                         className="exercise-reps"
                     >
-                                        8-10
+                                        10
                     </p>
                     <p
                                         className="exercise-name"
                     >
-                                        Overhead Press(Barbell)
-                    </p>
-</li>,
-                  <li
-                    className="exercise"
->
-                    <p
-                                        className="exercise-reps"
-                    >
-                                        8-10
-                    </p>
-                    <p
-                                        className="exercise-name"
-                    >
-                                        Standing Bent Row(Barbell)
-                    </p>
-</li>,
-                  <li
-                    className="exercise"
->
-                    <p
-                                        className="exercise-reps"
-                    >
-                                        8-10
-                    </p>
-                    <p
-                                        className="exercise-name"
-                    >
-                                        Standing Kettlebell Swings
+                                        sample exercise2
                     </p>
 </li>,
                 ],
@@ -438,7 +426,7 @@ ShallowWrapper {
                     <p
                       className="exercise-name"
 >
-                      Burpees
+                      sample exercise1
 </p>,
                   ],
                   "className": "exercise",
@@ -450,11 +438,11 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": "10",
+                      "children": 10,
                       "className": "exercise-reps",
                     },
                     "ref": null,
-                    "rendered": "10",
+                    "rendered": 10,
                     "type": "p",
                   },
                   Object {
@@ -462,11 +450,11 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": "Burpees",
+                      "children": "sample exercise1",
                       "className": "exercise-name",
                     },
                     "ref": null,
-                    "rendered": "Burpees",
+                    "rendered": "sample exercise1",
                     "type": "p",
                   },
                 ],
@@ -481,12 +469,12 @@ ShallowWrapper {
                     <p
                       className="exercise-reps"
 >
-                      8-10
+                      10
 </p>,
                     <p
                       className="exercise-name"
 >
-                      Overhead Press(Barbell)
+                      sample exercise2
 </p>,
                   ],
                   "className": "exercise",
@@ -498,11 +486,11 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": "8-10",
+                      "children": 10,
                       "className": "exercise-reps",
                     },
                     "ref": null,
-                    "rendered": "8-10",
+                    "rendered": 10,
                     "type": "p",
                   },
                   Object {
@@ -510,11 +498,240 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": "Overhead Press(Barbell)",
+                      "children": "sample exercise2",
                       "className": "exercise-name",
                     },
                     "ref": null,
-                    "rendered": "Overhead Press(Barbell)",
+                    "rendered": "sample exercise2",
+                    "type": "p",
+                  },
+                ],
+                "type": "li",
+              },
+            ],
+            "type": "ul",
+          },
+        ],
+        "type": "article",
+      },
+      Object {
+        "instance": null,
+        "key": "1",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h3
+              className="workout-name"
+>
+              <span
+                            className="workout-title"
+              >
+                            Workout:
+              </span>
+               
+              local sample workout name 2
+</h3>,
+            <p
+              className="workout-desc"
+>
+              local sample workout desc
+</p>,
+            <ul
+              className="exercises"
+>
+              <li
+                            className="exercises-header"
+              >
+                            <p
+                                          className="exercises-reps"
+                            >
+                                          Reps:
+                            </p>
+                            <p
+                                          className="exercises-name"
+                            >
+                                          Exercises:
+                            </p>
+              </li>
+              <li
+                            className="exercise"
+              >
+                            <p
+                                          className="exercise-reps"
+                            >
+                                          10
+                            </p>
+                            <p
+                                          className="exercise-name"
+                            >
+                                          sample exercise1
+                            </p>
+              </li>
+              <li
+                            className="exercise"
+              >
+                            <p
+                                          className="exercise-reps"
+                            >
+                                          10
+                            </p>
+                            <p
+                                          className="exercise-name"
+                            >
+                                          sample exercise2
+                            </p>
+              </li>
+</ul>,
+          ],
+          "className": "workout",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <span
+                  className="workout-title"
+>
+                  Workout:
+</span>,
+                " ",
+                "local sample workout name 2",
+              ],
+              "className": "workout-name",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Workout:",
+                  "className": "workout-title",
+                },
+                "ref": null,
+                "rendered": "Workout:",
+                "type": "span",
+              },
+              " ",
+              "local sample workout name 2",
+            ],
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "local sample workout desc",
+              "className": "workout-desc",
+            },
+            "ref": null,
+            "rendered": "local sample workout desc",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <li
+                  className="exercises-header"
+>
+                  <p
+                                    className="exercises-reps"
+                  >
+                                    Reps:
+                  </p>
+                  <p
+                                    className="exercises-name"
+                  >
+                                    Exercises:
+                  </p>
+</li>,
+                Array [
+                  <li
+                    className="exercise"
+>
+                    <p
+                                        className="exercise-reps"
+                    >
+                                        10
+                    </p>
+                    <p
+                                        className="exercise-name"
+                    >
+                                        sample exercise1
+                    </p>
+</li>,
+                  <li
+                    className="exercise"
+>
+                    <p
+                                        className="exercise-reps"
+                    >
+                                        10
+                    </p>
+                    <p
+                                        className="exercise-name"
+                    >
+                                        sample exercise2
+                    </p>
+</li>,
+                ],
+              ],
+              "className": "exercises",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <p
+                      className="exercises-reps"
+>
+                      Reps:
+</p>,
+                    <p
+                      className="exercises-name"
+>
+                      Exercises:
+</p>,
+                  ],
+                  "className": "exercises-header",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Reps:",
+                      "className": "exercises-reps",
+                    },
+                    "ref": null,
+                    "rendered": "Reps:",
+                    "type": "p",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Exercises:",
+                      "className": "exercises-name",
+                    },
+                    "ref": null,
+                    "rendered": "Exercises:",
                     "type": "p",
                   },
                 ],
@@ -522,19 +739,19 @@ ShallowWrapper {
               },
               Object {
                 "instance": null,
-                "key": "2",
+                "key": "0",
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
                     <p
                       className="exercise-reps"
 >
-                      8-10
+                      10
 </p>,
                     <p
                       className="exercise-name"
 >
-                      Standing Bent Row(Barbell)
+                      sample exercise1
 </p>,
                   ],
                   "className": "exercise",
@@ -546,11 +763,11 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": "8-10",
+                      "children": 10,
                       "className": "exercise-reps",
                     },
                     "ref": null,
-                    "rendered": "8-10",
+                    "rendered": 10,
                     "type": "p",
                   },
                   Object {
@@ -558,11 +775,11 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": "Standing Bent Row(Barbell)",
+                      "children": "sample exercise1",
                       "className": "exercise-name",
                     },
                     "ref": null,
-                    "rendered": "Standing Bent Row(Barbell)",
+                    "rendered": "sample exercise1",
                     "type": "p",
                   },
                 ],
@@ -570,19 +787,19 @@ ShallowWrapper {
               },
               Object {
                 "instance": null,
-                "key": "3",
+                "key": "1",
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
                     <p
                       className="exercise-reps"
 >
-                      8-10
+                      10
 </p>,
                     <p
                       className="exercise-name"
 >
-                      Standing Kettlebell Swings
+                      sample exercise2
 </p>,
                   ],
                   "className": "exercise",
@@ -594,11 +811,11 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": "8-10",
+                      "children": 10,
                       "className": "exercise-reps",
                     },
                     "ref": null,
-                    "rendered": "8-10",
+                    "rendered": 10,
                     "type": "p",
                   },
                   Object {
@@ -606,11 +823,11 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": "Standing Kettlebell Swings",
+                      "children": "sample exercise2",
                       "className": "exercise-name",
                     },
                     "ref": null,
-                    "rendered": "Standing Kettlebell Swings",
+                    "rendered": "sample exercise2",
                     "type": "p",
                   },
                 ],
@@ -644,12 +861,12 @@ ShallowWrapper {
                                     Workout:
                         </span>
                          
-                        The Grind
+                        local sample workout name 1
             </h3>
             <p
                         className="workout-desc"
             >
-                        Opposite movement workout with some running at the end!
+                        local sample workout desc
             </p>
             <ul
                         className="exercises"
@@ -679,7 +896,7 @@ ShallowWrapper {
                                     <p
                                                 className="exercise-name"
                                     >
-                                                Burpees
+                                                sample exercise1
                                     </p>
                         </li>
                         <li
@@ -688,12 +905,50 @@ ShallowWrapper {
                                     <p
                                                 className="exercise-reps"
                                     >
-                                                8-10
+                                                10
                                     </p>
                                     <p
                                                 className="exercise-name"
                                     >
-                                                Overhead Press(Barbell)
+                                                sample exercise2
+                                    </p>
+                        </li>
+            </ul>
+</article>,
+          <article
+            className="workout"
+>
+            <h3
+                        className="workout-name"
+            >
+                        <span
+                                    className="workout-title"
+                        >
+                                    Workout:
+                        </span>
+                         
+                        local sample workout name 2
+            </h3>
+            <p
+                        className="workout-desc"
+            >
+                        local sample workout desc
+            </p>
+            <ul
+                        className="exercises"
+            >
+                        <li
+                                    className="exercises-header"
+                        >
+                                    <p
+                                                className="exercises-reps"
+                                    >
+                                                Reps:
+                                    </p>
+                                    <p
+                                                className="exercises-name"
+                                    >
+                                                Exercises:
                                     </p>
                         </li>
                         <li
@@ -702,12 +957,12 @@ ShallowWrapper {
                                     <p
                                                 className="exercise-reps"
                                     >
-                                                8-10
+                                                10
                                     </p>
                                     <p
                                                 className="exercise-name"
                                     >
-                                                Standing Bent Row(Barbell)
+                                                sample exercise1
                                     </p>
                         </li>
                         <li
@@ -716,12 +971,12 @@ ShallowWrapper {
                                     <p
                                                 className="exercise-reps"
                                     >
-                                                8-10
+                                                10
                                     </p>
                                     <p
                                                 className="exercise-name"
                                     >
-                                                Standing Kettlebell Swings
+                                                sample exercise2
                                     </p>
                         </li>
             </ul>
@@ -746,12 +1001,12 @@ ShallowWrapper {
                                 Workout:
                 </span>
                  
-                The Grind
+                local sample workout name 1
 </h3>,
               <p
                 className="workout-desc"
 >
-                Opposite movement workout with some running at the end!
+                local sample workout desc
 </p>,
               <ul
                 className="exercises"
@@ -781,7 +1036,7 @@ ShallowWrapper {
                                 <p
                                                 className="exercise-name"
                                 >
-                                                Burpees
+                                                sample exercise1
                                 </p>
                 </li>
                 <li
@@ -790,40 +1045,12 @@ ShallowWrapper {
                                 <p
                                                 className="exercise-reps"
                                 >
-                                                8-10
+                                                10
                                 </p>
                                 <p
                                                 className="exercise-name"
                                 >
-                                                Overhead Press(Barbell)
-                                </p>
-                </li>
-                <li
-                                className="exercise"
-                >
-                                <p
-                                                className="exercise-reps"
-                                >
-                                                8-10
-                                </p>
-                                <p
-                                                className="exercise-name"
-                                >
-                                                Standing Bent Row(Barbell)
-                                </p>
-                </li>
-                <li
-                                className="exercise"
-                >
-                                <p
-                                                className="exercise-reps"
-                                >
-                                                8-10
-                                </p>
-                                <p
-                                                className="exercise-name"
-                                >
-                                                Standing Kettlebell Swings
+                                                sample exercise2
                                 </p>
                 </li>
 </ul>,
@@ -844,7 +1071,7 @@ ShallowWrapper {
                     Workout:
 </span>,
                   " ",
-                  "The Grind",
+                  "local sample workout name 1",
                 ],
                 "className": "workout-name",
               },
@@ -863,7 +1090,7 @@ ShallowWrapper {
                   "type": "span",
                 },
                 " ",
-                "The Grind",
+                "local sample workout name 1",
               ],
               "type": "h3",
             },
@@ -872,11 +1099,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Opposite movement workout with some running at the end!",
+                "children": "local sample workout desc",
                 "className": "workout-desc",
               },
               "ref": null,
-              "rendered": "Opposite movement workout with some running at the end!",
+              "rendered": "local sample workout desc",
               "type": "p",
             },
             Object {
@@ -911,7 +1138,7 @@ ShallowWrapper {
                       <p
                                             className="exercise-name"
                       >
-                                            Burpees
+                                            sample exercise1
                       </p>
 </li>,
                     <li
@@ -920,40 +1147,12 @@ ShallowWrapper {
                       <p
                                             className="exercise-reps"
                       >
-                                            8-10
+                                            10
                       </p>
                       <p
                                             className="exercise-name"
                       >
-                                            Overhead Press(Barbell)
-                      </p>
-</li>,
-                    <li
-                      className="exercise"
->
-                      <p
-                                            className="exercise-reps"
-                      >
-                                            8-10
-                      </p>
-                      <p
-                                            className="exercise-name"
-                      >
-                                            Standing Bent Row(Barbell)
-                      </p>
-</li>,
-                    <li
-                      className="exercise"
->
-                      <p
-                                            className="exercise-reps"
-                      >
-                                            8-10
-                      </p>
-                      <p
-                                            className="exercise-name"
-                      >
-                                            Standing Kettlebell Swings
+                                            sample exercise2
                       </p>
 </li>,
                   ],
@@ -1024,7 +1223,7 @@ ShallowWrapper {
                       <p
                         className="exercise-name"
 >
-                        Burpees
+                        sample exercise1
 </p>,
                     ],
                     "className": "exercise",
@@ -1036,11 +1235,11 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "children": "10",
+                        "children": 10,
                         "className": "exercise-reps",
                       },
                       "ref": null,
-                      "rendered": "10",
+                      "rendered": 10,
                       "type": "p",
                     },
                     Object {
@@ -1048,11 +1247,11 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "children": "Burpees",
+                        "children": "sample exercise1",
                         "className": "exercise-name",
                       },
                       "ref": null,
-                      "rendered": "Burpees",
+                      "rendered": "sample exercise1",
                       "type": "p",
                     },
                   ],
@@ -1067,12 +1266,12 @@ ShallowWrapper {
                       <p
                         className="exercise-reps"
 >
-                        8-10
+                        10
 </p>,
                       <p
                         className="exercise-name"
 >
-                        Overhead Press(Barbell)
+                        sample exercise2
 </p>,
                     ],
                     "className": "exercise",
@@ -1084,11 +1283,11 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "children": "8-10",
+                        "children": 10,
                         "className": "exercise-reps",
                       },
                       "ref": null,
-                      "rendered": "8-10",
+                      "rendered": 10,
                       "type": "p",
                     },
                     Object {
@@ -1096,11 +1295,240 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "children": "Overhead Press(Barbell)",
+                        "children": "sample exercise2",
                         "className": "exercise-name",
                       },
                       "ref": null,
-                      "rendered": "Overhead Press(Barbell)",
+                      "rendered": "sample exercise2",
+                      "type": "p",
+                    },
+                  ],
+                  "type": "li",
+                },
+              ],
+              "type": "ul",
+            },
+          ],
+          "type": "article",
+        },
+        Object {
+          "instance": null,
+          "key": "1",
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h3
+                className="workout-name"
+>
+                <span
+                                className="workout-title"
+                >
+                                Workout:
+                </span>
+                 
+                local sample workout name 2
+</h3>,
+              <p
+                className="workout-desc"
+>
+                local sample workout desc
+</p>,
+              <ul
+                className="exercises"
+>
+                <li
+                                className="exercises-header"
+                >
+                                <p
+                                                className="exercises-reps"
+                                >
+                                                Reps:
+                                </p>
+                                <p
+                                                className="exercises-name"
+                                >
+                                                Exercises:
+                                </p>
+                </li>
+                <li
+                                className="exercise"
+                >
+                                <p
+                                                className="exercise-reps"
+                                >
+                                                10
+                                </p>
+                                <p
+                                                className="exercise-name"
+                                >
+                                                sample exercise1
+                                </p>
+                </li>
+                <li
+                                className="exercise"
+                >
+                                <p
+                                                className="exercise-reps"
+                                >
+                                                10
+                                </p>
+                                <p
+                                                className="exercise-name"
+                                >
+                                                sample exercise2
+                                </p>
+                </li>
+</ul>,
+            ],
+            "className": "workout",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <span
+                    className="workout-title"
+>
+                    Workout:
+</span>,
+                  " ",
+                  "local sample workout name 2",
+                ],
+                "className": "workout-name",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Workout:",
+                    "className": "workout-title",
+                  },
+                  "ref": null,
+                  "rendered": "Workout:",
+                  "type": "span",
+                },
+                " ",
+                "local sample workout name 2",
+              ],
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "local sample workout desc",
+                "className": "workout-desc",
+              },
+              "ref": null,
+              "rendered": "local sample workout desc",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <li
+                    className="exercises-header"
+>
+                    <p
+                                        className="exercises-reps"
+                    >
+                                        Reps:
+                    </p>
+                    <p
+                                        className="exercises-name"
+                    >
+                                        Exercises:
+                    </p>
+</li>,
+                  Array [
+                    <li
+                      className="exercise"
+>
+                      <p
+                                            className="exercise-reps"
+                      >
+                                            10
+                      </p>
+                      <p
+                                            className="exercise-name"
+                      >
+                                            sample exercise1
+                      </p>
+</li>,
+                    <li
+                      className="exercise"
+>
+                      <p
+                                            className="exercise-reps"
+                      >
+                                            10
+                      </p>
+                      <p
+                                            className="exercise-name"
+                      >
+                                            sample exercise2
+                      </p>
+</li>,
+                  ],
+                ],
+                "className": "exercises",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <p
+                        className="exercises-reps"
+>
+                        Reps:
+</p>,
+                      <p
+                        className="exercises-name"
+>
+                        Exercises:
+</p>,
+                    ],
+                    "className": "exercises-header",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Reps:",
+                        "className": "exercises-reps",
+                      },
+                      "ref": null,
+                      "rendered": "Reps:",
+                      "type": "p",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Exercises:",
+                        "className": "exercises-name",
+                      },
+                      "ref": null,
+                      "rendered": "Exercises:",
                       "type": "p",
                     },
                   ],
@@ -1108,19 +1536,19 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "2",
+                  "key": "0",
                   "nodeType": "host",
                   "props": Object {
                     "children": Array [
                       <p
                         className="exercise-reps"
 >
-                        8-10
+                        10
 </p>,
                       <p
                         className="exercise-name"
 >
-                        Standing Bent Row(Barbell)
+                        sample exercise1
 </p>,
                     ],
                     "className": "exercise",
@@ -1132,11 +1560,11 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "children": "8-10",
+                        "children": 10,
                         "className": "exercise-reps",
                       },
                       "ref": null,
-                      "rendered": "8-10",
+                      "rendered": 10,
                       "type": "p",
                     },
                     Object {
@@ -1144,11 +1572,11 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "children": "Standing Bent Row(Barbell)",
+                        "children": "sample exercise1",
                         "className": "exercise-name",
                       },
                       "ref": null,
-                      "rendered": "Standing Bent Row(Barbell)",
+                      "rendered": "sample exercise1",
                       "type": "p",
                     },
                   ],
@@ -1156,19 +1584,19 @@ ShallowWrapper {
                 },
                 Object {
                   "instance": null,
-                  "key": "3",
+                  "key": "1",
                   "nodeType": "host",
                   "props": Object {
                     "children": Array [
                       <p
                         className="exercise-reps"
 >
-                        8-10
+                        10
 </p>,
                       <p
                         className="exercise-name"
 >
-                        Standing Kettlebell Swings
+                        sample exercise2
 </p>,
                     ],
                     "className": "exercise",
@@ -1180,11 +1608,11 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "children": "8-10",
+                        "children": 10,
                         "className": "exercise-reps",
                       },
                       "ref": null,
-                      "rendered": "8-10",
+                      "rendered": 10,
                       "type": "p",
                     },
                     Object {
@@ -1192,11 +1620,11 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "children": "Standing Kettlebell Swings",
+                        "children": "sample exercise2",
                         "className": "exercise-name",
                       },
                       "ref": null,
-                      "rendered": "Standing Kettlebell Swings",
+                      "rendered": "sample exercise2",
                       "type": "p",
                     },
                   ],
