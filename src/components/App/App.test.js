@@ -1,8 +1,7 @@
 /* eslint-disable */
 import React from 'react';
 import { shallow } from 'enzyme';
-import App from './App';
-import { mapStateToProps, mapDispatchToProps } from './App';
+import App, { mapStateToProps, mapDispatchToProps } from './App';
 
 describe('APP', () => {
   it('should match the snapshot', () => {
@@ -30,7 +29,7 @@ describe('APP', () => {
     const mockDispatch = jest.fn();
     const mapped = mapDispatchToProps(mockDispatch);
 
-    mapped.getUser();
+    mapped.getUserFromFirebase();
 
     expect(mockDispatch).toHaveBeenCalled();
   });

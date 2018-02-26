@@ -19,7 +19,7 @@ import { Settings } from '../Settings/Settings';
 
 import { mockTeam } from '../../initialData';
 
-class App extends Component {
+export class App extends Component {
 
   componentWillMount() {
     if (this.props.user.email === null) {
@@ -86,8 +86,8 @@ const userProps = {
 
 App.propTypes = {
   user: PropTypes.shape(userProps),
-  getUserFromFirebase: PropTypes.func.isRequired,
-  history: PropTypes.object.isRequired
+  getUserFromFirebase: PropTypes.func,
+  history: PropTypes.object
 };
 
 export const mapStateToProps = (state) => ({
