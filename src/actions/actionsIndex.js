@@ -61,3 +61,14 @@ export const getWorkouts = () => {
     })
   }
 };
+
+// export const getWorkouts = () => {
+//   return dispatch => {
+//     workoutsDb.on('value', snapshot => {
+//       dispatch({
+//         type: 'GET_WORKOUTS',
+//         workouts: snapshot.val()
+//       })
+//     })
+//   }
+// };

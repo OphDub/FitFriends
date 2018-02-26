@@ -5,8 +5,8 @@ import { getWorkouts } from '../../actions/actionsIndex';
 import './WorkoutHistory.css';
 
 export class WorkoutHistory extends Component {
-  componentWillMount () {
-    this.props.getWorkouts();
+  async componentWillMount () {
+    await this.props.getWorkouts();
   }
 
   renderedWorkouts = () => {
@@ -48,7 +48,7 @@ export class WorkoutHistory extends Component {
 }
 
 const exercise = {
-  reps: PropTypes.string.isRequired,
+  reps: PropTypes.string.iwqsRequired,
   exercise: PropTypes.string.isRequired
 };
 
@@ -59,8 +59,8 @@ const workout = {
 };
 
 WorkoutHistory.propTypes = {
-  getWorkouts: PropTypes.func.isRequired,
-  workouts: PropTypes.arrayOf(workout).isRequired
+  getWorkouts: PropTypes.func,
+  workouts: PropTypes.arrayOf(workout)
 };
 
 export const mapStateToProps = (state) => ({
