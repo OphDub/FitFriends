@@ -26,7 +26,7 @@ export class App extends Component {
       this.props.getUserFromFirebase();
     }
 
-    if (this.props.user.loggedIn === false) {
+    if (this.props.user.loggedIn === false && this.props.user.email === null) {
       this.props.history.push('/login');
     }
   }
