@@ -130,7 +130,7 @@ export class Workout extends Component {
 }
 
 Workout.propTypes = {
-  postWorkout: PropTypes.func.isRequired
+  postWorkout: PropTypes.func
 };
 
 const mapDispatchToProps = (dispatch) => ({
