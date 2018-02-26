@@ -29,7 +29,7 @@ export const logout = () => {
   return async dispatch => {
     await auth.signOut();
 
-    dispatch({ type: 'LOGOUT_USER' });
+    dispatch(logOutUserLocally());
   }
 };
 
