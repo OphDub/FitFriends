@@ -6,10 +6,13 @@ import { SignUp, mapDispatchToProps } from './SignUp';
 describe('SIGNUP', () => {
   let renderedComponent;
   let mockSignUp;
+  let mockHistory;
 
   beforeEach(() => {
     mockSignUp = jest.fn();
-    renderedComponent = shallow(<SignUp signup={mockSignUp}/>);
+    mockHistory = { push: jest.fn() }
+
+    renderedComponent = shallow(<SignUp signup={mockSignUp} history={mockHistory}/>);
   });
 
   it('should match snapshot', () => {

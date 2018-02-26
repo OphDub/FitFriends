@@ -17,409 +17,18 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <form
-        className="Workout-form"
->
+      "children": Array [
         <div
-                className="Workout-info"
-        >
-                <input
-                        className="workout-info-inputs workout-name"
-                        name="workoutName"
-                        onChange={[Function]}
-                        placeholder="Workout Name"
-                        type="text"
-                        value=""
-                />
-                <input
-                        className="workout-info-inputs workout-description"
-                        name="workoutDesc"
-                        onChange={[Function]}
-                        placeholder="Workout Description (Optional)"
-                        type="text"
-                        value=""
-                />
-        </div>
-        <div>
-                <h4
-                        className="exercise-header"
-                >
-                        Exercises
-                </h4>
-                <ul
-                        className="rendered-exercises"
-                >
-                        
-                </ul>
-                <div
-                        className="create-exercises"
-                >
-                        <input
-                                className="exercise-inputs exercise-number"
-                                name="reps"
-                                onChange={[Function]}
-                                placeholder="Reps"
-                                type="number"
-                                value=""
-                        />
-                        <input
-                                className="exercise-inputs exercise-name"
-                                name="exercise"
-                                onChange={[Function]}
-                                placeholder="Exercise"
-                                type="text"
-                                value=""
-                        />
-                        <button
-                                className="exercise-button"
-                                onClick={[Function]}
-                        >
-                                +
-                        </button>
-                </div>
-        </div>
-        <button
-                className="Workout-post-btn"
-                onClick={[Function]}
-        >
-                <h3>
-                        Post Workout
-                </h3>
-        </button>
-</form>,
-      "className": "Workout",
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <div
-            className="Workout-info"
+          className="Workout-header"
 >
-            <input
-                        className="workout-info-inputs workout-name"
-                        name="workoutName"
-                        onChange={[Function]}
-                        placeholder="Workout Name"
-                        type="text"
-                        value=""
-            />
-            <input
-                        className="workout-info-inputs workout-description"
-                        name="workoutDesc"
-                        onChange={[Function]}
-                        placeholder="Workout Description (Optional)"
-                        type="text"
-                        value=""
-            />
+          <h3>
+                    Post Your Workout:
+          </h3>
+          <p>
+                    Give it a name and any details for your teammates:
+          </p>
 </div>,
-          <div>
-            <h4
-                        className="exercise-header"
-            >
-                        Exercises
-            </h4>
-            <ul
-                        className="rendered-exercises"
-            >
-                        
-            </ul>
-            <div
-                        className="create-exercises"
-            >
-                        <input
-                                    className="exercise-inputs exercise-number"
-                                    name="reps"
-                                    onChange={[Function]}
-                                    placeholder="Reps"
-                                    type="number"
-                                    value=""
-                        />
-                        <input
-                                    className="exercise-inputs exercise-name"
-                                    name="exercise"
-                                    onChange={[Function]}
-                                    placeholder="Exercise"
-                                    type="text"
-                                    value=""
-                        />
-                        <button
-                                    className="exercise-button"
-                                    onClick={[Function]}
-                        >
-                                    +
-                        </button>
-            </div>
-</div>,
-          <button
-            className="Workout-post-btn"
-            onClick={[Function]}
->
-            <h3>
-                        Post Workout
-            </h3>
-</button>,
-        ],
-        "className": "Workout-form",
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <input
-                className="workout-info-inputs workout-name"
-                name="workoutName"
-                onChange={[Function]}
-                placeholder="Workout Name"
-                type="text"
-                value=""
-/>,
-              <input
-                className="workout-info-inputs workout-description"
-                name="workoutDesc"
-                onChange={[Function]}
-                placeholder="Workout Description (Optional)"
-                type="text"
-                value=""
-/>,
-            ],
-            "className": "Workout-info",
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "className": "workout-info-inputs workout-name",
-                "name": "workoutName",
-                "onChange": [Function],
-                "placeholder": "Workout Name",
-                "type": "text",
-                "value": "",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "input",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "className": "workout-info-inputs workout-description",
-                "name": "workoutDesc",
-                "onChange": [Function],
-                "placeholder": "Workout Description (Optional)",
-                "type": "text",
-                "value": "",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "input",
-            },
-          ],
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <h4
-                className="exercise-header"
->
-                Exercises
-</h4>,
-              <ul
-                className="rendered-exercises"
->
-                
-</ul>,
-              <div
-                className="create-exercises"
->
-                <input
-                                className="exercise-inputs exercise-number"
-                                name="reps"
-                                onChange={[Function]}
-                                placeholder="Reps"
-                                type="number"
-                                value=""
-                />
-                <input
-                                className="exercise-inputs exercise-name"
-                                name="exercise"
-                                onChange={[Function]}
-                                placeholder="Exercise"
-                                type="text"
-                                value=""
-                />
-                <button
-                                className="exercise-button"
-                                onClick={[Function]}
-                >
-                                +
-                </button>
-</div>,
-            ],
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Exercises",
-                "className": "exercise-header",
-              },
-              "ref": null,
-              "rendered": "Exercises",
-              "type": "h4",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [],
-                "className": "rendered-exercises",
-              },
-              "ref": null,
-              "rendered": Array [],
-              "type": "ul",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <input
-                    className="exercise-inputs exercise-number"
-                    name="reps"
-                    onChange={[Function]}
-                    placeholder="Reps"
-                    type="number"
-                    value=""
-/>,
-                  <input
-                    className="exercise-inputs exercise-name"
-                    name="exercise"
-                    onChange={[Function]}
-                    placeholder="Exercise"
-                    type="text"
-                    value=""
-/>,
-                  <button
-                    className="exercise-button"
-                    onClick={[Function]}
->
-                    +
-</button>,
-                ],
-                "className": "create-exercises",
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "className": "exercise-inputs exercise-number",
-                    "name": "reps",
-                    "onChange": [Function],
-                    "placeholder": "Reps",
-                    "type": "number",
-                    "value": "",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": "input",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "className": "exercise-inputs exercise-name",
-                    "name": "exercise",
-                    "onChange": [Function],
-                    "placeholder": "Exercise",
-                    "type": "text",
-                    "value": "",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": "input",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "+",
-                    "className": "exercise-button",
-                    "onClick": [Function],
-                  },
-                  "ref": null,
-                  "rendered": "+",
-                  "type": "button",
-                },
-              ],
-              "type": "div",
-            },
-          ],
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": <h3>
-              Post Workout
-</h3>,
-            "className": "Workout-post-btn",
-            "onClick": [Function],
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Post Workout",
-            },
-            "ref": null,
-            "rendered": "Post Workout",
-            "type": "h3",
-          },
-          "type": "button",
-        },
-      ],
-      "type": "form",
-    },
-    "type": "section",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <form
+        <form
           className="Workout-form"
 >
           <div
@@ -448,6 +57,9 @@ ShallowWrapper {
                     >
                               Exercises
                     </h4>
+                    <p>
+                              Add or remove exercises for your workout:
+                    </p>
                     <ul
                               className="rendered-exercises"
                     >
@@ -476,7 +88,7 @@ ShallowWrapper {
                                         className="exercise-button"
                                         onClick={[Function]}
                               >
-                                        +
+                                        Add
                               </button>
                     </div>
           </div>
@@ -489,10 +101,54 @@ ShallowWrapper {
                     </h3>
           </button>
 </form>,
-        "className": "Workout",
+      ],
+      "className": "Workout",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h3>
+              Post Your Workout:
+</h3>,
+            <p>
+              Give it a name and any details for your teammates:
+</p>,
+          ],
+          "className": "Workout-header",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Post Your Workout:",
+            },
+            "ref": null,
+            "rendered": "Post Your Workout:",
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Give it a name and any details for your teammates:",
+            },
+            "ref": null,
+            "rendered": "Give it a name and any details for your teammates:",
+            "type": "p",
+          },
+        ],
+        "type": "div",
       },
-      "ref": null,
-      "rendered": Object {
+      Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
@@ -524,6 +180,9 @@ ShallowWrapper {
               >
                             Exercises
               </h4>
+              <p>
+                            Add or remove exercises for your workout:
+              </p>
               <ul
                             className="rendered-exercises"
               >
@@ -552,7 +211,7 @@ ShallowWrapper {
                                           className="exercise-button"
                                           onClick={[Function]}
                             >
-                                          +
+                                          Add
                             </button>
               </div>
 </div>,
@@ -642,6 +301,9 @@ ShallowWrapper {
 >
                   Exercises
 </h4>,
+                <p>
+                  Add or remove exercises for your workout:
+</p>,
                 <ul
                   className="rendered-exercises"
 >
@@ -670,7 +332,7 @@ ShallowWrapper {
                                     className="exercise-button"
                                     onClick={[Function]}
                   >
-                                    +
+                                    Add
                   </button>
 </div>,
               ],
@@ -688,6 +350,17 @@ ShallowWrapper {
                 "ref": null,
                 "rendered": "Exercises",
                 "type": "h4",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Add or remove exercises for your workout:",
+                },
+                "ref": null,
+                "rendered": "Add or remove exercises for your workout:",
+                "type": "p",
               },
               Object {
                 "instance": null,
@@ -727,7 +400,7 @@ ShallowWrapper {
                       className="exercise-button"
                       onClick={[Function]}
 >
-                      +
+                      Add
 </button>,
                   ],
                   "className": "create-exercises",
@@ -771,12 +444,12 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": "+",
+                      "children": "Add",
                       "className": "exercise-button",
                       "onClick": [Function],
                     },
                     "ref": null,
-                    "rendered": "+",
+                    "rendered": "Add",
                     "type": "button",
                   },
                 ],
@@ -813,6 +486,485 @@ ShallowWrapper {
         ],
         "type": "form",
       },
+    ],
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="Workout-header"
+>
+            <h3>
+                        Post Your Workout:
+            </h3>
+            <p>
+                        Give it a name and any details for your teammates:
+            </p>
+</div>,
+          <form
+            className="Workout-form"
+>
+            <div
+                        className="Workout-info"
+            >
+                        <input
+                                    className="workout-info-inputs workout-name"
+                                    name="workoutName"
+                                    onChange={[Function]}
+                                    placeholder="Workout Name"
+                                    type="text"
+                                    value=""
+                        />
+                        <input
+                                    className="workout-info-inputs workout-description"
+                                    name="workoutDesc"
+                                    onChange={[Function]}
+                                    placeholder="Workout Description (Optional)"
+                                    type="text"
+                                    value=""
+                        />
+            </div>
+            <div>
+                        <h4
+                                    className="exercise-header"
+                        >
+                                    Exercises
+                        </h4>
+                        <p>
+                                    Add or remove exercises for your workout:
+                        </p>
+                        <ul
+                                    className="rendered-exercises"
+                        >
+                                    
+                        </ul>
+                        <div
+                                    className="create-exercises"
+                        >
+                                    <input
+                                                className="exercise-inputs exercise-number"
+                                                name="reps"
+                                                onChange={[Function]}
+                                                placeholder="Reps"
+                                                type="number"
+                                                value=""
+                                    />
+                                    <input
+                                                className="exercise-inputs exercise-name"
+                                                name="exercise"
+                                                onChange={[Function]}
+                                                placeholder="Exercise"
+                                                type="text"
+                                                value=""
+                                    />
+                                    <button
+                                                className="exercise-button"
+                                                onClick={[Function]}
+                                    >
+                                                Add
+                                    </button>
+                        </div>
+            </div>
+            <button
+                        className="Workout-post-btn"
+                        onClick={[Function]}
+            >
+                        <h3>
+                                    Post Workout
+                        </h3>
+            </button>
+</form>,
+        ],
+        "className": "Workout",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h3>
+                Post Your Workout:
+</h3>,
+              <p>
+                Give it a name and any details for your teammates:
+</p>,
+            ],
+            "className": "Workout-header",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Post Your Workout:",
+              },
+              "ref": null,
+              "rendered": "Post Your Workout:",
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Give it a name and any details for your teammates:",
+              },
+              "ref": null,
+              "rendered": "Give it a name and any details for your teammates:",
+              "type": "p",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="Workout-info"
+>
+                <input
+                                className="workout-info-inputs workout-name"
+                                name="workoutName"
+                                onChange={[Function]}
+                                placeholder="Workout Name"
+                                type="text"
+                                value=""
+                />
+                <input
+                                className="workout-info-inputs workout-description"
+                                name="workoutDesc"
+                                onChange={[Function]}
+                                placeholder="Workout Description (Optional)"
+                                type="text"
+                                value=""
+                />
+</div>,
+              <div>
+                <h4
+                                className="exercise-header"
+                >
+                                Exercises
+                </h4>
+                <p>
+                                Add or remove exercises for your workout:
+                </p>
+                <ul
+                                className="rendered-exercises"
+                >
+                                
+                </ul>
+                <div
+                                className="create-exercises"
+                >
+                                <input
+                                                className="exercise-inputs exercise-number"
+                                                name="reps"
+                                                onChange={[Function]}
+                                                placeholder="Reps"
+                                                type="number"
+                                                value=""
+                                />
+                                <input
+                                                className="exercise-inputs exercise-name"
+                                                name="exercise"
+                                                onChange={[Function]}
+                                                placeholder="Exercise"
+                                                type="text"
+                                                value=""
+                                />
+                                <button
+                                                className="exercise-button"
+                                                onClick={[Function]}
+                                >
+                                                Add
+                                </button>
+                </div>
+</div>,
+              <button
+                className="Workout-post-btn"
+                onClick={[Function]}
+>
+                <h3>
+                                Post Workout
+                </h3>
+</button>,
+            ],
+            "className": "Workout-form",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <input
+                    className="workout-info-inputs workout-name"
+                    name="workoutName"
+                    onChange={[Function]}
+                    placeholder="Workout Name"
+                    type="text"
+                    value=""
+/>,
+                  <input
+                    className="workout-info-inputs workout-description"
+                    name="workoutDesc"
+                    onChange={[Function]}
+                    placeholder="Workout Description (Optional)"
+                    type="text"
+                    value=""
+/>,
+                ],
+                "className": "Workout-info",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "workout-info-inputs workout-name",
+                    "name": "workoutName",
+                    "onChange": [Function],
+                    "placeholder": "Workout Name",
+                    "type": "text",
+                    "value": "",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "workout-info-inputs workout-description",
+                    "name": "workoutDesc",
+                    "onChange": [Function],
+                    "placeholder": "Workout Description (Optional)",
+                    "type": "text",
+                    "value": "",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h4
+                    className="exercise-header"
+>
+                    Exercises
+</h4>,
+                  <p>
+                    Add or remove exercises for your workout:
+</p>,
+                  <ul
+                    className="rendered-exercises"
+>
+                    
+</ul>,
+                  <div
+                    className="create-exercises"
+>
+                    <input
+                                        className="exercise-inputs exercise-number"
+                                        name="reps"
+                                        onChange={[Function]}
+                                        placeholder="Reps"
+                                        type="number"
+                                        value=""
+                    />
+                    <input
+                                        className="exercise-inputs exercise-name"
+                                        name="exercise"
+                                        onChange={[Function]}
+                                        placeholder="Exercise"
+                                        type="text"
+                                        value=""
+                    />
+                    <button
+                                        className="exercise-button"
+                                        onClick={[Function]}
+                    >
+                                        Add
+                    </button>
+</div>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Exercises",
+                    "className": "exercise-header",
+                  },
+                  "ref": null,
+                  "rendered": "Exercises",
+                  "type": "h4",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Add or remove exercises for your workout:",
+                  },
+                  "ref": null,
+                  "rendered": "Add or remove exercises for your workout:",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [],
+                    "className": "rendered-exercises",
+                  },
+                  "ref": null,
+                  "rendered": Array [],
+                  "type": "ul",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <input
+                        className="exercise-inputs exercise-number"
+                        name="reps"
+                        onChange={[Function]}
+                        placeholder="Reps"
+                        type="number"
+                        value=""
+/>,
+                      <input
+                        className="exercise-inputs exercise-name"
+                        name="exercise"
+                        onChange={[Function]}
+                        placeholder="Exercise"
+                        type="text"
+                        value=""
+/>,
+                      <button
+                        className="exercise-button"
+                        onClick={[Function]}
+>
+                        Add
+</button>,
+                    ],
+                    "className": "create-exercises",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "className": "exercise-inputs exercise-number",
+                        "name": "reps",
+                        "onChange": [Function],
+                        "placeholder": "Reps",
+                        "type": "number",
+                        "value": "",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "input",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "className": "exercise-inputs exercise-name",
+                        "name": "exercise",
+                        "onChange": [Function],
+                        "placeholder": "Exercise",
+                        "type": "text",
+                        "value": "",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "input",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Add",
+                        "className": "exercise-button",
+                        "onClick": [Function],
+                      },
+                      "ref": null,
+                      "rendered": "Add",
+                      "type": "button",
+                    },
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <h3>
+                  Post Workout
+</h3>,
+                "className": "Workout-post-btn",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Post Workout",
+                },
+                "ref": null,
+                "rendered": "Post Workout",
+                "type": "h3",
+              },
+              "type": "button",
+            },
+          ],
+          "type": "form",
+        },
+      ],
       "type": "section",
     },
   ],
@@ -843,561 +995,18 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <form
-        className="Workout-form"
->
+      "children": Array [
         <div
-                className="Workout-info"
-        >
-                <input
-                        className="workout-info-inputs workout-name"
-                        name="workoutName"
-                        onChange={[Function]}
-                        placeholder="Workout Name"
-                        type="text"
-                        value=""
-                />
-                <input
-                        className="workout-info-inputs workout-description"
-                        name="workoutDesc"
-                        onChange={[Function]}
-                        placeholder="Workout Description (Optional)"
-                        type="text"
-                        value=""
-                />
-        </div>
-        <div>
-                <h4
-                        className="exercise-header"
-                >
-                        Exercises
-                </h4>
-                <ul
-                        className="rendered-exercises"
-                >
-                        <li
-                                className="rendered-exercise"
-                        >
-                                <h5
-                                        className="rendered-ex-info"
-                                >
-                                        5
-                                </h5>
-                                <h5
-                                        className="rendered-ex-info"
-                                >
-                                        some exercise
-                                </h5>
-                                <button
-                                        className="rendered-ex-btn"
-                                        id={1519148514421}
-                                        onClick={[Function]}
-                                >
-                                        -
-                                </button>
-                        </li>
-                </ul>
-                <div
-                        className="create-exercises"
-                >
-                        <input
-                                className="exercise-inputs exercise-number"
-                                name="reps"
-                                onChange={[Function]}
-                                placeholder="Reps"
-                                type="number"
-                                value=""
-                        />
-                        <input
-                                className="exercise-inputs exercise-name"
-                                name="exercise"
-                                onChange={[Function]}
-                                placeholder="Exercise"
-                                type="text"
-                                value=""
-                        />
-                        <button
-                                className="exercise-button"
-                                onClick={[Function]}
-                        >
-                                +
-                        </button>
-                </div>
-        </div>
-        <button
-                className="Workout-post-btn"
-                onClick={[Function]}
-        >
-                <h3>
-                        Post Workout
-                </h3>
-        </button>
-</form>,
-      "className": "Workout",
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <div
-            className="Workout-info"
+          className="Workout-header"
 >
-            <input
-                        className="workout-info-inputs workout-name"
-                        name="workoutName"
-                        onChange={[Function]}
-                        placeholder="Workout Name"
-                        type="text"
-                        value=""
-            />
-            <input
-                        className="workout-info-inputs workout-description"
-                        name="workoutDesc"
-                        onChange={[Function]}
-                        placeholder="Workout Description (Optional)"
-                        type="text"
-                        value=""
-            />
+          <h3>
+                    Post Your Workout:
+          </h3>
+          <p>
+                    Give it a name and any details for your teammates:
+          </p>
 </div>,
-          <div>
-            <h4
-                        className="exercise-header"
-            >
-                        Exercises
-            </h4>
-            <ul
-                        className="rendered-exercises"
-            >
-                        <li
-                                    className="rendered-exercise"
-                        >
-                                    <h5
-                                                className="rendered-ex-info"
-                                    >
-                                                5
-                                    </h5>
-                                    <h5
-                                                className="rendered-ex-info"
-                                    >
-                                                some exercise
-                                    </h5>
-                                    <button
-                                                className="rendered-ex-btn"
-                                                id={1519148514421}
-                                                onClick={[Function]}
-                                    >
-                                                -
-                                    </button>
-                        </li>
-            </ul>
-            <div
-                        className="create-exercises"
-            >
-                        <input
-                                    className="exercise-inputs exercise-number"
-                                    name="reps"
-                                    onChange={[Function]}
-                                    placeholder="Reps"
-                                    type="number"
-                                    value=""
-                        />
-                        <input
-                                    className="exercise-inputs exercise-name"
-                                    name="exercise"
-                                    onChange={[Function]}
-                                    placeholder="Exercise"
-                                    type="text"
-                                    value=""
-                        />
-                        <button
-                                    className="exercise-button"
-                                    onClick={[Function]}
-                        >
-                                    +
-                        </button>
-            </div>
-</div>,
-          <button
-            className="Workout-post-btn"
-            onClick={[Function]}
->
-            <h3>
-                        Post Workout
-            </h3>
-</button>,
-        ],
-        "className": "Workout-form",
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <input
-                className="workout-info-inputs workout-name"
-                name="workoutName"
-                onChange={[Function]}
-                placeholder="Workout Name"
-                type="text"
-                value=""
-/>,
-              <input
-                className="workout-info-inputs workout-description"
-                name="workoutDesc"
-                onChange={[Function]}
-                placeholder="Workout Description (Optional)"
-                type="text"
-                value=""
-/>,
-            ],
-            "className": "Workout-info",
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "className": "workout-info-inputs workout-name",
-                "name": "workoutName",
-                "onChange": [Function],
-                "placeholder": "Workout Name",
-                "type": "text",
-                "value": "",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "input",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "className": "workout-info-inputs workout-description",
-                "name": "workoutDesc",
-                "onChange": [Function],
-                "placeholder": "Workout Description (Optional)",
-                "type": "text",
-                "value": "",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "input",
-            },
-          ],
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <h4
-                className="exercise-header"
->
-                Exercises
-</h4>,
-              <ul
-                className="rendered-exercises"
->
-                <li
-                                className="rendered-exercise"
-                >
-                                <h5
-                                                className="rendered-ex-info"
-                                >
-                                                5
-                                </h5>
-                                <h5
-                                                className="rendered-ex-info"
-                                >
-                                                some exercise
-                                </h5>
-                                <button
-                                                className="rendered-ex-btn"
-                                                id={1519148514421}
-                                                onClick={[Function]}
-                                >
-                                                -
-                                </button>
-                </li>
-</ul>,
-              <div
-                className="create-exercises"
->
-                <input
-                                className="exercise-inputs exercise-number"
-                                name="reps"
-                                onChange={[Function]}
-                                placeholder="Reps"
-                                type="number"
-                                value=""
-                />
-                <input
-                                className="exercise-inputs exercise-name"
-                                name="exercise"
-                                onChange={[Function]}
-                                placeholder="Exercise"
-                                type="text"
-                                value=""
-                />
-                <button
-                                className="exercise-button"
-                                onClick={[Function]}
-                >
-                                +
-                </button>
-</div>,
-            ],
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "Exercises",
-                "className": "exercise-header",
-              },
-              "ref": null,
-              "rendered": "Exercises",
-              "type": "h4",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <li
-                    className="rendered-exercise"
->
-                    <h5
-                                        className="rendered-ex-info"
-                    >
-                                        5
-                    </h5>
-                    <h5
-                                        className="rendered-ex-info"
-                    >
-                                        some exercise
-                    </h5>
-                    <button
-                                        className="rendered-ex-btn"
-                                        id={1519148514421}
-                                        onClick={[Function]}
-                    >
-                                        -
-                    </button>
-</li>,
-                ],
-                "className": "rendered-exercises",
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": "1519148514421",
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": Array [
-                      <h5
-                        className="rendered-ex-info"
->
-                        5
-</h5>,
-                      <h5
-                        className="rendered-ex-info"
->
-                        some exercise
-</h5>,
-                      <button
-                        className="rendered-ex-btn"
-                        id={1519148514421}
-                        onClick={[Function]}
->
-                        -
-</button>,
-                    ],
-                    "className": "rendered-exercise",
-                  },
-                  "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": 5,
-                        "className": "rendered-ex-info",
-                      },
-                      "ref": null,
-                      "rendered": 5,
-                      "type": "h5",
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "some exercise",
-                        "className": "rendered-ex-info",
-                      },
-                      "ref": null,
-                      "rendered": "some exercise",
-                      "type": "h5",
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "-",
-                        "className": "rendered-ex-btn",
-                        "id": 1519148514421,
-                        "onClick": [Function],
-                      },
-                      "ref": null,
-                      "rendered": "-",
-                      "type": "button",
-                    },
-                  ],
-                  "type": "li",
-                },
-              ],
-              "type": "ul",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <input
-                    className="exercise-inputs exercise-number"
-                    name="reps"
-                    onChange={[Function]}
-                    placeholder="Reps"
-                    type="number"
-                    value=""
-/>,
-                  <input
-                    className="exercise-inputs exercise-name"
-                    name="exercise"
-                    onChange={[Function]}
-                    placeholder="Exercise"
-                    type="text"
-                    value=""
-/>,
-                  <button
-                    className="exercise-button"
-                    onClick={[Function]}
->
-                    +
-</button>,
-                ],
-                "className": "create-exercises",
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "className": "exercise-inputs exercise-number",
-                    "name": "reps",
-                    "onChange": [Function],
-                    "placeholder": "Reps",
-                    "type": "number",
-                    "value": "",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": "input",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "className": "exercise-inputs exercise-name",
-                    "name": "exercise",
-                    "onChange": [Function],
-                    "placeholder": "Exercise",
-                    "type": "text",
-                    "value": "",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": "input",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "+",
-                    "className": "exercise-button",
-                    "onClick": [Function],
-                  },
-                  "ref": null,
-                  "rendered": "+",
-                  "type": "button",
-                },
-              ],
-              "type": "div",
-            },
-          ],
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": <h3>
-              Post Workout
-</h3>,
-            "className": "Workout-post-btn",
-            "onClick": [Function],
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "Post Workout",
-            },
-            "ref": null,
-            "rendered": "Post Workout",
-            "type": "h3",
-          },
-          "type": "button",
-        },
-      ],
-      "type": "form",
-    },
-    "type": "section",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <form
+        <form
           className="Workout-form"
 >
           <div
@@ -1426,6 +1035,9 @@ ShallowWrapper {
                     >
                               Exercises
                     </h4>
+                    <p>
+                              Add or remove exercises for your workout:
+                    </p>
                     <ul
                               className="rendered-exercises"
                     >
@@ -1447,7 +1059,7 @@ ShallowWrapper {
                                                   id={1519148514421}
                                                   onClick={[Function]}
                                         >
-                                                  -
+                                                  Remove
                                         </button>
                               </li>
                     </ul>
@@ -1474,7 +1086,7 @@ ShallowWrapper {
                                         className="exercise-button"
                                         onClick={[Function]}
                               >
-                                        +
+                                        Add
                               </button>
                     </div>
           </div>
@@ -1487,10 +1099,54 @@ ShallowWrapper {
                     </h3>
           </button>
 </form>,
-        "className": "Workout",
+      ],
+      "className": "Workout",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h3>
+              Post Your Workout:
+</h3>,
+            <p>
+              Give it a name and any details for your teammates:
+</p>,
+          ],
+          "className": "Workout-header",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Post Your Workout:",
+            },
+            "ref": null,
+            "rendered": "Post Your Workout:",
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Give it a name and any details for your teammates:",
+            },
+            "ref": null,
+            "rendered": "Give it a name and any details for your teammates:",
+            "type": "p",
+          },
+        ],
+        "type": "div",
       },
-      "ref": null,
-      "rendered": Object {
+      Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
@@ -1522,6 +1178,9 @@ ShallowWrapper {
               >
                             Exercises
               </h4>
+              <p>
+                            Add or remove exercises for your workout:
+              </p>
               <ul
                             className="rendered-exercises"
               >
@@ -1543,7 +1202,7 @@ ShallowWrapper {
                                                         id={1519148514421}
                                                         onClick={[Function]}
                                           >
-                                                        -
+                                                        Remove
                                           </button>
                             </li>
               </ul>
@@ -1570,7 +1229,7 @@ ShallowWrapper {
                                           className="exercise-button"
                                           onClick={[Function]}
                             >
-                                          +
+                                          Add
                             </button>
               </div>
 </div>,
@@ -1660,6 +1319,9 @@ ShallowWrapper {
 >
                   Exercises
 </h4>,
+                <p>
+                  Add or remove exercises for your workout:
+</p>,
                 <ul
                   className="rendered-exercises"
 >
@@ -1681,7 +1343,7 @@ ShallowWrapper {
                                                       id={1519148514421}
                                                       onClick={[Function]}
                                     >
-                                                      -
+                                                      Remove
                                     </button>
                   </li>
 </ul>,
@@ -1708,7 +1370,7 @@ ShallowWrapper {
                                     className="exercise-button"
                                     onClick={[Function]}
                   >
-                                    +
+                                    Add
                   </button>
 </div>,
               ],
@@ -1726,6 +1388,17 @@ ShallowWrapper {
                 "ref": null,
                 "rendered": "Exercises",
                 "type": "h4",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Add or remove exercises for your workout:",
+                },
+                "ref": null,
+                "rendered": "Add or remove exercises for your workout:",
+                "type": "p",
               },
               Object {
                 "instance": null,
@@ -1751,7 +1424,7 @@ ShallowWrapper {
                                             id={1519148514421}
                                             onClick={[Function]}
                       >
-                                            -
+                                            Remove
                       </button>
 </li>,
                   ],
@@ -1780,7 +1453,7 @@ ShallowWrapper {
                           id={1519148514421}
                           onClick={[Function]}
 >
-                          -
+                          Remove
 </button>,
                       ],
                       "className": "rendered-exercise",
@@ -1816,13 +1489,13 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "host",
                         "props": Object {
-                          "children": "-",
+                          "children": "Remove",
                           "className": "rendered-ex-btn",
                           "id": 1519148514421,
                           "onClick": [Function],
                         },
                         "ref": null,
-                        "rendered": "-",
+                        "rendered": "Remove",
                         "type": "button",
                       },
                     ],
@@ -1857,7 +1530,7 @@ ShallowWrapper {
                       className="exercise-button"
                       onClick={[Function]}
 >
-                      +
+                      Add
 </button>,
                   ],
                   "className": "create-exercises",
@@ -1901,12 +1574,12 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "host",
                     "props": Object {
-                      "children": "+",
+                      "children": "Add",
                       "className": "exercise-button",
                       "onClick": [Function],
                     },
                     "ref": null,
-                    "rendered": "+",
+                    "rendered": "Add",
                     "type": "button",
                   },
                 ],
@@ -1943,6 +1616,637 @@ ShallowWrapper {
         ],
         "type": "form",
       },
+    ],
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="Workout-header"
+>
+            <h3>
+                        Post Your Workout:
+            </h3>
+            <p>
+                        Give it a name and any details for your teammates:
+            </p>
+</div>,
+          <form
+            className="Workout-form"
+>
+            <div
+                        className="Workout-info"
+            >
+                        <input
+                                    className="workout-info-inputs workout-name"
+                                    name="workoutName"
+                                    onChange={[Function]}
+                                    placeholder="Workout Name"
+                                    type="text"
+                                    value=""
+                        />
+                        <input
+                                    className="workout-info-inputs workout-description"
+                                    name="workoutDesc"
+                                    onChange={[Function]}
+                                    placeholder="Workout Description (Optional)"
+                                    type="text"
+                                    value=""
+                        />
+            </div>
+            <div>
+                        <h4
+                                    className="exercise-header"
+                        >
+                                    Exercises
+                        </h4>
+                        <p>
+                                    Add or remove exercises for your workout:
+                        </p>
+                        <ul
+                                    className="rendered-exercises"
+                        >
+                                    <li
+                                                className="rendered-exercise"
+                                    >
+                                                <h5
+                                                            className="rendered-ex-info"
+                                                >
+                                                            5
+                                                </h5>
+                                                <h5
+                                                            className="rendered-ex-info"
+                                                >
+                                                            some exercise
+                                                </h5>
+                                                <button
+                                                            className="rendered-ex-btn"
+                                                            id={1519148514421}
+                                                            onClick={[Function]}
+                                                >
+                                                            Remove
+                                                </button>
+                                    </li>
+                        </ul>
+                        <div
+                                    className="create-exercises"
+                        >
+                                    <input
+                                                className="exercise-inputs exercise-number"
+                                                name="reps"
+                                                onChange={[Function]}
+                                                placeholder="Reps"
+                                                type="number"
+                                                value=""
+                                    />
+                                    <input
+                                                className="exercise-inputs exercise-name"
+                                                name="exercise"
+                                                onChange={[Function]}
+                                                placeholder="Exercise"
+                                                type="text"
+                                                value=""
+                                    />
+                                    <button
+                                                className="exercise-button"
+                                                onClick={[Function]}
+                                    >
+                                                Add
+                                    </button>
+                        </div>
+            </div>
+            <button
+                        className="Workout-post-btn"
+                        onClick={[Function]}
+            >
+                        <h3>
+                                    Post Workout
+                        </h3>
+            </button>
+</form>,
+        ],
+        "className": "Workout",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h3>
+                Post Your Workout:
+</h3>,
+              <p>
+                Give it a name and any details for your teammates:
+</p>,
+            ],
+            "className": "Workout-header",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Post Your Workout:",
+              },
+              "ref": null,
+              "rendered": "Post Your Workout:",
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Give it a name and any details for your teammates:",
+              },
+              "ref": null,
+              "rendered": "Give it a name and any details for your teammates:",
+              "type": "p",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="Workout-info"
+>
+                <input
+                                className="workout-info-inputs workout-name"
+                                name="workoutName"
+                                onChange={[Function]}
+                                placeholder="Workout Name"
+                                type="text"
+                                value=""
+                />
+                <input
+                                className="workout-info-inputs workout-description"
+                                name="workoutDesc"
+                                onChange={[Function]}
+                                placeholder="Workout Description (Optional)"
+                                type="text"
+                                value=""
+                />
+</div>,
+              <div>
+                <h4
+                                className="exercise-header"
+                >
+                                Exercises
+                </h4>
+                <p>
+                                Add or remove exercises for your workout:
+                </p>
+                <ul
+                                className="rendered-exercises"
+                >
+                                <li
+                                                className="rendered-exercise"
+                                >
+                                                <h5
+                                                                className="rendered-ex-info"
+                                                >
+                                                                5
+                                                </h5>
+                                                <h5
+                                                                className="rendered-ex-info"
+                                                >
+                                                                some exercise
+                                                </h5>
+                                                <button
+                                                                className="rendered-ex-btn"
+                                                                id={1519148514421}
+                                                                onClick={[Function]}
+                                                >
+                                                                Remove
+                                                </button>
+                                </li>
+                </ul>
+                <div
+                                className="create-exercises"
+                >
+                                <input
+                                                className="exercise-inputs exercise-number"
+                                                name="reps"
+                                                onChange={[Function]}
+                                                placeholder="Reps"
+                                                type="number"
+                                                value=""
+                                />
+                                <input
+                                                className="exercise-inputs exercise-name"
+                                                name="exercise"
+                                                onChange={[Function]}
+                                                placeholder="Exercise"
+                                                type="text"
+                                                value=""
+                                />
+                                <button
+                                                className="exercise-button"
+                                                onClick={[Function]}
+                                >
+                                                Add
+                                </button>
+                </div>
+</div>,
+              <button
+                className="Workout-post-btn"
+                onClick={[Function]}
+>
+                <h3>
+                                Post Workout
+                </h3>
+</button>,
+            ],
+            "className": "Workout-form",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <input
+                    className="workout-info-inputs workout-name"
+                    name="workoutName"
+                    onChange={[Function]}
+                    placeholder="Workout Name"
+                    type="text"
+                    value=""
+/>,
+                  <input
+                    className="workout-info-inputs workout-description"
+                    name="workoutDesc"
+                    onChange={[Function]}
+                    placeholder="Workout Description (Optional)"
+                    type="text"
+                    value=""
+/>,
+                ],
+                "className": "Workout-info",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "workout-info-inputs workout-name",
+                    "name": "workoutName",
+                    "onChange": [Function],
+                    "placeholder": "Workout Name",
+                    "type": "text",
+                    "value": "",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "workout-info-inputs workout-description",
+                    "name": "workoutDesc",
+                    "onChange": [Function],
+                    "placeholder": "Workout Description (Optional)",
+                    "type": "text",
+                    "value": "",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h4
+                    className="exercise-header"
+>
+                    Exercises
+</h4>,
+                  <p>
+                    Add or remove exercises for your workout:
+</p>,
+                  <ul
+                    className="rendered-exercises"
+>
+                    <li
+                                        className="rendered-exercise"
+                    >
+                                        <h5
+                                                            className="rendered-ex-info"
+                                        >
+                                                            5
+                                        </h5>
+                                        <h5
+                                                            className="rendered-ex-info"
+                                        >
+                                                            some exercise
+                                        </h5>
+                                        <button
+                                                            className="rendered-ex-btn"
+                                                            id={1519148514421}
+                                                            onClick={[Function]}
+                                        >
+                                                            Remove
+                                        </button>
+                    </li>
+</ul>,
+                  <div
+                    className="create-exercises"
+>
+                    <input
+                                        className="exercise-inputs exercise-number"
+                                        name="reps"
+                                        onChange={[Function]}
+                                        placeholder="Reps"
+                                        type="number"
+                                        value=""
+                    />
+                    <input
+                                        className="exercise-inputs exercise-name"
+                                        name="exercise"
+                                        onChange={[Function]}
+                                        placeholder="Exercise"
+                                        type="text"
+                                        value=""
+                    />
+                    <button
+                                        className="exercise-button"
+                                        onClick={[Function]}
+                    >
+                                        Add
+                    </button>
+</div>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Exercises",
+                    "className": "exercise-header",
+                  },
+                  "ref": null,
+                  "rendered": "Exercises",
+                  "type": "h4",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Add or remove exercises for your workout:",
+                  },
+                  "ref": null,
+                  "rendered": "Add or remove exercises for your workout:",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <li
+                        className="rendered-exercise"
+>
+                        <h5
+                                                className="rendered-ex-info"
+                        >
+                                                5
+                        </h5>
+                        <h5
+                                                className="rendered-ex-info"
+                        >
+                                                some exercise
+                        </h5>
+                        <button
+                                                className="rendered-ex-btn"
+                                                id={1519148514421}
+                                                onClick={[Function]}
+                        >
+                                                Remove
+                        </button>
+</li>,
+                    ],
+                    "className": "rendered-exercises",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": "1519148514421",
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": Array [
+                          <h5
+                            className="rendered-ex-info"
+>
+                            5
+</h5>,
+                          <h5
+                            className="rendered-ex-info"
+>
+                            some exercise
+</h5>,
+                          <button
+                            className="rendered-ex-btn"
+                            id={1519148514421}
+                            onClick={[Function]}
+>
+                            Remove
+</button>,
+                        ],
+                        "className": "rendered-exercise",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": 5,
+                            "className": "rendered-ex-info",
+                          },
+                          "ref": null,
+                          "rendered": 5,
+                          "type": "h5",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "some exercise",
+                            "className": "rendered-ex-info",
+                          },
+                          "ref": null,
+                          "rendered": "some exercise",
+                          "type": "h5",
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "Remove",
+                            "className": "rendered-ex-btn",
+                            "id": 1519148514421,
+                            "onClick": [Function],
+                          },
+                          "ref": null,
+                          "rendered": "Remove",
+                          "type": "button",
+                        },
+                      ],
+                      "type": "li",
+                    },
+                  ],
+                  "type": "ul",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <input
+                        className="exercise-inputs exercise-number"
+                        name="reps"
+                        onChange={[Function]}
+                        placeholder="Reps"
+                        type="number"
+                        value=""
+/>,
+                      <input
+                        className="exercise-inputs exercise-name"
+                        name="exercise"
+                        onChange={[Function]}
+                        placeholder="Exercise"
+                        type="text"
+                        value=""
+/>,
+                      <button
+                        className="exercise-button"
+                        onClick={[Function]}
+>
+                        Add
+</button>,
+                    ],
+                    "className": "create-exercises",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "className": "exercise-inputs exercise-number",
+                        "name": "reps",
+                        "onChange": [Function],
+                        "placeholder": "Reps",
+                        "type": "number",
+                        "value": "",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "input",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "className": "exercise-inputs exercise-name",
+                        "name": "exercise",
+                        "onChange": [Function],
+                        "placeholder": "Exercise",
+                        "type": "text",
+                        "value": "",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "input",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Add",
+                        "className": "exercise-button",
+                        "onClick": [Function],
+                      },
+                      "ref": null,
+                      "rendered": "Add",
+                      "type": "button",
+                    },
+                  ],
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <h3>
+                  Post Workout
+</h3>,
+                "className": "Workout-post-btn",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Post Workout",
+                },
+                "ref": null,
+                "rendered": "Post Workout",
+                "type": "h3",
+              },
+              "type": "button",
+            },
+          ],
+          "type": "form",
+        },
+      ],
       "type": "section",
     },
   ],
