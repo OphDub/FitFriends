@@ -23,10 +23,7 @@ export class App extends Component {
 
   componentWillMount() {
     if (this.props.user.email === null) {
-      const thing = this.props.getUserFromFirebase();
-      console.log(thing);
-
-      return thing;
+      this.props.getUserFromFirebase();
     }
 
     if (this.props.user.loggedIn === false) {
