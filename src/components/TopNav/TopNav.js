@@ -17,14 +17,6 @@ export const TopNav = () => {
           </h4>
         </button>
       </NavLink>
-      <NavLink to="/team">
-        <button className="topnav-btn">
-          <FontAwesomeIcon icon={faUsers} size="3x"/>
-          <h4>
-            Team
-          </h4>
-        </button>
-      </NavLink>
       <NavLink to="/history">
         <button className="topnav-btn">
           <FontAwesomeIcon icon={faHistory} size="3x"/>
