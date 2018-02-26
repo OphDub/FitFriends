@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import PropTypes, { func } from 'prop-types';
+import PropTypes from 'prop-types';
 import './Workout.css';
 import { postWorkout } from '../../actions/actionsIndex';
 export class Workout extends Component {
@@ -130,7 +130,7 @@ export class Workout extends Component {
 }
 
 Workout.propTypes = {
-  postWorkout: func.isRequired
+  postWorkout: PropTypes.func.isRequired
 };
 
 const mapDispatchToProps = (dispatch) => ({

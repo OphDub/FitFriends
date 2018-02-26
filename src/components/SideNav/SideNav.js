@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { logout } from '../../actions/actionsIndex';
-import PropTypes, { string, func } from 'prop-types';
+import PropTypes from 'prop-types';
 import './SideNav.css';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faHome from '@fortawesome/fontawesome-free-solid/faHome';
@@ -49,9 +49,9 @@ export const SideNav = ({ userImage, userName, logout }) => {
 };
 
 SideNav.propTypes = {
-  userImage: string,
-  userName: string,
-  logout: func.isRequired
+  userImage: PropTypes.string.isRequired,
+  userName: PropTypes.string.isRequired,
+  logout: PropTypes.func.isRequired
 };
 
 export const mapStateToProps = (state) => ({
