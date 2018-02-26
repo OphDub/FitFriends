@@ -6,11 +6,13 @@ import { Control, mapDispatchToProps } from './Control';
 describe('CONTROL', () => {
   let renderedComponent;
   let mockLogin;
+  let mockHistory;
 
   beforeEach(() => {
     mockLogin=jest.fn();
+    mockHistory={ push: jest.fn() }
 
-    renderedComponent = shallow(<Control login={mockLogin} />, { disableLifecycleMethods: true });
+    renderedComponent = shallow(<Control login={mockLogin} history={mockHistory}/>, { disableLifecycleMethods: true });
   });
 
   it('should match snapshot', () => {
