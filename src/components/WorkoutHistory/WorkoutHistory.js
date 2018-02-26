@@ -55,12 +55,12 @@ const exercise = {
 const workout = {
   workoutName: PropTypes.string.isRequired,
   workoutDesc: PropTypes.string.isRequired,
-  exercises: PropTypes.arrayOf(exercise).isRequired
+  exercises: PropTypes.arrayOf(PropTypes.shape(exercise)).isRequired
 };
 
 WorkoutHistory.propTypes = {
   getWorkouts: PropTypes.func,
-  workouts: PropTypes.arrayOf(workout)
+  workouts: PropTypes.arrayOf(PropTypes.shape(workout))
 };
 
 export const mapStateToProps = (state) => ({
