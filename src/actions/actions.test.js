@@ -1,67 +1,140 @@
 /* eslint-disable */
 import * as actions from './actionsIndex';
 import thunk from 'redux-thunk';
+import fetchMock from 'fetch-mock';
 import configureMockStore from 'redux-mock-store';
-
-const middleware = [ thunk ];
-const mockStore = configureMockStore(middleware);
+import { auth, workoutsDb } from '../base';
+import { mockWorkout, mockWorkouts } from '../initialData';
 
 describe('ACTIONS', () => {
-  describe('getUser action', () => {
-    it('should return a type of GET_USER, with a user', async () => {
-      const mockUser = { email: 'me@me.com', password: 'password' };
-      const mockAuthStateChanged = jest.fn();
-      const auth = {
-        onAuthStateChanged: mockAuthStateChanged
-      }
-      const expected = { type: 'GET_USER', user: mockUser };
+  let middleware;
+  let mockStore;
+  let initialState;
+  let store;
 
-      actions.getUser(mockUser);
+  beforeEach(() => {
+    middleware = [ thunk ];
+    mockStore = configureMockStore(middleware);
+    initialState = {};
+    store = mockStore(initialState);
+  });
 
-      await expect(actions.getUser(mockUser)).toEqual(expected);
-      await expect(mockAuthStateChanged).toHaveBeenCalled();
+  describe('getUserFromFirebase action', () => {
+    it('calls the onAuthStateChanged method of auth', async () => {
+      auth.onAuthStateChanged = jest.fn(() => {
+        return Promise.resolve();
+      });
+
+      await store.dispatch(actions.getUserFromFirebase());
+
+      expect(auth.onAuthStateChanged).toHaveBeenCalled();
+    });
+
+    it('dispatches the saveUserInStore action on success', async () => {
+      const mockUser = { email: 'me@me.com' };
+      const expected = [{ type: 'SAVE_USER', user: mockUser }]
+
+      auth.onAuthStateChanged = jest.fn(() => {
+        return Promise.resolve(mockUser);
+      });
+
+      await store.dispatch(actions.getUserFromFirebase(mockUser));
+
+      expect(store.getActions()).toEqual(expected);
+    });
+
+    it('dispatches the saveUserError action on failure', async () => {
+      const mockError = { message: 'User does not exist' };
+      const mockUser = { email: 'me@me.com' };
+      const expected = [{ type: 'SAVE_USER_ERROR', error: mockError }];
+
+      auth.onAuthStateChanged = jest.fn(() => {
+        return Promise.reject(mockError);
+      });
+
+      await store.dispatch(actions.getUserFromFirebase(mockUser));
+
+      expect(store.getActions()).toEqual(expected);
     });
   });
 
   describe('login action', () => {
-    it('should call signInWithEmailAndPassword', async () => {
-      const mockUser = {
-        email: 'me@me.com',
-        password: 'password',
-      };
+    it('calls the signInWithEmailAndPassword method of auth', async () => {
+      const mockUser = { email: 'me@me.com', password: 'password' };
 
-      const mockSignIn = jest.fn();
-      const auth = {
-        signInWithEmailAndPassword: mockSignIn
-      }
+      auth.signInWithEmailAndPassword = jest.fn();
 
-      actions.login(mockUser.email, mockUser.password);
+      await store.dispatch(actions.login(mockUser.email, mockUser.password));
 
-      await expect(mockSignIn).toHaveBeenCalled();
+      expect(auth.signInWithEmailAndPassword).toHaveBeenCalled();
     });
   });
-  
+
   describe('logout action', () => {
-    it('should call signOut and return a type of LOGOUT_USER', () => {
-  
+    it('calls signOut method of auth return a type of LOGOUT_USER', async () => {
+      auth.signOut = jest.fn();
+
+      await store.dispatch(actions.logout());
+
+      expect(auth.signOut).toHaveBeenCalled();
+    });
+
+    it('dispatches the logOutUserLocally action', async () => {
+      const expected = [{ type: 'LOGOUT_USER'}];
+
+      auth.signOut = jest.fn();
+
+      await store.dispatch(actions.logout());
+
+      expect(store.getActions()).toEqual(expected);
     });
   });
-  
+
   describe('signup action', () => {
-    it('should call createUserWithEmailAndPassword', () => {
-  
+    it('should call createUserWithEmailAndPassword', async () => {
+      const mockUser = { email: 'me@me.com', password: 'password' };
+
+      auth.createUserWithEmailAndPassword = jest.fn();
+
+      await store.dispatch(actions.signup(mockUser.email, mockUser.password));
+
+      expect(auth.createUserWithEmailAndPassword).toHaveBeenCalled();
     });
   });
-  
+
   describe('postWorkout action', () => {
-    it('should call push', () => {
-  
+    it('should call push', async () => {
+      workoutsDb.push = jest.fn();
+
+      await store.dispatch(actions.postWorkout(mockWorkout));
+
+      expect(workoutsDb.push).toHaveBeenCalled();
     });
   });
-  
+
   describe('getWorkouts action', () => {
-    it('should return a type of GET_WORKOUTS and a snapshot value', () => {
-  
+    it('should call the on method of workoutsDb', async () => {
+      workoutsDb.on = jest.fn();
+
+      await store.dispatch(actions.getWorkouts(mockWorkout));
+
+      expect(workoutsDb.on).toHaveBeenCalled();
+    });
+
+    it.skip('dispatches the saveWorkoutsInStore action on success', async () => {
+      const expected = [ { type: 'SAVE_WORKOUTS', workouts: mockWorkouts } ];
+
+      workoutsDb.on = jest.fn((prompt) => {
+        return Promise.resolve({
+          dispatch: () => Promise.resolve({
+            mockWorkouts
+          })
+        })
+      });
+
+      await store.dispatch(actions.getWorkouts());
+
+      expect(store.getActions()).toEqual(expected);
     });
   });
 });
