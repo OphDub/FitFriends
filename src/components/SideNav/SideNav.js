@@ -49,8 +49,8 @@ export const SideNav = ({ userImage, userName, logout }) => {
 };
 
 SideNav.propTypes = {
-  userImage: PropTypes.string.isRequired,
-  userName: PropTypes.string.isRequired,
+  userImage: PropTypes.string,
+  userName: PropTypes.string,
   logout: PropTypes.func.isRequired
 };
 
