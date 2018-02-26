@@ -2,7 +2,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { WorkoutHistory, mapStateToProps, mapDispatchToProps } from './WorkoutHistory';
-import { mockWorkoutHistory } from '../../initialData';
+import { mockWorkouts } from '../../initialData';
 
 describe('WORKOUT HISTORY', () => {
   let renderedComponent;
@@ -10,7 +10,7 @@ describe('WORKOUT HISTORY', () => {
 
   beforeEach(() => {
     mockFn = jest.fn();
-    renderedComponent = shallow(<WorkoutHistory getWorkouts={mockFn} workouts={mockWorkoutHistory}/>);
+    renderedComponent = shallow(<WorkoutHistory getWorkouts={mockFn} workouts={mockWorkouts}/>);
   });
 
   it('should match snapshot', () => {
@@ -19,7 +19,7 @@ describe('WORKOUT HISTORY', () => {
 
   it('should map the store correctly', () => {
     const mockStore = {
-      workouts: mockWorkoutHistory
+      workouts: mockWorkouts
     };
 
     const mapped = mapStateToProps(mockStore);
