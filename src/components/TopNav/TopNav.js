@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 import './TopNav.css';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faEdit from '@fortawesome/fontawesome-free-solid/faEdit';
-import faUsers from '@fortawesome/fontawesome-free-solid/faUsers';
 import faHistory from '@fortawesome/fontawesome-free-solid/faHistory';
 
 export const TopNav = () => {
