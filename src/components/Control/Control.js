@@ -96,8 +96,13 @@ export class Control extends Component {
   }
 }
 
+const historyProps = PropTypes.shape({
+  push: PropTypes.func
+});
+
 Control.propTypes = {
-  login: PropTypes.func.isRequired
+  login: PropTypes.func.isRequired,
+  history: PropTypes(historyProps)
 };
 
 export const mapDispatchToProps = (dispatch) => ({
