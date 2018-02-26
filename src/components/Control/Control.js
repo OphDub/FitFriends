@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import './Control.css';
 import { login } from '../../actions/actionsIndex';
-import { connect } from 'react-redux';
 
 export class Control extends Component {
   constructor () {
-    super ();
+    super();
     this.state = {
       email: '',
       password: '',
-      errorMsg: '',
-    }
+      errorMsg: ''
+    };
   }
 
   handleChange = (e) => {
@@ -20,7 +21,7 @@ export class Control extends Component {
 
   validateLogin = () => {
     const { email, password } = this.state;
-    const message = 'Please provide an email and password.'
+    const message = 'Please provide an email and password.';
     let errorMsg;
 
     const validated = email === '' || password === '' ?
@@ -34,8 +35,8 @@ export class Control extends Component {
     e.preventDefault();
     const { email, password } = this.state;
 
-    if(!this.validateLogin()) {
-      return
+    if (!this.validateLogin()) {
+      return;
     }
 
     try {
@@ -44,9 +45,9 @@ export class Control extends Component {
       this.setState({
         email: '',
         password: '',
-        errorMsg: '',
+        errorMsg: ''
       });
-    } catch(error) {
+    } catch (error) {
       const errorMsg = 'Username/password incorrect. Try again.';
 
       this.setState({
@@ -55,12 +56,12 @@ export class Control extends Component {
         errorMsg
       });
 
-      throw error
+      throw error;
     }
   }
 
   renderError = () => {
-    return (<h3>{this.state.errorMsg}</h3>)
+    return (<h3>{this.state.errorMsg}</h3>);
   }
 
   render () {
@@ -81,14 +82,18 @@ export class Control extends Component {
         <button className="login-btn"
           onClick={this.handleLogin}
           type="submit">
-            <h3>Login</h3>
+          <h3>Login</h3>
         </button>
         <div className="error-msg">
           {this.renderError()}
         </div>
       </form>
-    )
+    );
   }
+}
+
+Control.propTypes = {
+  login: PropTypes.func.isRequired
 };
 
 export const mapDispatchToProps = (dispatch) => ({

@@ -32,8 +32,8 @@
     "keyword-spacing": ["error", { "before": true, "after": true }],
     "max-len": ["warn", 500],
     "no-duplicate-imports": "error",
-    "id-length": "error",
-    "id-blacklist": ["error", "data", "err", "e", "cb", "callback", "payload", "obj", "arr"],
+    "id-length": ["error", { "exceptions": ["e"]}],
+    "id-blacklist": ["error", "data", "err", "cb", "callback", "payload", "obj", "arr"],
     "max-depth": ["warn", 4]
   },
   "globals": {
