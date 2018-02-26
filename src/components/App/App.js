@@ -34,6 +34,10 @@ export class App extends Component {
     }
   }
 
+  loginRedirect = () => {
+    this.props.history.push('/workout');
+  }
+
   render() {
     return (
       <div className="App">
@@ -52,7 +56,7 @@ export class App extends Component {
               render={() => (<Home/>)}/>
             <Route
               path="/login"
-              render={() => (<Welcome/>)}/>
+              render={() => (<Welcome />)}/>
             <Route
               path="/signup"
               render={() => (<SignUp />)}/>
