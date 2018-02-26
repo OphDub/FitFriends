@@ -27,7 +27,7 @@ export class SideNav extends Component {
         <div className="sidenav-btns">
           <NavLink to="/login">
             <button className="sidenav-btn"
-              onClick={logout}>
+              onClick={this.props.logout}>
               <FontAwesomeIcon icon={faSignOut} size="2x"/>
               Logout
             </button>
