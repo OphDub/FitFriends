@@ -3,7 +3,7 @@ import './App.css';
 import { Switch, Route, withRouter } from 'react-router';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { getUser } from '../../actions/actionsIndex';
+import { getUserFromFirebase } from '../../actions/actionsIndex';
 
 import { TopNav } from '../TopNav/TopNav';
 import SideNav from '../SideNav/SideNav';
@@ -19,16 +19,20 @@ import { Settings } from '../Settings/Settings';
 
 import { mockTeam } from '../../initialData';
 
-class App extends Component {
+export class App extends Component {
 
   componentWillMount() {
     if (this.props.user.email === null) {
-      this.props.getUser();
+      this.props.getUserFromFirebase();
     }
 
-    if (this.props.user.loggedIn === false) {
+    if (this.props.user.loggedIn === false && this.props.user.email === null) {
       this.props.history.push('/login');
     }
+  }
+
+  loginRedirect = () => {
+    this.props.history.push('/workout');
   }
 
   render() {
@@ -49,7 +53,7 @@ class App extends Component {
               render={() => (<Home/>)}/>
             <Route
               path="/login"
-              render={() => (<Welcome/>)}/>
+              render={() => (<Welcome />)}/>
             <Route
               path="/signup"
               render={() => (<SignUp />)}/>
@@ -79,15 +83,15 @@ class App extends Component {
   }
 }
 
-const userProps = PropTypes.shape({
-  loggedIn: PropTypes.bool.isRequired,
-  email: PropTypes.string.isRequired
-});
+const userProps = {
+  loggedIn: PropTypes.bool,
+  email: PropTypes.string
+};
 
 App.propTypes = {
-  user: PropTypes.shape(userProps).isRequired,
-  getUser: PropTypes.func.isRequired,
-  history: PropTypes.object.isRequired
+  user: PropTypes.shape(userProps),
+  getUserFromFirebase: PropTypes.func,
+  history: PropTypes.object
 };
 
 export const mapStateToProps = (state) => ({
@@ -95,7 +99,7 @@ export const mapStateToProps = (state) => ({
 });
 
 export const mapDispatchToProps = (dispatch) => ({
-  getUser: (user) => dispatch(getUser(user))
+  getUserFromFirebase: (user) => dispatch(getUserFromFirebase(user))
 });
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));

@@ -21,8 +21,8 @@ export const Teammate = ({ name, workoutTally, workoutsPosted }) => {
 };
 
 Teammate.propTypes = {
-  name: PropTypes.string.isRequired,
-  workoutTally: PropTypes.number.isRequired,
-  workoutsPosted: PropTypes.number.isRequired
+  name: PropTypes.string,
+  workoutTally: PropTypes.number,
+  workoutsPosted: PropTypes.number
 };
 

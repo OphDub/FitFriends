@@ -2,7 +2,7 @@ export const workoutsReducer = (state = [], action) => {
   switch (action.type) {
     case 'POST_WORKOUT':
       return [...state, action.workouts];
-    case 'GET_WORKOUTS':
+    case 'SAVE_WORKOUTS':
       return action.workouts;
     default:
       return state;

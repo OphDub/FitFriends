@@ -17,9 +17,9 @@ export const Team = ({team}) => {
 };
 
 const teammate = PropTypes.shape({
-  name: PropTypes.string.isRequired,
-  workoutTally: PropTypes.string.isRequired,
-  workoutsPosted: PropTypes.string.isRequired
+  name: PropTypes.string,
+  workoutTally: PropTypes.number,
+  workoutsPosted: PropTypes.number
 });
 
 Team.propTypes = {
