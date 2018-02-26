@@ -5,9 +5,7 @@ import { logout } from '../../actions/actionsIndex';
 import PropTypes from 'prop-types';
 import './SideNav.css';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import faHome from '@fortawesome/fontawesome-free-solid/faHome';
 import faUser from '@fortawesome/fontawesome-free-solid/faUser';
-import faCog from '@fortawesome/fontawesome-free-solid/faCog';
 import faSignOut from '@fortawesome/fontawesome-free-solid/faSignOutAlt';
 
 export class SideNav extends Component {
