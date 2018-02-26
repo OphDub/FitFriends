@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import './Control.css';
-import { login, getUserFromFirebase } from '../../actions/actionsIndex';
+import { login } from '../../actions/actionsIndex';
 import { withRouter } from 'react-router-dom';
 
 export class Control extends Component {
