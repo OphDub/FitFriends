@@ -1,15 +1,16 @@
 import React from 'react';
-import './SideNav.css';
 import { NavLink } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { logout } from '../../actions/actionsIndex';
+import PropTypes, { string, func } from 'prop-types';
+import './SideNav.css';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faHome from '@fortawesome/fontawesome-free-solid/faHome';
 import faUser from '@fortawesome/fontawesome-free-solid/faUser';
 import faCog from '@fortawesome/fontawesome-free-solid/faCog';
-import faSignOut from '@fortawesome/fontawesome-free-solid/faSignOutAlt'
-import { connect } from 'react-redux';
-import { logout } from '../../actions/actionsIndex';
+import faSignOut from '@fortawesome/fontawesome-free-solid/faSignOutAlt';
 
-export const SideNav = ({ user, userImage, userName, logout }) => {
+export const SideNav = ({ userImage, userName, logout }) => {
   return (
     <section className="SideNav">
       <div className="user-profile">
@@ -44,15 +45,21 @@ export const SideNav = ({ user, userImage, userName, logout }) => {
         </NavLink>
       </div>
     </section>
-  )
+  );
+};
+
+SideNav.propTypes = {
+  userImage: string,
+  userName: string,
+  logout: func.isRequired
 };
 
 export const mapStateToProps = (state) => ({
-  user: state.user,
+  user: state.user
 });
 
 export const mapDispatchToProps = (dispatch) => ({
-  logout: () => dispatch(logout()),
+  logout: () => dispatch(logout())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SideNav);
