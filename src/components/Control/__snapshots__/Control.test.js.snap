@@ -5,6 +5,11 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Control
+    history={
+        Object {
+            "push": [Function],
+          }
+    }
     login={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
