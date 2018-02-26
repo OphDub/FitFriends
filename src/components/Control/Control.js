@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import './Control.css';
-import { login } from '../../actions/actionsIndex';
+import { login, getUserFromFirebase } from '../../actions/actionsIndex';
 
 export class Control extends Component {
   constructor () {
@@ -21,6 +21,7 @@ export class Control extends Component {
 
   validateLogin = () => {
     const { email, password } = this.state;
+
     const message = 'Please provide an email and password.';
     let errorMsg;
 
@@ -40,7 +41,11 @@ export class Control extends Component {
     }
 
     try {
-      await this.props.login(email, password);
+      const firebaseLogin = await this.props.login(email, password);
+      
+      const gotUser = firebaseLogin ? this.props.getUserFromFirebase() : null
+      console.log(gotUser);
+      
 
       this.setState({
         email: '',
@@ -97,7 +102,8 @@ Control.propTypes = {
 };
 
 export const mapDispatchToProps = (dispatch) => ({
-  login: (email, password) => dispatch(login(email, password))
+  login: (email, password) => dispatch(login(email, password)),
+  getUserFromFirebase: (user) => dispatch(getUserFromFirebase(user))
 });
 
 export default connect(null, mapDispatchToProps)(Control);
