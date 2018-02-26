@@ -51,7 +51,7 @@ export const SideNav = ({ userImage, userName, logout }) => {
 SideNav.propTypes = {
   userImage: PropTypes.string,
   userName: PropTypes.string,
-  logout: PropTypes.func.isRequired
+  logout: PropTypes.func
 };
 
 export const mapStateToProps = (state) => ({
