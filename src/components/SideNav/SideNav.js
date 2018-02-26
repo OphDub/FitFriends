@@ -11,10 +11,10 @@ import faSignOut from '@fortawesome/fontawesome-free-solid/faSignOutAlt';
 export class SideNav extends Component {
   renderUserProfile = () => {
     if (this.props.user.image) {
-      return (<img src={this.props.user.image} alt="User profile" className="user-pic"/>)
+      return (<img src={this.props.user.image} alt="User profile" className="user-pic"/>);
     }
 
-    return (<div className="user-pic"><FontAwesomeIcon icon={faUser} size="4x"/></div>)
+    return (<div className="user-pic"><FontAwesomeIcon icon={faUser} size="4x"/></div>);
   }
 
   render () {
@@ -36,11 +36,16 @@ export class SideNav extends Component {
       </section>
     );
   }
-};
+}
+
+const userProps = PropTypes.shape({
+  name: PropTypes.string,
+  image: PropTypes.string,
+  email: PropTypes.string
+});
 
 SideNav.propTypes = {
-  userImage: PropTypes.string,
-  userName: PropTypes.string,
+  user: PropTypes(userProps),
   logout: PropTypes.func
 };
 

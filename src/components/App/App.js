@@ -7,17 +7,10 @@ import { getUserFromFirebase } from '../../actions/actionsIndex';
 
 import { TopNav } from '../TopNav/TopNav';
 import SideNav from '../SideNav/SideNav';
-import { Leaderboard } from '../Leaderboard/Leaderboard';
 import Welcome from '../Welcome/Welcome';
 import SignUp from '../SignUp/SignUp';
-import { Home } from '../Home/Home';
 import Workout from '../Workout/Workout';
-import { Team } from '../Team/Team';
 import WorkoutHistory from '../WorkoutHistory/WorkoutHistory';
-import { Profile } from '../Profile/Profile';
-import { Settings } from '../Settings/Settings';
-
-import { mockTeam } from '../../initialData';
 
 export class App extends Component {
 
@@ -48,9 +41,6 @@ export class App extends Component {
             <TopNav />
           }
           <Switch>
-            <Route
-              exact path="/"
-              render={() => (<Home/>)}/>
             <Route
               path="/login"
               render={() => (<Welcome />)}/>
