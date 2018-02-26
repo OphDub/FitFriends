@@ -48,19 +48,19 @@ export class WorkoutHistory extends Component {
 }
 
 const exercise = {
-  reps: PropTypes.string.iwqsRequired,
-  exercise: PropTypes.string.isRequired
+  reps: PropTypes.string,
+  exercise: PropTypes.string
 };
 
 const workout = {
-  workoutName: PropTypes.string.isRequired,
-  workoutDesc: PropTypes.string.isRequired,
-  exercises: PropTypes.arrayOf(PropTypes.shape(exercise)).isRequired
+  workoutName: PropTypes.string,
+  workoutDesc: PropTypes.string,
+  exercises: PropTypes.arrayOf(PropTypes.shape(exercise))
 };
 
 WorkoutHistory.propTypes = {
   getWorkouts: PropTypes.func,
-  workouts: PropTypes.arrayOf(PropTypes.shape(workout))
+  workouts: PropTypes.shape(workout)
 };
 
 export const mapStateToProps = (state) => ({
