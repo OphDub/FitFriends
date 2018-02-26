@@ -61,23 +61,10 @@ export class App extends Component {
               path="/workout"
               render={( )=> (<Workout/>)}/>
             <Route
-              path="/team"
-              render={() => (<Team team={mockTeam} />)}/>
-            <Route
               path="/history"
               render={() => (<WorkoutHistory/>)}/>
-            <Route
-              path="/profile"
-              render={() => (<Profile />)}/>
-            <Route
-              path="/settings"
-              render={() => (<Settings/>)}/>
           </Switch>
         </div>
-        {
-          this.props.user.email !== null &&
-          <Leaderboard topThree={mockTeam}/>
-        }
       </div>
     );
   }
