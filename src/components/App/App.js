@@ -3,7 +3,7 @@ import './App.css';
 import { Switch, Route, withRouter } from 'react-router';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { getUser } from '../../actions/actionsIndex';
+import { getUserFromFirebase } from '../../actions/actionsIndex';
 
 import { TopNav } from '../TopNav/TopNav';
 import SideNav from '../SideNav/SideNav';
@@ -23,7 +23,7 @@ class App extends Component {
 
   componentWillMount() {
     if (this.props.user.email === null) {
-      this.props.getUser();
+      this.props.getUserFromFirebase();
     }
 
     if (this.props.user.loggedIn === false) {
@@ -79,14 +79,14 @@ class App extends Component {
   }
 }
 
-const userProps = PropTypes.shape({
-  loggedIn: PropTypes.bool.isRequired,
-  email: PropTypes.string.isRequired
-});
+const userProps = {
+  loggedIn: PropTypes.bool,
+  email: PropTypes.string
+};
 
 App.propTypes = {
-  user: PropTypes.shape(userProps).isRequired,
-  getUser: PropTypes.func.isRequired,
+  user: PropTypes.shape(userProps),
+  getUserFromFirebase: PropTypes.func.isRequired,
   history: PropTypes.object.isRequired
 };
 
@@ -95,7 +95,7 @@ export const mapStateToProps = (state) => ({
 });
 
 export const mapDispatchToProps = (dispatch) => ({
-  getUser: (user) => dispatch(getUser(user))
+  getUserFromFirebase: (user) => dispatch(getUserFromFirebase(user))
 });
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
