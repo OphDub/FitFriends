@@ -22,13 +22,13 @@ export const getUserFromFirebase = (user) => {
 
 export const login = (email, password) => {
   return async dispatch => {
-    await auth.signInWithEmailAndPassword(email, password)
+    return await auth.signInWithEmailAndPassword(email, password);
   }
 };
 
-export const logOutUserLocally = () => {
+export const logOutUserLocally = () => ({
   type: 'LOGOUT_USER'
-};
+});
 
 export const logout = () => {
   return async dispatch => {
