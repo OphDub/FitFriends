@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { Switch, Route, withRouter } from 'react-router';
 import { connect } from 'react-redux';
-
+import PropTypes from 'prop-types';
 import { getUser } from '../../actions/actionsIndex';
 
 import { TopNav } from '../TopNav/TopNav';
@@ -18,7 +18,6 @@ import { Profile } from '../Profile/Profile';
 import { Settings } from '../Settings/Settings';
 
 import { mockTeam } from '../../initialData';
-import { mockWorkoutHistory } from '../../initialData';
 
 class App extends Component {
 
@@ -71,21 +70,32 @@ class App extends Component {
               render={() => (<Settings/>)}/>
           </Switch>
         </div>
-          {
-            this.props.user.email !== null &&
-            <Leaderboard topThree={mockTeam}/>
-          }
+        {
+          this.props.user.email !== null &&
+          <Leaderboard topThree={mockTeam}/>
+        }
       </div>
     );
   }
 }
 
+const userProps = PropTypes.shape({
+  loggedIn: PropTypes.bool.isRequired,
+  email: PropTypes.string.isRequired
+});
+
+App.propTypes = {
+  user: PropTypes.shape(userProps).isRequired,
+  getUser: PropTypes.func.isRequired,
+  history: PropTypes.object.isRequired
+};
+
 export const mapStateToProps = (state) => ({
-  user: state.user,
-})
+  user: state.user
+});
 
 export const mapDispatchToProps = (dispatch) => ({
-  getUser: (user) => dispatch(getUser(user)),
-})
+  getUser: (user) => dispatch(getUser(user))
+});
 
-export default withRouter(connect(mapStateToProps,mapDispatchToProps)(App))
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
