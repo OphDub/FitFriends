@@ -1,6 +1,6 @@
 import React from 'react';
 import './Teammate.css';
-import PropTypes, { string } from 'prop-types';
+import PropTypes from 'prop-types';
 
 export const Teammate = ({ name, workoutTally, workoutsPosted }) => {
   return (
@@ -21,8 +21,8 @@ export const Teammate = ({ name, workoutTally, workoutsPosted }) => {
 };
 
 Teammate.propTypes = {
-  name: string.isRequired,
-  workoutTally: string.isRequired,
-  workoutsPosted: string.isRequired
+  name: PropTypes.string.isRequired,
+  workoutTally: PropTypes.number.isRequired,
+  workoutsPosted: PropTypes.number.isRequired
 };
 

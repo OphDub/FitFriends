@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './SignUp.css';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import PropTypes, { func } from 'prop-types';
+import PropTypes from 'prop-types';
 import { signup } from '../../actions/actionsIndex';
 export class SignUp extends Component {
   constructor () {
@@ -132,7 +132,7 @@ export class SignUp extends Component {
 }
 
 SignUp.propTypes = {
-  signup: func.isRequired
+  signup: PropTypes.func.isRequired
 };
 
 export const mapDispatchToProps = (dispatch) => ({

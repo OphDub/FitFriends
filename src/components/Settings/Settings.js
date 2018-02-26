@@ -5,5 +5,5 @@ export const Settings = () => {
     <article className="Settings">
       I am Settings
     </article>
-  )
-}
+  );
+};

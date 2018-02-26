@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes, { shape, string, arrayOf } from 'prop-types';
+import PropTypes from 'prop-types';
 import './Team.css';
 import { Teammate } from '../Teammate/Teammate';
 
@@ -16,12 +16,12 @@ export const Team = ({team}) => {
   );
 };
 
-const teammate = shape({
-  name: string.isRequired,
-  workoutTally: string.isRequired,
-  workoutsPosted: string.isRequired
+const teammate = PropTypes.shape({
+  name: PropTypes.string.isRequired,
+  workoutTally: PropTypes.string.isRequired,
+  workoutsPosted: PropTypes.string.isRequired
 });
 
 Team.propTypes = {
-  team: arrayOf(teammate)
+  team: PropTypes.arrayOf(teammate)
 };

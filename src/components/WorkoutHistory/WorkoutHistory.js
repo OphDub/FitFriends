@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import PropTypes, { string, arrayOf, func } from 'prop-types';
+import PropTypes from 'prop-types';
 import { getWorkouts } from '../../actions/actionsIndex';
 import './WorkoutHistory.css';
 
@@ -48,19 +48,19 @@ export class WorkoutHistory extends Component {
 }
 
 const exercise = {
-  reps: string.isRequired,
-  exercise: string.isRequired
+  reps: PropTypes.string.isRequired,
+  exercise: PropTypes.string.isRequired
 };
 
 const workout = {
-  workoutName: string.isRequired,
-  workoutDesc: string.isRequired,
-  exercises: arrayOf(exercise).isRequired
+  workoutName: PropTypes.string.isRequired,
+  workoutDesc: PropTypes.string.isRequired,
+  exercises: PropTypes.arrayOf(exercise).isRequired
 };
 
 WorkoutHistory.propTypes = {
-  getWorkouts: func.isRequired,
-  workouts: arrayOf(workout).isRequired
+  getWorkouts: PropTypes.func.isRequired,
+  workouts: PropTypes.arrayOf(workout).isRequired
 };
 
 export const mapStateToProps = (state) => ({

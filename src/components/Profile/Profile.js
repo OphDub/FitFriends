@@ -5,5 +5,5 @@ export const Profile = () => {
     <article className="Profile">
       I am Profile
     </article>
-  )
-}
+  );
+};
