@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import './Control.css';
 import { login, getUserFromFirebase } from '../../actions/actionsIndex';
+import { withRouter } from 'react-router-dom';
 
 export class Control extends Component {
   constructor () {
@@ -41,17 +42,15 @@ export class Control extends Component {
     }
 
     try {
-      const firebaseLogin = await this.props.login(email, password);
-      
-      const gotUser = firebaseLogin ? this.props.getUserFromFirebase() : null
-      console.log(gotUser);
-      
+      await this.props.login(email, password);
 
       this.setState({
         email: '',
         password: '',
         errorMsg: ''
       });
+
+      this.props.history.push('/workout');
     } catch (error) {
       const errorMsg = 'Username/password incorrect. Try again.';
 
@@ -102,8 +101,7 @@ Control.propTypes = {
 };
 
 export const mapDispatchToProps = (dispatch) => ({
-  login: (email, password) => dispatch(login(email, password)),
-  getUserFromFirebase: (user) => dispatch(getUserFromFirebase(user))
+  login: (email, password) => dispatch(login(email, password))
 });
 
-export default connect(null, mapDispatchToProps)(Control);
+export default withRouter(connect(null, mapDispatchToProps)(Control));

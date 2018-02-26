@@ -6,17 +6,12 @@ export const saveUserInStore = (user) => ({
   user
 });
 
-export const saveUserError = (error) => ({
-  type: 'SAVE_USER_ERROR',
-  error
-});
-
 export const getUserFromFirebase = (user) => {
   return async dispatch => {
-    await auth
-            .onAuthStateChanged(user)
-            .then((user) => dispatch(saveUserInStore(user)))
-            .catch((error) => dispatch(saveUserError(error)));
+    await auth.onAuthStateChanged(user => {
+
+      dispatch(saveUserInStore(user));
+    })
   }
 };
 
