@@ -1,5 +1,5 @@
 /* eslint-disable */
-import * as actions from './actionsIndex';
+import * as thunks from './thunks';
 import thunk from 'redux-thunk';
 import configureMockStore from 'redux-mock-store';
 import { auth, workoutsDb } from '../base';
@@ -24,7 +24,7 @@ describe('THUNKS', () => {
         return Promise.resolve();
       });
 
-      await store.dispatch(actions.getUserFromFirebase());
+      await store.dispatch(thunks.getUserFromFirebase());
 
       expect(auth.onAuthStateChanged).toHaveBeenCalled();
     });
@@ -37,7 +37,7 @@ describe('THUNKS', () => {
         return Promise.resolve(mockUser);
       });
 
-      await store.dispatch(actions.getUserFromFirebase(mockUser));
+      await store.dispatch(thunks.getUserFromFirebase(mockUser));
 
       expect(store.getActions()).toEqual(expected);
     });
@@ -49,7 +49,7 @@ describe('THUNKS', () => {
 
       auth.signInWithEmailAndPassword = jest.fn();
 
-      await store.dispatch(actions.login(mockUser.email, mockUser.password));
+      await store.dispatch(thunks.login(mockUser.email, mockUser.password));
 
       expect(auth.signInWithEmailAndPassword).toHaveBeenCalled();
     });
@@ -59,7 +59,7 @@ describe('THUNKS', () => {
     it('calls signOut method of auth return a type of LOGOUT_USER', async () => {
       auth.signOut = jest.fn();
 
-      await store.dispatch(actions.logout());
+      await store.dispatch(thunks.logout());
 
       expect(auth.signOut).toHaveBeenCalled();
     });
@@ -69,7 +69,7 @@ describe('THUNKS', () => {
 
       auth.signOut = jest.fn();
 
-      await store.dispatch(actions.logout());
+      await store.dispatch(thunks.logout());
 
       expect(store.getActions()).toEqual(expected);
     });
@@ -81,7 +81,7 @@ describe('THUNKS', () => {
 
       auth.createUserWithEmailAndPassword = jest.fn();
 
-      await store.dispatch(actions.signup(mockUser.email, mockUser.password));
+      await store.dispatch(thunks.signup(mockUser.email, mockUser.password));
 
       expect(auth.createUserWithEmailAndPassword).toHaveBeenCalled();
     });
@@ -91,7 +91,7 @@ describe('THUNKS', () => {
     it('should call push', async () => {
       workoutsDb.push = jest.fn();
 
-      await store.dispatch(actions.postWorkout(mockWorkout));
+      await store.dispatch(thunks.postWorkout(mockWorkout));
 
       expect(workoutsDb.push).toHaveBeenCalled();
     });
@@ -101,7 +101,7 @@ describe('THUNKS', () => {
     it('should call the on method of workoutsDb', async () => {
       workoutsDb.on = jest.fn();
 
-      await store.dispatch(actions.getWorkouts(mockWorkout));
+      await store.dispatch(thunks.getWorkouts(mockWorkout));
 
       expect(workoutsDb.on).toHaveBeenCalled();
     });
@@ -117,7 +117,7 @@ describe('THUNKS', () => {
         })
       });
 
-      await store.dispatch(actions.getWorkouts());
+      await store.dispatch(thunks.getWorkouts());
 
       expect(store.getActions()).toEqual(expected);
     });
