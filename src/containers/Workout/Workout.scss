@@ -1,0 +1,107 @@
+.Workout {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: lightgrey;
+  min-height: 75%;
+  padding: 15px;
+  margin: 0 10px 10px 10px;
+  border-radius: 10px;
+}
+
+.Workout-header {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+}
+
+.Workout-header h3, p {
+  margin: 5px 0;
+}
+
+.Workout-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.Workout-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.workout-name {
+  margin-bottom: 15px;
+}
+
+.workout-info-inputs {
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  outline: none;
+}
+
+.exercise-header {
+  padding: 0;
+  margin: 15px 0 0 0;
+}
+
+.exercise-inputs {
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  outline: none;
+}
+
+.exercise-inputs::-webkit-inner-spin-button,
+.exercise-inputs::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.create-exercises {
+  display: flex;
+  justify-content: space-between;
+}
+
+.exercise-name {
+  width: 50%;
+}
+
+.exercise-button,
+.rendered-ex-btn {
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  width: 30px;
+}
+
+.exercise-button:hover,
+.rendered-ex-btn:hover,
+.Workout-post-btn:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.rendered-exercise {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.rendered-ex-info {
+  margin: 0px;
+}
+
+.Workout-post-btn {
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 15px;
+}
+
+.Workout-post-btn h3 {
+  margin: 0px;
+}
