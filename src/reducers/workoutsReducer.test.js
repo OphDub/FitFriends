@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { workoutsReducer } from './workoutsReducer';
-import * as actions from '../actions/actionsIndex';
+import * as thunks from '../thunks/thunks';
 import { mockWorkout, mockWorkouts } from '../initialData';
 
 describe('workoutReducer', () => {
@@ -11,6 +11,6 @@ describe('workoutReducer', () => {
 
   it('should return workouts when given an action with a type SAVE_WORKOUTS', () => {
     const expected = mockWorkouts;
-    const mockAction = actions.getWorkouts(mockWorkouts);
+    const mockAction = thunks.getWorkouts(mockWorkouts);
   });
 });
