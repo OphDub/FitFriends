@@ -1,10 +1,10 @@
 import { workoutsDb } from '../base';
 import { auth } from '../base';
-
-export const saveUserInStore = (user) => ({
-  type: 'SAVE_USER',
-  user
-});
+import {
+  saveUserInStore,
+  logOutUserLocally,
+  saveWorkoutsInStore
+} from '../actions/actionsIndex';
 
 export const getUserFromFirebase = (user) => {
   return async dispatch => {
@@ -20,10 +20,6 @@ export const login = (email, password) => {
     return await auth.signInWithEmailAndPassword(email, password);
   }
 };
-
-export const logOutUserLocally = () => ({
-  type: 'LOGOUT_USER'
-});
 
 export const logout = () => {
   return async dispatch => {
@@ -42,11 +38,6 @@ export const signup = (email, password) => {
 export const postWorkout = (workout) => {
   return dispatch => workoutsDb.push(workout)
 };
-
-export const saveWorkoutsInStore = (workouts) => ({
-  type: 'SAVE_WORKOUTS',
-  workouts
-});
 
 export const getWorkouts = () => {
   return async dispatch => {

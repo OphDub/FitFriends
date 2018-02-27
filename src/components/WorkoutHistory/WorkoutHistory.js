@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { getWorkouts } from '../../actions/actionsIndex';
+import { getWorkouts } from '../../thunks/thunks';
 import './WorkoutHistory.css';
 
 export class WorkoutHistory extends Component {

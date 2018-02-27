@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import './Workout.css';
-import { postWorkout } from '../../actions/actionsIndex';
+import { postWorkout } from '../../thunks/thunks';
 export class Workout extends Component {
   constructor () {
     super();

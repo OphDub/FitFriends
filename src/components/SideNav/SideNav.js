@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { logout } from '../../actions/actionsIndex';
+import { logout } from '../../thunks/thunks';
 import PropTypes from 'prop-types';
 import './SideNav.css';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';

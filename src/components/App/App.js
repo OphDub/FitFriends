@@ -3,7 +3,7 @@ import './App.css';
 import { Switch, Route, withRouter } from 'react-router';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { getUserFromFirebase } from '../../actions/actionsIndex';
+import { getUserFromFirebase } from '../../thunks/thunks';
 
 import { TopNav } from '../TopNav/TopNav';
 import SideNav from '../SideNav/SideNav';

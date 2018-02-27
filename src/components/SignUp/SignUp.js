@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
-import { signup } from '../../actions/actionsIndex';
+import { signup } from '../../thunks/thunks';
 export class SignUp extends Component {
   constructor () {
     super();
