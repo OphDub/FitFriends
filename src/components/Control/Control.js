@@ -102,7 +102,7 @@ const historyProps = PropTypes.shape({
 
 Control.propTypes = {
   login: PropTypes.func.isRequired,
-  history: PropTypes(historyProps)
+  history: PropTypes.shape(historyProps)
 };
 
 export const mapDispatchToProps = (dispatch) => ({

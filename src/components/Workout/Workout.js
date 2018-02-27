@@ -53,7 +53,11 @@ export class Workout extends Component {
         <button className="rendered-ex-btn"
           id={exercise.id}
           onClick={this.removeExercise}>
+<<<<<<< HEAD
             -
+=======
+            Remove
+>>>>>>> a1452d3196c34a0d95e63c2903b37a6ab051f770
         </button>
       </li>
     );
@@ -76,6 +80,13 @@ export class Workout extends Component {
   render () {
     return (
       <section className="Workout">
+<<<<<<< HEAD
+=======
+        <div className="Workout-header">
+          <h3>Post Your Workout:</h3>
+          <p>Give it a name and any details for your teammates:</p>
+        </div>
+>>>>>>> a1452d3196c34a0d95e63c2903b37a6ab051f770
         <form className="Workout-form">
           <div className="Workout-info">
             <input  type="text"
@@ -95,6 +106,7 @@ export class Workout extends Component {
           </div>
           <div>
             <h4 className="exercise-header">Exercises</h4>
+            <p>Add or remove exercises for your workout:</p>
             <ul className="rendered-exercises">
               {this.renderExercises()}
             </ul>
@@ -115,7 +127,7 @@ export class Workout extends Component {
               />
               <button className="exercise-button"
                 onClick={this.addExercise}>
-                +
+                Add
               </button>
             </div>
           </div>

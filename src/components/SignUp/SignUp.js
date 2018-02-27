@@ -3,6 +3,7 @@ import './SignUp.css';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
 import { signup } from '../../actions/actionsIndex';
 export class SignUp extends Component {
   constructor () {
@@ -57,6 +58,8 @@ export class SignUp extends Component {
         userPass2: '',
         errorMsg: ''
       });
+
+      this.props.history.push('/workout');
     } catch (error) {
       const errorMsg = error.message;
 
@@ -139,4 +142,4 @@ export const mapDispatchToProps = (dispatch) => ({
   signup: (email, password) => dispatch(signup(email, password))
 });
 
-export default connect(null, mapDispatchToProps)(SignUp);
+export default withRouter(connect(null, mapDispatchToProps)(SignUp));
