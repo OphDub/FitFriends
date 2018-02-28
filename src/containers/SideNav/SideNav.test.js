@@ -2,20 +2,55 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { SideNav, mapStateToProps, mapDispatchToProps } from './SideNav';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import faUser from '@fortawesome/fontawesome-free-solid/faUser';
 
 describe('SIDENAV', () => {
-  it('should match the snapshot', () => {
-    const mockImgUrl = 'www.someimage.com';
-    const mockUserName = 'Batman';
-    const mockUserEmail = 'batman@gotham.com'
-    const mockUser = {
+  let mockImgUrl;
+  let mockUserName;
+  let mockUserEmail;
+  let mockUser;
+  let renderedComponent;
+
+  beforeEach(() => {
+    mockUserName = 'Batman';
+    mockUserEmail = 'batman@gotham.com';
+    mockImgUrl = 'www.someimage.com';
+
+    mockUser = {
       image: mockImgUrl,
       name: mockUserName,
       email: mockUserEmail
     }
-    const renderedComponent = shallow(<SideNav user={mockUser}/>, { disableLifecycleMethods: true });
 
+    renderedComponent = shallow(<SideNav user={mockUser}/>, { disableLifecycleMethods: true });
+  });
+
+  it('should match the snapshot', () => {
     expect(renderedComponent).toMatchSnapshot();
+  });
+
+  it('renderUserProfile should return an img tag if the user image is valid', () => {
+    const expected = (<img src="www.someimage.com" alt="User profile" className="user-pic"/>);
+
+    const userProfile = renderedComponent.instance().renderUserProfile()
+
+    expect(userProfile).toEqual(expected);
+  });
+
+  it('renderUserProfile should return a div with a FontAwesomeIcon if the user image is invalid', () => {
+    mockUser = {
+      image: undefined,
+      name: 'The Flash',
+      email: 'flash@centralcity.com'
+    }
+
+    renderedComponent = shallow(<SideNav user={mockUser}/>);
+
+    const expected = (<div className="user-pic"><FontAwesomeIcon icon={faUser} size="4x"/></div>);
+    const userProfile = renderedComponent.instance().renderUserProfile();
+
+    expect(userProfile).toEqual(expected);
   });
 
   describe('mapStateToProps and mapDispatchToProps for SideNav', () => {

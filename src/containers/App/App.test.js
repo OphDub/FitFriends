@@ -14,23 +14,25 @@ describe('APP', () => {
     expect(renderedComponent).toMatchSnapshot();
   });
 
-  it('should be able to map the store correctly', () => {
-    const mockUser = { loggedIn: true, email: 'will@will.com' }
-    const mockStore = {
-      user: mockUser
-    };
+  describe('mapStateToProps and mapDispatchToProps for App', () => {
+    it('should be able to map the store correctly', () => {
+      const mockUser = { loggedIn: true, email: 'will@will.com' }
+      const mockStore = {
+        user: mockUser
+      };
 
-    const mapped = mapStateToProps(mockStore);
+      const mapped = mapStateToProps(mockStore);
 
-    expect(mapped.user).toEqual(mockStore.user);
-  });
+      expect(mapped.user).toEqual(mockStore.user);
+    });
 
-  it('should call the dispatch func when using a func getUser', () => {
-    const mockDispatch = jest.fn();
-    const mapped = mapDispatchToProps(mockDispatch);
+    it('should call the dispatch func when using a func getUser', () => {
+      const mockDispatch = jest.fn();
+      const mapped = mapDispatchToProps(mockDispatch);
 
-    mapped.getUserFromFirebase();
+      mapped.getUserFromFirebase();
 
-    expect(mockDispatch).toHaveBeenCalled();
+      expect(mockDispatch).toHaveBeenCalled();
+    });
   });
 });

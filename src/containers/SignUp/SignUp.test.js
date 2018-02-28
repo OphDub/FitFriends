@@ -100,12 +100,14 @@ describe('SIGNUP', () => {
     expect(renderedComponent.state()).toEqual(expected);
   });
 
-  it('should call the dispatch fun when the signup func is called', () => {
-    const mockDispatch = jest.fn();
-    const mapped = mapDispatchToProps(mockDispatch);
+  describe('mapDispatchToProps for SignUp', () => {
+    it('should call the dispatch fun when the signup func is called', () => {
+      const mockDispatch = jest.fn();
+      const mapped = mapDispatchToProps(mockDispatch);
 
-    mapped.signup();
+      mapped.signup();
 
-    expect(mockDispatch).toHaveBeenCalled();
+      expect(mockDispatch).toHaveBeenCalled();
+    });
   });
 })

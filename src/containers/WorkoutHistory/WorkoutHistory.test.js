@@ -17,22 +17,24 @@ describe('WORKOUT HISTORY', () => {
     expect(renderedComponent).toMatchSnapshot();
   });
 
-  it('should map the store correctly', () => {
-    const mockStore = {
-      workouts: mockWorkouts
-    };
+  describe('mapStateToProps and mapDispatchToProps for WorkoutHistory', () => {
+    it('should map the store correctly', () => {
+      const mockStore = {
+        workouts: mockWorkouts
+      };
 
-    const mapped = mapStateToProps(mockStore);
+      const mapped = mapStateToProps(mockStore);
 
-    expect(mapped.workouts).toEqual(mockStore.workouts);
-  });
+      expect(mapped.workouts).toEqual(mockStore.workouts);
+    });
 
-  it('should call dispatch when using a function from mapDispatchToProps', () => {
-    const mockDispatch = jest.fn();
-    const mapped = mapDispatchToProps(mockDispatch);
+    it('should call dispatch when using a function from mapDispatchToProps', () => {
+      const mockDispatch = jest.fn();
+      const mapped = mapDispatchToProps(mockDispatch);
 
-    mapped.getWorkouts();
+      mapped.getWorkouts();
 
-    expect(mockDispatch).toHaveBeenCalled();
+      expect(mockDispatch).toHaveBeenCalled();
+    });
   });
 });
