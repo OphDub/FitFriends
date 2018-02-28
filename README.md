@@ -20,12 +20,16 @@ As an obstacle course enthusiast it always seems extra difficult and cumbersome 
 
 Clone down the repo:
 `git clone git@github.com:OphDub/FitFriends.git`
+
 `npm install`
+
 `npm start`
 
 ## Tests
 
-This project was developed with the Jest and Enzyme testing utilities. To run the test suites for this project:
+This project was developed with the Jest and Enzyme testing utilities. 
+To run the test suites for this project:
+
 `npm test`
 
 ## Contributors
