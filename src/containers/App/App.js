@@ -59,13 +59,13 @@ export class App extends Component {
   }
 }
 
-const userProps = {
+const userProps = PropTypes.shape({
   loggedIn: PropTypes.bool,
   email: PropTypes.string
-};
+});
 
 App.propTypes = {
-  user: PropTypes.shape(userProps),
+  user: userProps,
   getUserFromFirebase: PropTypes.func,
   history: PropTypes.object
 };
