@@ -12,13 +12,39 @@ export class Workout extends Component {
       workoutDesc: '',
       reps: '',
       exercise: '',
-      exercises: []
+      exercises: [],
+      errorMsg: ''
     };
   }
 
   handleChange = (e) => {
     const { value, name } = e.target;
     this.setState({[name]:value});
+  }
+
+  validateExercise = () => {
+    const { exercises } = this.state;
+    const message = 'Please add at least one exercise to your workout';
+    let errorMsg;
+
+    const validated = exercises.length <= 0 ?
+      (errorMsg = message) && false : true;
+
+    this.setState({ errorMsg });
+    return validated;
+  }
+
+  validateWorkoutInfo = () => {
+    const { workoutName, workoutDesc } = this.state;
+
+    if (workoutName === '' || workoutDesc === '') {
+      const errorMsg = 'Please give your workout a name and description';
+
+      this.setState({ errorMsg });
+      return false;
+    }
+
+    return true
   }
 
   addExercise = (e) => {
@@ -38,11 +64,94 @@ export class Workout extends Component {
   removeExercise = (e) => {
     e.preventDefault();
     const { id } = e.target;
-
     const filtered = this.state.exercises.filter(exercise =>
       exercise.id !== parseInt(id));
 
     this.setState({ exercises: filtered });
+  }
+
+  postWorkout = (e) => {
+    e.preventDefault();
+    const { workoutName, workoutDesc, exercises } = this.state;
+
+    if (!this.validateWorkoutInfo()) {
+      return;
+    }
+
+    if (!this.validateExercise()) {
+      return;
+    }
+
+    this.props.postWorkout({ workoutName, workoutDesc, exercises });
+
+    this.setState({
+      workoutName: '',
+      workoutDesc: '',
+      reps: '',
+      exercise: '',
+      exercises: []
+    });
+  }
+
+  renderWorkoutForm = () => {
+    return (
+    <form className="Workout-form">
+      <div className="Workout-info">
+        <label className="workout-info-labels"htmlFor="workoutName">
+          <p>Workout Name: </p>
+          <input  type="text"
+            className="workout-info-inputs workout-name"
+            placeholder="Workout Name"
+            name="workoutName"
+            value={this.state.workoutName}
+            onChange={this.handleChange}
+          />
+        </label>
+        <label className="workout-info-labels"htmlFor="workoutDesc">
+          <p>Description: </p>
+          <input  type="text"
+            className="workout-info-inputs workout-description"
+            placeholder="Workout Description"
+            name="workoutDesc"
+            value={this.state.workoutDesc}
+            onChange={this.handleChange}
+          />
+        </label>
+      </div>
+      <div>
+        <h4 className="exercise-header">Exercises</h4>
+        <p>Add or remove exercises for your workout:</p>
+        <div className="create-exercises">
+          <input  type="number"
+            className="exercise-inputs exercise-number"
+            placeholder="Reps"
+            name="reps"
+            value={this.state.reps}
+            onChange={this.handleChange}
+          />
+          <input  type="text"
+            className="exercise-inputs exercise-name"
+            placeholder="Exercise"
+            name="exercise"
+            value={this.state.exercise}
+            onChange={this.handleChange}
+          />
+          <button className="exercise-button"
+            onClick={this.addExercise}>
+            Add
+          </button>
+        </div>
+        <ul className="rendered-exercises">
+          {this.renderExercises()}
+        </ul>
+      </div>
+      {this.renderError()}
+      <button className="Workout-post-btn"
+        onClick={this.postWorkout}>
+        <h3>Post Workout</h3>
+      </button>
+    </form>
+    )
   }
 
   renderExercises = () => {
@@ -60,76 +169,22 @@ export class Workout extends Component {
     );
   }
 
-  postWorkout = (e) => {
-    e.preventDefault();
-    const { workoutName, workoutDesc, exercises } = this.state;
-    this.props.postWorkout({ workoutName, workoutDesc, exercises });
-
-    this.setState({
-      workoutName: '',
-      workoutDesc: '',
-      reps: '',
-      exercise: '',
-      exercises: []
-    });
+  renderError = () => {
+    return (
+      <div className="workout-error">
+        <h5 className="workout-error-msg">{this.state.errorMsg}</h5>
+      </div>
+    )
   }
 
   render () {
     return (
       <section className="Workout">
         <div className="Workout-header">
-          <h3>Post Your Workout:</h3>
-          <p>Give it a name and any details for your teammates:</p>
+          <h3>Post Your Workout</h3>
+          <p>Give it a name and any details for your teammates</p>
         </div>
-        <form className="Workout-form">
-          <div className="Workout-info">
-            <input  type="text"
-              className="workout-info-inputs workout-name"
-              placeholder="Workout Name"
-              name="workoutName"
-              value={this.state.workoutName}
-              onChange={this.handleChange}
-            />
-            <input  type="text"
-              className="workout-info-inputs workout-description"
-              placeholder="Workout Description (Optional)"
-              name="workoutDesc"
-              value={this.state.workoutDesc}
-              onChange={this.handleChange}
-            />
-          </div>
-          <div>
-            <h4 className="exercise-header">Exercises</h4>
-            <p>Add or remove exercises for your workout:</p>
-            <ul className="rendered-exercises">
-              {this.renderExercises()}
-            </ul>
-            <div className="create-exercises">
-              <input  type="number"
-                className="exercise-inputs exercise-number"
-                placeholder="Reps"
-                name="reps"
-                value={this.state.reps}
-                onChange={this.handleChange}
-              />
-              <input  type="text"
-                className="exercise-inputs exercise-name"
-                placeholder="Exercise"
-                name="exercise"
-                value={this.state.exercise}
-                onChange={this.handleChange}
-              />
-              <button className="exercise-button"
-                onClick={this.addExercise}>
-                Add
-              </button>
-            </div>
-          </div>
-          <button className="Workout-post-btn"
-            onClick={this.postWorkout}>
-            <h3>Post Workout</h3>
-          </button>
-        </form>
+        {this.renderWorkoutForm()}
       </section>
     );
   }
