@@ -1,6 +1,6 @@
 import React from 'react';
 import './Welcome.css';
-import Control from '../Control/Control';
+import Control from '../../containers/Control/Control';
 import { NavLink } from 'react-router-dom';
 
 const Welcome = () => {
