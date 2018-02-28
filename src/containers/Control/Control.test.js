@@ -2,6 +2,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { Control, mapDispatchToProps } from './Control';
+import '../../mock-localstorage';
 
 describe('CONTROL', () => {
   let renderedComponent;
@@ -84,6 +85,22 @@ describe('CONTROL', () => {
     await renderedComponent.instance().handleLogin(mockEvent);
 
     expect(renderedComponent.state()).toEqual(expectedState);
+  });
+
+  it('should put an object with key of user in localStorage when handleLogin is called', async () => {
+    const mockEvent = { preventDefault: jest.fn() };
+    const expectedUser = { loggedIn: true, email: 'me@me.com' };
+
+    renderedComponent.setState({
+      email: 'me@me.com',
+      password: 'password',
+    });
+
+    await renderedComponent.instance().handleLogin(mockEvent);
+
+    const userInLocalStorage = JSON.parse(localStorage.getItem('user'));
+
+    expect(userInLocalStorage).toEqual(expectedUser);
   });
 
   describe('mapDispatchToProps for Control', () => {

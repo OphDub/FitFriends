@@ -44,13 +44,13 @@ export class Control extends Component {
     try {
       await this.props.login(email, password);
 
+      localStorage.setItem('user', JSON.stringify({ loggedIn: true, email: this.state.email }));
+
       this.setState({
         email: '',
         password: '',
         errorMsg: ''
       });
-
-      localStorage.setItem('user', JSON.stringify({ loggedIn: true, email: this.props.email }));
 
       this.props.history.push('/workout');
     } catch (error) {
