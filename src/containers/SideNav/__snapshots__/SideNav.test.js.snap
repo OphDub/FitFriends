@@ -7,7 +7,9 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <SideNav
     user={
         Object {
+            "email": "batman@gotham.com",
             "image": "www.someimage.com",
+            "name": "Batman",
           }
     }
 />,
@@ -34,7 +36,9 @@ ShallowWrapper {
           />
           <h4
                     className="user-name"
-          />
+          >
+                    batman@gotham.com
+          </h4>
 </div>,
         <div
           className="sidenav-btns"
@@ -99,7 +103,9 @@ ShallowWrapper {
 />,
             <h4
               className="user-name"
-/>,
+>
+              batman@gotham.com
+</h4>,
           ],
           "className": "user-profile",
         },
@@ -123,11 +129,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": undefined,
+              "children": "batman@gotham.com",
               "className": "user-name",
             },
             "ref": null,
-            "rendered": null,
+            "rendered": "batman@gotham.com",
             "type": "h4",
           },
         ],
@@ -332,7 +338,9 @@ ShallowWrapper {
             />
             <h4
                         className="user-name"
-            />
+            >
+                        batman@gotham.com
+            </h4>
 </div>,
           <div
             className="sidenav-btns"
@@ -397,7 +405,9 @@ ShallowWrapper {
 />,
               <h4
                 className="user-name"
-/>,
+>
+                batman@gotham.com
+</h4>,
             ],
             "className": "user-profile",
           },
@@ -421,11 +431,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": undefined,
+                "children": "batman@gotham.com",
                 "className": "user-name",
               },
               "ref": null,
-              "rendered": null,
+              "rendered": "batman@gotham.com",
               "type": "h4",
             },
           ],
@@ -620,6 +630,7 @@ ShallowWrapper {
         "enableComponentDidUpdateOnSetState": true,
       },
     },
+    "disableLifecycleMethods": true,
   },
 }
 `;

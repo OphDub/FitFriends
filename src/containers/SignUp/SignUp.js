@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import './SignUp.css';
 import { connect } from 'react-redux';
-import { NavLink } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom';
 import { signup } from '../../thunks/thunks';
 
 export class SignUp extends Component {
@@ -135,8 +134,13 @@ export class SignUp extends Component {
   }
 }
 
+const historyProps = PropTypes.shape({
+  push: PropTypes.func
+});
+
 SignUp.propTypes = {
-  signup: PropTypes.func.isRequired
+  signup: PropTypes.func.isRequired,
+  history: PropTypes.shape(historyProps)
 };
 
 export const mapDispatchToProps = (dispatch) => ({
