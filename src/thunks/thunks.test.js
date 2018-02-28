@@ -4,6 +4,7 @@ import thunk from 'redux-thunk';
 import configureMockStore from 'redux-mock-store';
 import { auth, workoutsDb } from '../base';
 import { mockWorkout, mockWorkouts } from '../initialData';
+import '../mock-localstorage';
 
 describe('THUNKS', () => {
   let middleware;
@@ -62,6 +63,18 @@ describe('THUNKS', () => {
       await store.dispatch(thunks.logout());
 
       expect(auth.signOut).toHaveBeenCalled();
+    });
+
+    it('should remove anything in localStorage', async () => {
+      const mockUser = { loggedIn: true, email: 'me@me.com' };
+
+      localStorage.setItem('user', JSON.stringify(mockUser));
+
+      await store.dispatch(thunks.logout());
+
+      const removedUser = localStorage.getItem('user');
+
+      expect(removedUser).toEqual(null);
     });
 
     it('dispatches the logOutUserLocally action', async () => {
