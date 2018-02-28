@@ -24,6 +24,7 @@ export const login = (email, password) => {
 export const logout = () => {
   return async dispatch => {
     await auth.signOut();
+    localStorage.removeItem('user');
 
     dispatch(logOutUserLocally());
   }
