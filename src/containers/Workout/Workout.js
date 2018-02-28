@@ -44,7 +44,7 @@ export class Workout extends Component {
       return false;
     }
 
-    return true
+    return true;
   }
 
   addExercise = (e) => {
@@ -95,63 +95,63 @@ export class Workout extends Component {
 
   renderWorkoutForm = () => {
     return (
-    <form className="Workout-form">
-      <div className="Workout-info">
-        <label className="workout-info-labels"htmlFor="workoutName">
-          <p>Workout Name: </p>
-          <input  type="text"
-            className="workout-info-inputs workout-name"
-            placeholder="Workout Name"
-            name="workoutName"
-            value={this.state.workoutName}
-            onChange={this.handleChange}
-          />
-        </label>
-        <label className="workout-info-labels"htmlFor="workoutDesc">
-          <p>Description: </p>
-          <input  type="text"
-            className="workout-info-inputs workout-description"
-            placeholder="Workout Description"
-            name="workoutDesc"
-            value={this.state.workoutDesc}
-            onChange={this.handleChange}
-          />
-        </label>
-      </div>
-      <div>
-        <h4 className="exercise-header">Exercises</h4>
-        <p>Add or remove exercises for your workout:</p>
-        <div className="create-exercises">
-          <input  type="number"
-            className="exercise-inputs exercise-number"
-            placeholder="Reps"
-            name="reps"
-            value={this.state.reps}
-            onChange={this.handleChange}
-          />
-          <input  type="text"
-            className="exercise-inputs exercise-name"
-            placeholder="Exercise"
-            name="exercise"
-            value={this.state.exercise}
-            onChange={this.handleChange}
-          />
-          <button className="exercise-button"
-            onClick={this.addExercise}>
-            Add
-          </button>
+      <form className="Workout-form">
+        <div className="Workout-info">
+          <label className="workout-info-labels"htmlFor="workoutName">
+            <p>Workout Name: </p>
+            <input  type="text"
+              className="workout-info-inputs workout-name"
+              placeholder="Workout Name"
+              name="workoutName"
+              value={this.state.workoutName}
+              onChange={this.handleChange}
+            />
+          </label>
+          <label className="workout-info-labels"htmlFor="workoutDesc">
+            <p>Description: </p>
+            <input  type="text"
+              className="workout-info-inputs workout-description"
+              placeholder="Workout Description"
+              name="workoutDesc"
+              value={this.state.workoutDesc}
+              onChange={this.handleChange}
+            />
+          </label>
         </div>
-        <ul className="rendered-exercises">
-          {this.renderExercises()}
-        </ul>
-      </div>
-      {this.renderError()}
-      <button className="Workout-post-btn"
-        onClick={this.postWorkout}>
-        <h3>Post Workout</h3>
-      </button>
-    </form>
-    )
+        <div>
+          <h4 className="exercise-header">Exercises</h4>
+          <p>Add or remove exercises for your workout:</p>
+          <div className="create-exercises">
+            <input  type="number"
+              className="exercise-inputs exercise-number"
+              placeholder="Reps"
+              name="reps"
+              value={this.state.reps}
+              onChange={this.handleChange}
+            />
+            <input  type="text"
+              className="exercise-inputs exercise-name"
+              placeholder="Exercise"
+              name="exercise"
+              value={this.state.exercise}
+              onChange={this.handleChange}
+            />
+            <button className="exercise-button"
+              onClick={this.addExercise}>
+              Add
+            </button>
+          </div>
+          <ul className="rendered-exercises">
+            {this.renderExercises()}
+          </ul>
+        </div>
+        {this.renderError()}
+        <button className="Workout-post-btn"
+          onClick={this.postWorkout}>
+          <h3>Post Workout</h3>
+        </button>
+      </form>
+    );
   }
 
   renderExercises = () => {
@@ -174,7 +174,7 @@ export class Workout extends Component {
       <div className="workout-error">
         <h5 className="workout-error-msg">{this.state.errorMsg}</h5>
       </div>
-    )
+    );
   }
 
   render () {
