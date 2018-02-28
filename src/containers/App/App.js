@@ -21,10 +21,10 @@ export class App extends Component {
     if (this.props.user.loggedIn === false && this.props.user.email === null) {
       this.props.history.push('/login');
     }
-  }
 
-  loginRedirect = () => {
-    this.props.history.push('/workout');
+    if (localStorage.getItem('user')) {
+      this.props.history.push('/workout');
+    }
   }
 
   render() {
