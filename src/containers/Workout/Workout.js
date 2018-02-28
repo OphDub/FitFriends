@@ -141,9 +141,7 @@ export class Workout extends Component {
               Add
             </button>
           </div>
-          <ul className="rendered-exercises">
-            {this.renderExercises()}
-          </ul>
+          {this.renderExercises()}
         </div>
         {this.renderError()}
         <button className="Workout-post-btn"
@@ -155,17 +153,22 @@ export class Workout extends Component {
   }
 
   renderExercises = () => {
-    return this.state.exercises.map( (exercise) =>
-      <li className="rendered-exercise"
-        key={exercise.id}>
-        <h5 className="rendered-ex-info">{exercise.reps}</h5>
-        <h5 className="rendered-ex-info">{exercise.exercise}</h5>
-        <button className="rendered-ex-btn"
-          id={exercise.id}
-          onClick={this.removeExercise}>
-            Remove
-        </button>
-      </li>
+    return (
+      <ul className="rendered-exercises">
+        {
+          this.state.exercises.map( (exercise) =>
+            <li className="rendered-exercise" key={exercise.id}>
+              <h5 className="rendered-ex-info">{exercise.reps}</h5>
+              <h5 className="rendered-ex-info">{exercise.exercise}</h5>
+              <button className="rendered-ex-btn"
+                id={exercise.id}
+                onClick={this.removeExercise}>
+                  Remove
+              </button>
+            </li>
+          )
+        }
+      </ul>
     );
   }
 
