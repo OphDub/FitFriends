@@ -1,5 +1,6 @@
 /* eslint-disable */
 import * as thunks from './thunks';
+import * as actions from '../actions/actionsIndex';
 import thunk from 'redux-thunk';
 import configureMockStore from 'redux-mock-store';
 import { auth, workoutsDb } from '../base';
@@ -28,19 +29,6 @@ describe('THUNKS', () => {
       await store.dispatch(thunks.getUserFromFirebase());
 
       expect(auth.onAuthStateChanged).toHaveBeenCalled();
-    });
-
-    it.skip('dispatches the saveUserInStore action on success', async () => {
-      const mockUser = { email: 'me@me.com' };
-      const expected = [{ type: 'SAVE_USER', user: mockUser }]
-
-      auth.onAuthStateChanged = jest.fn(() => {
-        return Promise.resolve(mockUser);
-      });
-
-      await store.dispatch(thunks.getUserFromFirebase(mockUser));
-
-      expect(store.getActions()).toEqual(expected);
     });
   });
 
@@ -117,22 +105,6 @@ describe('THUNKS', () => {
       await store.dispatch(thunks.getWorkouts(mockWorkout));
 
       expect(workoutsDb.on).toHaveBeenCalled();
-    });
-
-    it.skip('dispatches the saveWorkoutsInStore action on success', async () => {
-      const expected = [ { type: 'SAVE_WORKOUTS', workouts: mockWorkouts } ];
-
-      workoutsDb.on = jest.fn((prompt) => {
-        return Promise.resolve({
-          dispatch: () => Promise.resolve({
-            mockWorkouts
-          })
-        })
-      });
-
-      await store.dispatch(thunks.getWorkouts());
-
-      expect(store.getActions()).toEqual(expected);
     });
   });
 });
