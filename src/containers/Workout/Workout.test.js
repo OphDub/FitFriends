@@ -5,9 +5,11 @@ import { Workout, mapDispatchToProps } from './Workout';
 
 describe('WORKOUT', () => {
   let renderedComponent;
+  let mockFn;
 
   beforeEach(() => {
-    renderedComponent = shallow(<Workout />);
+    mockFn = jest.fn();
+    renderedComponent = shallow(<Workout postWorkout={mockFn}/>);
   });
 
   it('should match snapshot', () => {
@@ -24,34 +26,85 @@ describe('WORKOUT', () => {
     expect(renderedComponent.state().workoutName).toEqual(expected);
   });
 
-  it('should call postWorkout from props when postWorkout is called', () => {
-    const mockFn = jest.fn();
-    const wrapper = shallow(<Workout postWorkout={mockFn}/>);
-    const mockEvent = { preventDefault: jest.fn() };
+  it('validateExercise should return false and update errorMsg in state if there are no exercises in state', () => {
+    const expectedErrorMsg = 'Please add at least one exercise to your workout';
+    const exerciseValidation = renderedComponent.instance().validateExercise();
 
-    wrapper.instance().postWorkout(mockEvent);
+    expect(exerciseValidation).toEqual(false);
+    expect(renderedComponent.state().errorMsg).toEqual(expectedErrorMsg);
+  });
+
+  it('validateExercise should return true if there are exercises in state', () => {
+    const mockExercises = [
+      {reps: 1, exercise: 'pushup'}
+    ];
+
+    renderedComponent.setState({ exercises: mockExercises });
+
+    const exerciseValidation = renderedComponent.instance().validateExercise();
+
+    expect(exerciseValidation).toEqual(true);
+  });
+
+  it('validateWorkoutInfo should return false and update errorMsg in state if there is no workoutName or workoutDesc', () => {
+    const expectedErrorMsg = 'Please give your workout a name and description';
+    const workoutValidation = renderedComponent.instance().validateWorkoutInfo();
+
+    expect(workoutValidation).toEqual(false);
+    expect(renderedComponent.state().errorMsg).toEqual(expectedErrorMsg);
+  });
+
+  it('validateWorkoutInfo should return true if there is workoutName and workoutDesc in state', () => {
+    const mockWorkoutName = 'some name';
+    const mockWorkoutDesc = 'some desc';
+
+    renderedComponent.setState({
+      workoutName: mockWorkoutName,
+      workoutDesc: mockWorkoutDesc
+    });
+
+    const workoutValidation = renderedComponent.instance().validateWorkoutInfo();
+
+    expect(workoutValidation).toEqual(true);
+  });
+
+  it('should call postWorkout from props when postWorkout is called', () => {
+    const mockEvent = { preventDefault: jest.fn() };
+    const mockWorkoutName = 'some name';
+    const mockWorkoutDesc = 'some desc';
+    const mockExercises = [
+      {reps: 1, exercise: 'pushup'}
+    ];
+
+    renderedComponent.setState({
+      workoutName: mockWorkoutName,
+      workoutDesc: mockWorkoutDesc,
+      exercises: mockExercises
+    });
+
+    renderedComponent.instance().postWorkout(mockEvent);
     expect(mockFn).toHaveBeenCalled();
   });
 
   it('should clear state when postWorkout is called', () => {
-    const mockFn = jest.fn();
-    const wrapper = shallow(<Workout postWorkout={mockFn}/>);
-
-    const exampleEvent = {target: {value: 'some workout',name: 'workoutName'}};
-    const exampleString = 'some workout';
-
-    wrapper.instance().handleChange(exampleEvent);
-    wrapper.update();
-
-    expect(wrapper.state().workoutName).toEqual(exampleString);
-
+    const mockWorkoutName = 'some name';
+    const mockWorkoutDesc = 'some desc';
+    const mockExercises = [
+      {reps: 1, exercise: 'pushup'}
+    ];
     const expected ='';
     const mockEvent = {preventDefault: jest.fn()};
 
-    wrapper.instance().postWorkout(mockEvent);
-    wrapper.update();
+    renderedComponent.setState({
+      workoutName: mockWorkoutName,
+      workoutDesc: mockWorkoutDesc,
+      exercises: mockExercises
+    });
 
-    expect(wrapper.state().workoutName).toEqual(expected);
+    renderedComponent.instance().postWorkout(mockEvent);
+    renderedComponent.update();
+
+    expect(renderedComponent.state().workoutName).toEqual(expected);
   });
 
   it('should add an exercise to the exercises array in state when addExercise is called', () => {
