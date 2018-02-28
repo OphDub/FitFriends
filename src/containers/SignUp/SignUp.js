@@ -140,7 +140,7 @@ const historyProps = PropTypes.shape({
 
 SignUp.propTypes = {
   signup: PropTypes.func.isRequired,
-  history: PropTypes.shape(historyProps)
+  history: historyProps
 };
 
 export const mapDispatchToProps = (dispatch) => ({
