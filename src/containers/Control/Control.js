@@ -50,6 +50,8 @@ export class Control extends Component {
         errorMsg: ''
       });
 
+      localStorage.setItem('user', JSON.stringify({ loggedIn: true, email: this.props.email }));
+
       this.props.history.push('/workout');
     } catch (error) {
       const errorMsg = 'Username/password incorrect. Try again.';
