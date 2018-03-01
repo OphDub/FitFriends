@@ -34,6 +34,19 @@ export class Workout extends Component {
     return validated;
   }
 
+  validateExerciseInfo = () => {
+    const { reps, exercise } = this.state;
+
+    if (reps === '' || exercise === '') {
+      const errorMsg = 'Please give your exercise a rep count and name';
+
+      this.setState({ errorMsg });
+      return false;
+    }
+
+    return true;
+  }
+
   validateWorkoutInfo = () => {
     const { workoutName, workoutDesc } = this.state;
 
@@ -50,6 +63,11 @@ export class Workout extends Component {
   addExercise = (e) => {
     e.preventDefault();
     const { reps, exercise } = this.state;
+
+    if(!this.validateExerciseInfo()) {
+      return;
+    }
+
     const id = Date.now();
     const newExercise = Object.assign({ id, reps, exercise});
     const exercises = [...this.state.exercises, newExercise];

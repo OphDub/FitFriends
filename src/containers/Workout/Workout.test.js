@@ -68,6 +68,28 @@ describe('WORKOUT', () => {
     expect(workoutValidation).toEqual(true);
   });
 
+  it('validateExerciseInfo should return true if there is a rep amount and exercise name in state', () => {
+    const mockRepCount = 10;
+    const mockExerciseName = 'jumping jacks';
+
+    renderedComponent.setState({
+      reps: mockRepCount,
+      exercise: mockExerciseName
+    });
+
+    const exerciseInfoValidation = renderedComponent.instance().validateExerciseInfo();
+
+    expect(exerciseInfoValidation).toEqual(true);
+  });
+
+  it('validateExerciseInfo should return false and set an errorMsg in state if there is not a rep amount or exercise name in state', () => {
+    const expectedErrorMsg = 'Please give your exercise a rep count and name';
+    const exerciseInfoValidation = renderedComponent.instance().validateExerciseInfo();
+
+    expect(exerciseInfoValidation).toEqual(false);
+    expect(renderedComponent.state().errorMsg).toEqual(expectedErrorMsg);
+  });
+
   it('should call postWorkout from props when postWorkout is called', () => {
     const mockEvent = { preventDefault: jest.fn() };
     const mockWorkoutName = 'some name';
