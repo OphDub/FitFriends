@@ -44,8 +44,6 @@ export class Control extends Component {
     try {
       await this.props.login(email, password);
 
-      localStorage.setItem('user', JSON.stringify({ loggedIn: true, email: this.state.email }));
-
       this.setState({
         email: '',
         password: '',
