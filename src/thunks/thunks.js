@@ -24,7 +24,6 @@ export const login = (email, password) => {
 export const logout = () => {
   return async dispatch => {
     await auth.signOut();
-    localStorage.removeItem('user');
 
     dispatch(logOutUserLocally());
   }
@@ -46,5 +45,11 @@ export const getWorkouts = () => {
 
       dispatch(saveWorkoutsInStore(snapshot.val()));
     })
+  }
+};
+
+export const deleteWorkoutFromFirebase = () => {
+  return async dispatch => {
+    // await workoutsDb.child()
   }
 };

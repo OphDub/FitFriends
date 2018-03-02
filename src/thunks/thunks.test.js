@@ -53,18 +53,6 @@ describe('THUNKS', () => {
       expect(auth.signOut).toHaveBeenCalled();
     });
 
-    it('should remove anything in localStorage', async () => {
-      const mockUser = { loggedIn: true, email: 'me@me.com' };
-
-      localStorage.setItem('user', JSON.stringify(mockUser));
-
-      await store.dispatch(thunks.logout());
-
-      const removedUser = localStorage.getItem('user');
-
-      expect(removedUser).toEqual(null);
-    });
-
     it('dispatches the logOutUserLocally action', async () => {
       const expected = [{ type: 'LOGOUT_USER'}];
 
@@ -107,4 +95,12 @@ describe('THUNKS', () => {
       expect(workoutsDb.on).toHaveBeenCalled();
     });
   });
+
+  describe('deleteWorkoutFromFirebase action', () => {
+    it('should call the remove method of workoutsDb', async () => {
+      workoutsDb.remove = jest.fn();
+
+      await store.dispatch(thunks.deleteWorkoutFromFirebase())
+    });
+  })
 });
