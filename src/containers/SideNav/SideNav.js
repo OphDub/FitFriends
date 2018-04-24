@@ -14,7 +14,7 @@ export class SideNav extends Component {
       return (<img src={this.props.user.image} alt="User profile" className="user-pic"/>);
     }
 
-    return (<div className="user-pic"><FontAwesomeIcon icon={faUser} size="4x"/></div>);
+    return (<div className="user-pic"><FontAwesomeIcon icon={faUser} size="sm"/></div>);
   }
 
   render () {
@@ -23,6 +23,9 @@ export class SideNav extends Component {
         <div className="user-profile">
           {this.renderUserProfile()}
           <h4 className="user-name">{this.props.user.email}</h4>
+        </div>
+        <div>
+          <h3>FitFriends</h3>
         </div>
         <div className="sidenav-btns">
           <NavLink to="/login">
