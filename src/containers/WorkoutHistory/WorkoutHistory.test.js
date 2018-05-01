@@ -10,11 +10,24 @@ describe('WORKOUT HISTORY', () => {
 
   beforeEach(() => {
     mockFn = jest.fn();
-    renderedComponent = shallow(<WorkoutHistory getWorkouts={mockFn} workouts={mockWorkouts}/>);
+    renderedComponent = shallow(
+      <WorkoutHistory getWorkouts={mockFn}
+        workouts={mockWorkouts}
+        deleteWorkoutFromFirebase={mockFn}
+      />
+    );
   });
 
   it('should match snapshot', () => {
     expect(renderedComponent).toMatchSnapshot();
+  });
+
+  it('deleteWorkout method should call the deleteWorkoutFromFirebase', () => {
+    const mockWorkoutId = 1234567890;
+
+    renderedComponent.instance().deleteWorkout();
+
+    expect(deleteWorkoutFromFirebase).toHaveBeenCalled();
   });
 
   describe('mapStateToProps and mapDispatchToProps for WorkoutHistory', () => {
