@@ -4,6 +4,7 @@ import { Switch, Route, withRouter } from 'react-router';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { getUserFromFirebase } from '../../thunks/thunks';
+import { config } from '../../apiKey';
 
 import { TopNav } from '../../components/TopNav/TopNav';
 import SideNav from '../SideNav/SideNav';
@@ -14,6 +15,8 @@ import WorkoutHistory from '../WorkoutHistory/WorkoutHistory';
 
 export class App extends Component {
   componentWillMount() {
+    const user = `firebase:authUser:${config.apiKey}:[DEFAULT]`;
+
     if (this.props.user.email === null) {
       this.props.getUserFromFirebase();
     }
@@ -22,7 +25,7 @@ export class App extends Component {
       this.props.history.push('/login');
     }
 
-    if (localStorage.getItem('user')) {
+    if (localStorage.getItem(user)) {
       this.props.history.push('/workout');
     }
   }

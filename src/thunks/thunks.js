@@ -9,7 +9,8 @@ import {
 export const getUserFromFirebase = (user) => {
   return async dispatch => {
     await auth.onAuthStateChanged(user => {
-
+      console.log(user);
+      
       dispatch(saveUserInStore(user));
     })
   }
@@ -24,7 +25,6 @@ export const login = (email, password) => {
 export const logout = () => {
   return async dispatch => {
     await auth.signOut();
-    localStorage.removeItem('user');
 
     dispatch(logOutUserLocally());
   }
@@ -45,6 +45,15 @@ export const getWorkouts = () => {
     await workoutsDb.on('value', snapshot => {
 
       dispatch(saveWorkoutsInStore(snapshot.val()));
+    })
+  }
+};
+
+export const deleteWorkoutFromFirebase = () => {
+  return async dispatch => {
+    await workoutsDb.child().remove('value', snapshot => {
+
+      dispatch(saveWorkoutsInStore(snapshot.val()))
     })
   }
 };

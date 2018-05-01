@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { getWorkouts } from '../../thunks/thunks';
+import { getWorkouts, deleteWorkoutFromFirebase } from '../../thunks/thunks';
 import './WorkoutHistory.css';
 
 export class WorkoutHistory extends Component {
   async componentWillMount () {
     await this.props.getWorkouts();
+  }
+
+  deleteWorkout = (e) => {
+    console.log(e.target.parentNode);
   }
 
   renderedWorkouts = () => {
@@ -23,7 +27,7 @@ export class WorkoutHistory extends Component {
       });
 
       return (
-        <article className="workout" key={key}>
+        <article className="workout" key={key} id={key}>
           <h3 className="workout-name"><span className="workout-title">Workout:</span> {workout.workoutName}</h3>
           <p className="workout-desc">{workout.workoutDesc}</p>
           <ul className="exercises">
@@ -33,6 +37,7 @@ export class WorkoutHistory extends Component {
             </li>
             {exerciseVals}
           </ul>
+          <button className="workout-delete-btn" onClick={this.deleteWorkout}>Delete Workout</button>
         </article>
       );
     });
