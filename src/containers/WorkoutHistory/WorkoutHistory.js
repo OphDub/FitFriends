@@ -15,6 +15,7 @@ export class WorkoutHistory extends Component {
 
   renderedWorkouts = () => {
     const workoutVals = Object.values(this.props.workouts);
+    const workoutKeys = Object.keys(this.props.workouts);
 
     return workoutVals.map((workout, key) => {
       const exerciseVals = Object.values(workout.exercises).map((exercise, key) => {
@@ -27,7 +28,7 @@ export class WorkoutHistory extends Component {
       });
 
       return (
-        <article className="workout" key={key} id={key}>
+        <article className="workout" key={key} id={workoutKeys[key]}>
           <h3 className="workout-name"><span className="workout-title">Workout:</span> {workout.workoutName}</h3>
           <p className="workout-desc">{workout.workoutDesc}</p>
           <ul className="exercises">
