@@ -9,8 +9,6 @@ import {
 export const getUserFromFirebase = (user) => {
   return async dispatch => {
     await auth.onAuthStateChanged(user => {
-      console.log(user);
-      
       dispatch(saveUserInStore(user));
     })
   }
