@@ -47,11 +47,8 @@ export const getWorkouts = () => {
   }
 };
 
-export const deleteWorkoutFromFirebase = () => {
+export const deleteWorkoutFromFirebase = (id) => {
   return async dispatch => {
-    await workoutsDb.child().remove('value', snapshot => {
-
-      dispatch(saveWorkoutsInStore(snapshot.val()))
-    })
+    await workoutsDb.child(id).remove();
   }
 };

@@ -9,8 +9,10 @@ export class WorkoutHistory extends Component {
     await this.props.getWorkouts();
   }
 
-  deleteWorkout = (e) => {
-    console.log(e.target.parentNode);
+  deleteWorkout = async (e) => {
+    const { id } = e.target.parentNode;
+
+    await this.props.deleteWorkoutFromFirebase(id);
   }
 
   renderedWorkouts = () => {
@@ -38,7 +40,7 @@ export class WorkoutHistory extends Component {
             </li>
             {exerciseVals}
           </ul>
-          <button className="workout-delete-btn" onClick={this.deleteWorkout}>Delete Workout</button>
+          <button className="workout-delete-btn" onClick={(e) => this.deleteWorkout(e)}>Delete Workout</button>
         </article>
       );
     });
@@ -66,6 +68,7 @@ const workout = PropTypes.shape({
 
 WorkoutHistory.propTypes = {
   getWorkouts: PropTypes.func,
+  deleteWorkoutFromFirebase: PropTypes.func,
   workouts: PropTypes.arrayOf(workout)
 };
 
@@ -74,7 +77,8 @@ export const mapStateToProps = (state) => ({
 });
 
 export const mapDispatchToProps = (dispatch) => ({
-  getWorkouts: () => dispatch(getWorkouts())
+  getWorkouts: () => dispatch(getWorkouts()),
+  deleteWorkoutFromFirebase: (id) => dispatch(deleteWorkoutFromFirebase(id))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(WorkoutHistory);
