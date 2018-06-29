@@ -55,6 +55,7 @@ ShallowWrapper {
       "children": Array [
         <article
           className="workout"
+          id="someKey1"
 >
           <h3
                     className="workout-name"
@@ -118,9 +119,16 @@ ShallowWrapper {
                               </p>
                     </li>
           </ul>
+          <button
+                    className="workout-delete-btn"
+                    onClick={[Function]}
+          >
+                    Delete Workout
+          </button>
 </article>,
         <article
           className="workout"
+          id="someKey2"
 >
           <h3
                     className="workout-name"
@@ -184,6 +192,12 @@ ShallowWrapper {
                               </p>
                     </li>
           </ul>
+          <button
+                    className="workout-delete-btn"
+                    onClick={[Function]}
+          >
+                    Delete Workout
+          </button>
 </article>,
       ],
       "className": "WorkoutHistory",
@@ -258,8 +272,15 @@ ShallowWrapper {
                             </p>
               </li>
 </ul>,
+            <button
+              className="workout-delete-btn"
+              onClick={[Function]}
+>
+              Delete Workout
+</button>,
           ],
           "className": "workout",
+          "id": "someKey1",
         },
         "ref": null,
         "rendered": Array [
@@ -512,6 +533,19 @@ ShallowWrapper {
             ],
             "type": "ul",
           },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Delete Workout",
+              "className": "workout-delete-btn",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Delete Workout",
+            "type": "button",
+          },
         ],
         "type": "article",
       },
@@ -583,8 +617,15 @@ ShallowWrapper {
                             </p>
               </li>
 </ul>,
+            <button
+              className="workout-delete-btn"
+              onClick={[Function]}
+>
+              Delete Workout
+</button>,
           ],
           "className": "workout",
+          "id": "someKey2",
         },
         "ref": null,
         "rendered": Array [
@@ -837,6 +878,19 @@ ShallowWrapper {
             ],
             "type": "ul",
           },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Delete Workout",
+              "className": "workout-delete-btn",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Delete Workout",
+            "type": "button",
+          },
         ],
         "type": "article",
       },
@@ -852,6 +906,7 @@ ShallowWrapper {
         "children": Array [
           <article
             className="workout"
+            id="someKey1"
 >
             <h3
                         className="workout-name"
@@ -915,9 +970,16 @@ ShallowWrapper {
                                     </p>
                         </li>
             </ul>
+            <button
+                        className="workout-delete-btn"
+                        onClick={[Function]}
+            >
+                        Delete Workout
+            </button>
 </article>,
           <article
             className="workout"
+            id="someKey2"
 >
             <h3
                         className="workout-name"
@@ -981,6 +1043,12 @@ ShallowWrapper {
                                     </p>
                         </li>
             </ul>
+            <button
+                        className="workout-delete-btn"
+                        onClick={[Function]}
+            >
+                        Delete Workout
+            </button>
 </article>,
         ],
         "className": "WorkoutHistory",
@@ -1055,8 +1123,15 @@ ShallowWrapper {
                                 </p>
                 </li>
 </ul>,
+              <button
+                className="workout-delete-btn"
+                onClick={[Function]}
+>
+                Delete Workout
+</button>,
             ],
             "className": "workout",
+            "id": "someKey1",
           },
           "ref": null,
           "rendered": Array [
@@ -1309,6 +1384,19 @@ ShallowWrapper {
               ],
               "type": "ul",
             },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Delete Workout",
+                "className": "workout-delete-btn",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Delete Workout",
+              "type": "button",
+            },
           ],
           "type": "article",
         },
@@ -1380,8 +1468,15 @@ ShallowWrapper {
                                 </p>
                 </li>
 </ul>,
+              <button
+                className="workout-delete-btn"
+                onClick={[Function]}
+>
+                Delete Workout
+</button>,
             ],
             "className": "workout",
+            "id": "someKey2",
           },
           "ref": null,
           "rendered": Array [
@@ -1633,6 +1728,19 @@ ShallowWrapper {
                 },
               ],
               "type": "ul",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Delete Workout",
+                "className": "workout-delete-btn",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Delete Workout",
+              "type": "button",
             },
           ],
           "type": "article",

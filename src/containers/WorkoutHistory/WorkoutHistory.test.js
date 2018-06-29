@@ -22,10 +22,10 @@ describe('WORKOUT HISTORY', () => {
     expect(renderedComponent).toMatchSnapshot();
   });
 
-  it('deleteWorkout method should call the deleteWorkoutFromFirebase', () => {
-    const mockWorkoutId = 1234567890;
+  it.skip('deleteWorkout method should call the deleteWorkoutFromFirebase', () => {
+    const mockWorkoutId = 'someKey1';
 
-    renderedComponent.instance().deleteWorkout();
+    renderedComponent.instance().deleteWorkout(mockWorkoutId);
 
     expect(deleteWorkoutFromFirebase).toHaveBeenCalled();
   });

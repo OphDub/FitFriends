@@ -40,14 +40,14 @@ describe('SIDENAV', () => {
 
   it('renderUserProfile should return a div with a FontAwesomeIcon if the user image is invalid', () => {
     mockUser = {
-      image: undefined,
+      image: null,
       name: 'The Flash',
       email: 'flash@centralcity.com'
     }
 
     renderedComponent = shallow(<SideNav user={mockUser}/>);
 
-    const expected = (<div className="user-pic"><FontAwesomeIcon icon={faUser} size="4x"/></div>);
+    const expected = (<div className="user-pic"><FontAwesomeIcon icon={faUser} size="sm"/></div>);
     const userProfile = renderedComponent.instance().renderUserProfile();
 
     expect(userProfile).toEqual(expected);
